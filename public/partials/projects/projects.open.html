@@ -1,0 +1,75 @@
+<div class="container row">
+    <div class="page">
+        <div class="page-projects">
+            <h3>
+                <a ui-sref="clients.projects({clientId:project.client.id})">{{project.client.title}}</a> - {{project.title}}
+            </h3>
+            <div class="row tabs-row">
+                <div class="small-12 columns">
+                    <dl class="tabs">
+                        <dd ng-class="{'active': $state.includes('project.tasks')}">
+                            <a ui-sref="project.tasks">Tasks</a>
+                        </dd>
+                        <dd ui-sref-active="active">
+                            <a ui-sref="project.estimates">Estimates & Invoices</a>
+                        </dd>
+                        <dd ui-sref-active="active"><a ui-sref="project.reports">Reports</a></dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="row content-row">
+                <div class="small-12 columns">
+                    <div class="tabs-content horizontal-move" >
+                        <div class="content active" ui-view>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div id="myModal" class="reveal-modal app-help-content" data-reveal>
+    <h2>Congratulations!!</h2>
+    <p class="lead">You found the <a href="" class="tiny button">Options</a> button. Now, be a dear and and close me.</p>
+    <p></p>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+
+<div id="estimate-modal" class="reveal-modal app-help-content" data-reveal>
+    <div class="row-full-width">
+        <div class="row">
+            <div class="small-1 columns">
+                <label for="estimate-name-input" class="right inline">Name:</label>
+            </div>
+            <div class="small-11 medium-6 columns">
+                    <input id="estimate-name-input" type="text" placeholder="Dizaina izveide" />
+            </div>
+            <div class="medium-5 columns"></div>
+        </div>
+        <div class="row">
+            <div class="small-1 columns">
+                <label for="estimate-desc-input" class="right inline">Description:</label>
+            </div>
+            <div class="small-11 medium-9 columns">
+                    <input id="estimate-desc-input" type="text" placeholder="Tāme par logotipa, vizītkartes un web kataloga dizaina izstrādi" />
+            </div>
+            <div class="medium-2 columns"></div>
+        </div>
+
+           
+        <div class="row">
+            <a href="" class="button tiny success" ng-click="">Save</a>
+            <a href="" class="button tiny alert  " ng-click="">Back</a>
+        </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>

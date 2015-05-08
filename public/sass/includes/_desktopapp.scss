@@ -1,0 +1,18 @@
+.app-container {
+	&.desktopapp {
+		.app-pusher > .container { margin: 0px 10px;}
+		.app-top > .container { margin: 0px 10px;}
+		// input[type="search"] { padding: 0.5rem 0 0.5rem ;}
+		.logout {
+			text-align: right;
+			a { margin-right: 30px;}
+		}
+
+		.app-content > .row {
+			max-width: none;
+			width: 100%;
+			padding-left: 0;
+		}
+
+	}
+}

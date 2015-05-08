@@ -1,0 +1,1 @@
+{"version":3,"file":"services-min.js","sources":["../services.js"],"names":["app","angular","module","factory","$resource","CSRF_TOKEN","id","projects","csrf_token"],"mappings":"AAAA,GAAIA,KAAMC,QAAQC,OAAO,4CACvBC,QAAQ,cAAe,SAASC,EAAWC,GAC3C,MAAOD,GAAU,4BAChBE,GAAI,MAAOC,SAAU,YAAaC,WAAcH"}

@@ -1,0 +1,2 @@
+var app=angular.module("Timetracker.apps.LayouterGrid.services",[]).factory("LayouterGrid",function(r,a){return r("/api/v1/apps/layoutergrid",{id:"@id",projects:"@projects",csrf_token:a},{})});
+//# sourceMappingURL=./services-min.js.map

@@ -1,0 +1,81 @@
+<div class="page container row ">
+	<div class="small-12 medium-12 large-12 columns lt-index" ng-class="{'full-width q': (weareinview) ,'full-width a': ('clients'|isState) }">
+		<div class="row">
+			<div class="small-12 medium-12 large-12 columns">
+				<h2>Input</h2>
+				<table width='100%' class="input-table">
+					<thead>
+						<tr ng-repeat="value in app.data.values">
+							<th class="check-col" ></th>
+							<th class="drag-col" ></th>
+							<th class="lang-col" ></th>
+							<th class="input-col" ng-repeat="text in value.texts track by $index">
+								<input type="text" ng-model="value.texts[$index]">
+							</th>
+						</tr>
+						<tr class="seperate-row">
+							<th colspan="11"></th>
+						</tr>
+					</thead>
+
+					<tbody class="sortable" ui-sortable="sortableOptions" ng-model="app.data.languages">
+						<tr ng-repeat="lang in app.data.languages" >
+							<td class="check-col" width="32">
+								<input type="checkbox" ng-model="lang.active">
+							</td>
+							<td class="drag-col handle" width="32" ng-class="{'group-header-col':(entry.is_header==1)}"> 
+                                <i class="fa fa-bars"></i>
+							</td>
+							<td class="lang-col" width="32">
+								<input type="text" ng-model="lang.lang">
+							</td>
+							<td class="input-col" ng-repeat="text in lang.texts track by $index">
+								<input type="text" ng-model="lang.texts[$index]">
+							</td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td colspan="11">
+								<a class="button secondary tiny" ng-click="add_new()">Add row</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+		  <div class="small-12 medium-12 large-12 columns">
+		  	<h2>Result Table</h2>
+				<table width='80%' class="result-table">
+					<thead>
+						<tr ng-init="row=0" >
+							<th>
+								<span ng-if="lang.texts[row]!='' && lang.active" ng-repeat="lang in app.data.languages">{{($index==0)?'':'/'}} {{lang.texts[row]}}</span>
+							</th>
+							<th ng-repeat="value in app.data.values" class="value-col">
+								{{value.texts[row]}}
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in [1,2,3,4,5,6,7] track by $index">
+							<td>
+								<span ng-if="lang.texts[row]!='' && lang.active" ng-repeat="lang in app.data.languages">{{($index==0)?'':'/'}} {{lang.texts[row]}}</span>
+							</td>
+							<td ng-repeat="value in app.data.values" class="value-col">
+								{{value.texts[row]}}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+		</div>
+
+		<div class="row">
+			<div class="end"></div>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="/coustom-ng-apps/layouter_grid/css/styles.css">

@@ -1,0 +1,516 @@
+<div class="container row">
+	<div class="page page-dashboard">
+		<div class="row tabs-row">
+            <div class="small-12 columns">
+                <dl class="tabs" data-tab>
+                    <dd data-tab-panel="panel-1" class="active" ><a href="">Dashboard</a></dd>
+                    <dd data-tab-panel="panel-2"><a href="">Estimates List</a></dd>
+                    <dd data-tab-panel="panel-3"><a href="">All Users Task List</a></dd>
+                    <dd data-tab-panel="panel-4"><a href="">????</a></dd>
+
+                </dl>
+            </div>
+        </div>
+
+
+        <div class="row content-row ">
+            <div class="small-12 columns">
+                <div class="tabs-content">
+
+<!-- PANEL # 1 START -->
+                    <div class="content active foundation" id="panel-1">
+
+						<div class="top">
+							<h1>Dashboard {{filters.date}}</h1>
+						</div>
+
+						<div class="content row clearfix" >
+							<div class="small-12 medium-6 columns" style="text-align:center">
+								<h6 >Time on client in Estimates <small>(minutes)</small></h6>
+								<div class="chart" id="chart-estimates">
+									<svg></svg>
+								</div>
+							</div>
+							<div class="small-12 medium-6 columns" style="text-align:center">
+								<h6 >Spent time on client <small>(minutes)</small></h6>
+								<div class="chart" id="chart-spent">
+									<svg></svg>
+								</div>
+							</div>
+						</div>
+						<!-- <li><a href="" class="tiny button secondary {{(is_on)?'fi-':'' }} " ng-click="is_on = (is_on+1)%2 " ng-init="is_on=0">Filter {{(is_on)?'on':'off' }}</a></li> -->
+						<h4>All Project List</h4>
+						<table width="100%" class="menu-table">
+						  <tbody>
+						    <tr >
+
+						    	<td class="menu-col" > 
+									<ul class="button-group clearfix">
+										<li class="right"><a href="" class="tiny button          " ng-click=""  data-reveal-id="myModal">Options</a></li>
+										<li class="right"><a href="" class="tiny button secondary" ng-click="" >Filter by Date</a></li>
+										<li class="right"><a href="" class="tiny button secondary" ng-click="" >Filter by Bussines</a></li>
+										<!-- <li class="right"><a href="#/client/new" class="tiny button success" ng-click="" >Add New</a></li> -->
+						    			<li class="left" > 
+											<div class="row collapse" >
+										        <div class="small-3 columns">
+										        	<span class="prefix has-tip tip-top"  title="To search, start typing!" data-tooltip >Search</span>
+										        </div>
+					 							<div class="small-9 columns">
+										        	<input type="search" ng-model="filter.title" placeholder=""  autocomplete="off"/>
+										        </div>
+											</div>
+						    			</li>
+									</ul>
+								</td>
+						    	
+						    </tr>
+						   
+						  </tbody>
+						</table>
+						<table width="100%">
+						  <thead>
+						    <tr>
+						      <th class="first-col"width="">Projects</th>
+						      <th class="first-col"width="80">Done Time</th>
+						      <th class="first-col"width="80">Sold Time</th>
+						      <th class="first-col"width="80">Efficency<br><small>% of sold h</small></th>
+						      <!-- <th class="last-col" width="106"></th> -->
+						    </tr>
+						  </thead>
+						  <tbody>
+
+						    <tr ng-repeat="project in projectList | orderByPriority | filter:filter " >
+						    	<td class="first-col on-click-open-details" ng-click="refreshProject_Details($event,project.id)" data-project-id="{{project.id}}"> 
+						    		<h6><small><b>{{ project.client.title }} </b></small> {{ project.title }}</h6>
+						    	</td>
+						    	<td class="first-col align-center" ng-click=""> 
+						    		<h6>{{ project.done_m|parseTimeMins }}</h6>
+						    		
+						    	</td>
+						    	<td class="first-col align-center" ng-click=""> 
+						    		<h6>{{ project.sold_m|parseTimeMins }}</h6> 
+						    	</td>
+						    	<td class="first-col align-center" ng-click=""> 
+						    		<h6>{{ ( project.sold_m/project.done_m)*100|number }}%</h6> 
+						    	</td>						    	
+						    </tr>
+
+					   
+						  </tbody>
+						</table>
+						<table width="100%" class="total-table">
+						  <thead>
+						    <tr>
+						      <th class="first-col " width=""> Total </th>
+						      <th class="first-col align-center" width="80">{{total.done_m|parseTimeMins}}</th>
+						      <th class="first-col align-center" width="80">{{total.sold_m|parseTimeMins}}</th>
+						      <th class="first-col align-center" width="80">{{(total.sold_m/total.done_m*100|number)}}%</th>
+						      <!-- <th class="last-col"  width="106"></th> -->
+						    </tr>
+						  </thead>
+						  <tbody class="real">
+						    <tr class="project-details row-with-table closed" >
+						    	<td class="col-with-table" ng-click="" id="details" colspan="4">
+						    		<!-- ESTIMATES TABLE -->
+						    		<table width="100%" class="inner-table" ng-repeat="estimate in project.estimates">
+										<tr class="row-with-table row-title" > 
+											<td class="first-col" width=""> 
+												<h6><i class="fa fa-chevron-right"></i><small>Estimate</small> {{ estimate.title }}</h6>
+											</td>
+											<td class="align-center" width="80">{{estimate.done_m|parseTimeMins}}</td>
+											<td class="align-center" width="80">{{estimate.sold_m|parseTimeMins}}</td>
+											<td class="align-center" width="80">{{ (estimate.sold_m/estimate.done_m*100|number) }}%</td>
+										</tr>
+										<tr class="row-with-table row-child" >
+											<td class="first-col col-with-table" colspan='10'>
+												<!-- TASKS TABLE -->
+												<table width="100%" class="inner-table" ng-repeat="task in estimate.tasks">
+													<tr class="row-with-table row-title" > 
+														<td class="first-col" width=""> 
+															<h6><i class="fa fa-chevron-right"></i><small>Task</small> {{ task.title }}</h6>
+														</td>
+														<td class="align-center" width="80">{{task.done_m|parseTimeMins}}</td>
+														<td class="align-center" width="80">{{task.sold_m|parseTimeMins}}</td>
+														<td class="align-center" width="80">{{ (task.sold_m/task.done_m*100|number) }}%</td>
+													</tr>
+													<tr class="row-with-table row-child">
+														<td class="first-col col-with-table" colspan='10'>
+															<!-- TASK-ROLE TABLE -->
+															<table width="100%" class="inner-table" ng-repeat="taskrole in task.taskrolebinds">
+																<tr class="row-with-table row-title" > 
+																	<td class="first-col" width=""> 
+																		<h6><i class="fa fa-chevron-right"></i><small>role</small> {{ taskrole.jobrole.title }}</h6>
+																	</td>
+																	<td class="align-center" width="80">{{taskrole.done_m|parseTimeMins}}</td>
+																	<td class="align-center" width="80">{{taskrole.sold_m|parseTimeMins}}</td>
+																	<td class="align-center" width="80">{{ (taskrole.sold_m/taskrole.done_m*100|number) }}%</td>
+																</tr>
+																<tr class="row-with-table row-child">
+																	<td class="first-col col-with-table" colspan='10'>
+																		<!-- USER TABLE -->
+																		<table width="100%" class="inner-table" ng-repeat="user in taskrole.users">
+																			<tr class="row-with-table" > 
+																				<td class="first-col" width="">  
+																					<h6>
+																						<img class="user-picture" ng-src="{{user.pict}}">
+																						{{ user.name }}
+																					</h6>
+																				</td>
+																				<td class="align-center" width="80"><h6>{{ (user.done_m)|parseTimeMins }}</h6></td>
+																				<td class="align-center" width="80"><h6>
+																					{{ _est_m = ((taskrole.sold_m)*(user.done_m/taskrole.done_m))|parseTimeMins  }}
+																				</h6></td>
+																				<td class="align-center" width="80"><h6>{{ (_est_m/user.done_m*100|number) }}%</h6></td>
+																			</tr>
+																			<tr class="row-with-table row-tasks">
+																				<td class="first-col col-with-table" colspan='10'>
+																					
+																				</td>
+																	    	</tr>
+															    		</table>
+															    		<!-- # NO USER TABLE -->
+															    		<table width="100%" class="inner-table" ng-show="taskrole.users_empty">
+																			<tr class="row-with-table row-tasks-title" > 
+																				<td class="first-col" width="" > 
+																					<h6><i class="fa">:(</i> <small> Sorry there are no users in this role</small></h6>
+																				</td>
+																			</tr>
+															    		</table>
+															    		<!-- END USER -->
+																	</td>
+														    	</tr>
+												    		</table>
+												    		<!-- # NO TASK-ROLE TABLE -->
+												    		<table width="100%" class="inner-table" ng-show="task.taskrolebinds_empty">
+																<tr class="row-with-table row-tasks-title" > 
+																	<td class="first-col" width="" > 
+																		<h6><i class="fa">:(</i> <small> Sorry there are no role in this task</small></h6>
+																	</td>
+																</tr>
+												    		</table>
+												    		<!-- END TASK-ROLE -->
+														</td>
+											    	</tr>
+									    		</table>
+									    		<!-- # NO TASKS TABLE -->
+									    		<table width="100%" class="inner-table" ng-show="estimate.tasks_empty">
+													<tr class="row-with-table row-tasks-title" > 
+														<td class="first-col" width="" > 
+															<h6><i class="fa">:(</i> <small> Sorry there are no tasks in this estimate</small></h6>
+														</td>
+													</tr>
+									    		</table>
+									    		<!-- END TASKS -->
+											</td>
+								    	</tr>
+						    		</table>
+									
+									<!-- # NO ESTIMATES TABLE -->
+						    		<table width="100%" class="inner-table" ng-show="project.estimates_empty">
+										<tr class="row-with-table row-tasks-title" > 
+											<td class="first-col" width="" > 
+												<h6><i class="fa">:(</i> <small> Sorry there are no estimates in this project</small></h6>
+											</td>
+										</tr>
+						    		</table>
+						    		<!-- END ESTIMATES -->
+
+						    		<!-- ROUGETASKS TABLE -->
+						    		<table width="100%" class="inner-table" ng-repeat="rougetask in project.rougetasks">
+										<tr class="row-with-table row-title" > 
+											<td class="first-col" width="" colspan='10'> 
+												<h6><i class="fa fa-chevron-right"></i><small>Tasks added by users</small> &nbsp; </h6>
+											</td>
+										</tr>
+										<tr class="row-with-table row-child" >
+											<td class="first-col col-with-table" colspan='10'>
+												
+												<!-- ROUGETASKS TABLE -->
+									    		<table width="100%" class="inner-table" ng-repeat="rougetask in project.rougetasks">
+													<tr class="row-with-table row-title" > 
+														<td class="first-col" width=""> 
+															<h6><i class="fa fa-chevron-right"></i><small>user Tasks</small> {{ rougetask.title }}</h6>
+														</td>
+														<td class="align-center" width="80">{{rougetask.done_m|parseTimeMins}}</td>
+														<td class="align-center" width="80">{{rougetask.sold_m|parseTimeMins}}</td>
+														<td class="align-center" width="80">{{ (rougetask.sold_m/rougetask.done_m*100|number) }}%</td>
+													</tr>
+													<tr class="row-with-table row-child" >
+														<td class="first-col col-with-table" colspan='10'>
+															
+															<!-- TASK-ROLE TABLE -->
+															<table width="100%" class="inner-table" ng-repeat="taskrole in rougetask.taskrolebinds">
+																<tr class="row-with-table row-title" > 
+																	<td class="first-col" width=""> 
+																		<h6><i class="fa fa-chevron-right"></i><small>role</small> {{ taskrole.jobrole.title }}</h6>
+																	</td>
+																	<td class="align-center" width="80">{{taskrole.done_m|parseTimeMins}}</td>
+																	<td class="align-center" width="80">{{taskrole.sold_m|parseTimeMins}}</td>
+																	<td class="align-center" width="80">{{ (taskrole.sold_m/taskrole.done_m*100|number) }}%</td>
+																</tr>
+																<tr class="row-with-table row-child">
+																	<td class="first-col col-with-table" colspan='10'>
+																		<!-- USER TABLE -->
+																		<table width="100%" class="inner-table" ng-repeat="user in taskrole.users">
+																			<tr class="row-with-table" > 
+																				<td class="first-col" width="">  
+																					<h6>
+																						<img class="user-picture" ng-src="{{user.pict}}">
+																						{{ user.name }}
+																					</h6>
+																				</td>
+																				<td class="align-center" width="80"><h6>{{ (user.done_m)|parseTimeMins }}</h6></td>
+																				<td class="align-center" width="80"><h6>
+																					{{ _est_m = ((taskrole.sold_m)*(user.done_m/taskrole.done_m))|parseTimeMins  }}
+																				</h6></td>
+																				<td class="align-center" width="80"><h6>{{ (_est_m/user.done_m*100|number) }}%</h6></td>
+																			</tr>
+																			<tr class="row-with-table row-tasks">
+																				<td class="first-col col-with-table" colspan='10'>
+																					
+																				</td>
+																	    	</tr>
+															    		</table>
+															    		<!-- # NO USER TABLE -->
+															    		<table width="100%" class="inner-table" ng-show="taskrole.users_empty">
+																			<tr class="row-with-table row-tasks-title" > 
+																				<td class="first-col" width="" > 
+																					<h6><i class="fa">:(</i> <small> Sorry there are no users in this role</small></h6>
+																				</td>
+																			</tr>
+															    		</table>
+															    		<!-- END USER -->
+																	</td>
+														    	</tr>
+												    		</table>
+												    		<!-- # NO TASK-ROLE TABLE -->
+												    		<table width="100%" class="inner-table" ng-show="rougetask.taskrolebinds_empty">
+																<tr class="row-with-table row-tasks-title" > 
+																	<td class="first-col" width="" > 
+																		<h6><i class="fa">:(</i> <small> Sorry there are no role in this task</small></h6>
+																	</td>
+																</tr>
+												    		</table>
+												    		<!-- END TASK-ROLE -->
+												    	</td>
+												    </tr>
+									    		</table>
+												
+									    		<!-- END ROUGETASKS -->
+
+											</td>
+								    	</tr>
+						    		</table>
+									
+									<!-- # NO ROUGETASKS TABLE -->
+						    		<table width="100%" class="inner-table" ng-show="project.estimates_empty">
+										<tr class="row-with-table row-tasks-title" > 
+											<td class="first-col" width="" > 
+												<h6><i class="fa">:(</i> <small> Sorry there are no estimates in this project</small></h6>
+											</td>
+										</tr>
+						    		</table>
+						    		<!-- END ROUGETASKS -->
+						    	</td>
+						    </tr>
+						    <tr class="project-details loading row-with-table closed">
+								<td class="col-with-table" ng-click="" id="details" colspan="10">
+									&nbsp;&nbsp;&nbsp; <small> Loading... </small>
+						    	</td>
+						    </tr>
+						  </tbody>	
+						</table>
+
+					</div>
+<!-- PANEL # 1 END -->
+<!-- PANEL # 2 START -->
+					<div class="content foundation" id="panel-2">
+		
+						<div class="top">
+							<h1>Estimates List {{filters.date}}</h1>
+						</div>
+
+						<table width="100%" class="menu-table">
+						  <tbody>
+						    <tr >
+
+						    	<td class="menu-col" > 
+									<ul class="button-group clearfix">
+										<li class="right"><a href="" class="tiny button          " ng-click=""  data-reveal-id="myModal">Options</a></li>
+										<li class="right"><a href="" class="tiny button secondary" ng-click="" >Filter by Date</a></li>
+										<li class="right"><a href="" class="tiny button secondary" ng-click="" >Filter by Bussines</a></li>
+										<!-- <li class="right"><a href="#/client/new" class="tiny button success" ng-click="" >Add New</a></li> -->
+						    			<li class="left" > 
+											<div class="row collapse" >
+										        <div class="small-3 columns">
+										        	<span class="prefix has-tip tip-top"  title="To search, start typing!" data-tooltip >Search</span>
+										        </div>
+					 							<div class="small-9 columns">
+										        	<input type="search" ng-model="filter.title" placeholder=""  autocomplete="off"/>
+										        </div>
+											</div>
+						    			</li>
+									</ul>
+								</td>
+
+						    </tr>
+						   
+						  </tbody>
+						</table>
+
+						
+						
+						<table width="100%">
+						  <thead>
+						    <tr>
+						      <th class="first-col align-center"width="">Projects</th>
+						      <th class="first-col align-center"width="80">Time</th>
+						      <th class="first-col align-center"width="80">Cost<br><small>hours</small></th>
+						      <th class="first-col align-center"width="80">Cost<br><small>additional</small></th>
+						      <th class="first-col align-center"width="80"><b>Total</b></th>
+						      <!-- <th class="last-col" width="106"></th> -->
+						    </tr>
+						  </thead>
+						  <tbody ng-repeat="estimate in estimatesList | orderByPriority | filter:filter ">
+
+							<tr class="row-with-table estimate-row-title" >
+								<td class="first-col " ng-click="" data-project-id="{{project.id}}"> 
+									<h6><small>estimate</small> {{ estimate.title }}</h6>
+								</td>
+								<td class="first-col align-center" ng-click=""> 
+									<h6>{{ estimate.sold_m|parseTimeMins }}</h6> 
+								</td>
+								<td class="first-col align-center" ng-click=""> 
+									<h6>{{ estimate.cost_hours|number }} €</h6> 
+								</td>
+								<td class="first-col align-center" ng-click=""> 
+									<h6>{{ estimate.cost_additional|number }} €</h6> 
+								</td>
+								<td class="first-col align-center" ng-click=""> 
+									<h6>{{ estimate.cost_hours+estimate.cost_additional|number }} €</h6> 
+								</td>
+							</tr>
+						   <tr class="row-with-table estimate-details closed" >
+								<td class="first-col col-with-table" colspan='10'>
+									<!-- TASKS TABLE -->
+									<table width="100%" class="inner-table" ng-repeat="task in estimate.tasks">
+										<tr class="row-with-table row-title" > 
+											<td class="first-col" width=""> 
+												<h6><i class="fa fa-chevron-right"></i><small>Task</small> {{ task.title }}</h6>
+											</td>
+											<td class="align-center" width="80">{{task.sold_m|parseTimeMins}}</td>
+											<td class="align-center" width="80">{{task.cost_hours|number}} €</td>
+											<td class="align-center" width="80"></td>
+											<td class="align-center" width="80">{{task.cost_hours+task.cost_additional|number}} €</td>
+
+										</tr>
+										<tr class="row-with-table row-child">
+											<td class="first-col col-with-table" colspan='10'>
+												<!-- TASK-ROLE TABLE -->
+												<table width="100%" class="inner-table" ng-repeat="taskrole in task.taskrolebinds">
+													<tr class="row-with-table" > 
+														<td class="first-col" width=""> 
+															<h6><i class="fa fa-circle-thin"></i><small>role</small> {{ taskrole.jobrole.title }}</h6>
+														</td>
+														<td class="align-center" width="80">{{taskrole.sold_m|parseTimeMins}} €</td>
+														<td class="align-center" width="80">{{taskrole.cost_hours|number}} €</td>
+														<td class="align-center" width="80"></td>
+														<td class="align-center" width="80">{{taskrole.cost_hours+taskrole.cost_additional|number}} €</td>
+													</tr>
+									    		</table>
+									    		<!-- # NO TASK-ROLE TABLE -->
+									    		<table width="100%" class="inner-table" ng-show="task.taskrolebinds_empty">
+													<tr class="row-with-table row-tasks-title" > 
+														<td class="first-col" width="" > 
+															<h6><i class="fa">:(</i> <small> Sorry there are no role in this task</small></h6>
+														</td>
+													</tr>
+									    		</table>
+									    		<!-- END TASK-ROLE -->
+											</td>
+								    	</tr>
+						    		</table>
+						    		<!-- # NO TASKS TABLE -->
+						    		<table width="100%" class="inner-table" ng-show="estimate.tasks_empty">
+										<tr class="row-with-table row-tasks-title" > 
+											<td class="first-col" width="" > 
+												<h6><i class="fa">:(</i> <small> Sorry there are no tasks in this estimate</small></h6>
+											</td>
+										</tr>
+						    		</table>
+						    		<!-- END TASKS -->
+								</td>
+						   
+						  </tbody>
+						</table>
+						<table width="100%" class="total-table">
+						  <thead>
+						    <tr>
+						      <th class="first-col " width=""> Total </th>
+						      <th class="first-col align-center" width="80">{{total.done|parseTimeMins}}</th>
+						      <th class="first-col align-center" width="80">{{total.estimate|parseTimeMins}}</th>
+						      <th class="first-col align-center" width="80">{{(total.estimate/total.done)*100|number}}%</th>
+						      <!-- <th class="last-col"  width="106"></th> -->
+						    </tr>
+						  </thead>
+						</table>
+
+					</div>
+<!-- PANEL # 2 END -->
+<!-- PANEL # 3 END -->
+					<div class="content" id="panel-3">
+						<div class="page page-my-tasks" ng-repeat="user in users">
+							<div class="top">
+								<h2>
+									<img class="th user-picture" ng-src="{{user.pict}}">
+									{{user.name}}
+								</h2>
+							</div>
+							
+
+							<table width="100%" ui-view class="main-table">
+					            <thead>
+					                <tr>
+					                    <th class="color-col" width="5"></th>
+					                    <th class="first-col" width=""></th>
+					                    <th ng-repeat="day in week" class="day-col {{ (day.weekend)?'weekend':'' }} {{ (day.today)?'today':'' }}" width="50">
+					                        {{ day.date() }}
+					                    </th>
+
+					                </tr>
+					            </thead>
+					            <tbody>
+					                <!-- {{data.clients}} -->
+					                <tr ng-repeat="taskrole in user.taskroles | orderByPriority | filter:filter " ng-show='taskrole.task' class="{{ (taskrole.task.estimate_id==null)?'rouge-task':'' }}">
+					                    <td class="color-col" style="background: {{taskrole.task.project.client.color}}; box-shadow: 0 0 3px {{taskrole.task.project.client.color}};" ></th>
+					                        </th>
+					                        <td class="title-col">
+					                            <a ui-sref="project({projectId:taskrole.task.project.id})" ng-show="user.group==1">
+					                                <h6>{{ taskrole.task.project.client.title }} - {{taskrole.task.project.title}} <small>{{ taskrole.task.title }}</span> </h6>
+					                            </a>
+					                            <h6 ng-hide="user.group==1">{{ taskrole.task.project.client.title }} - {{taskrole.task.project.title}} <small>{{ taskrole.task.title }}</span> </h6>
+					                        </td>
+					                        <td ng-repeat="day in week" class="day-col {{ (day.weekend)?'weekend':'' }} {{ (day.today)?'today':'' }}">
+					                            <h6 ng-show="timelog.exist">{{timelog = (taskrole.usertimelogs | compareTimesGetObject:day); timelog.minutes|parseTimeMins}}</h6>
+					                        </td>
+
+					                </tr>
+
+					            </tbody>
+					        </table>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+<div id="myModal" class="reveal-modal app-help-content" data-reveal>
+  <h2>Congratulations!!</h2>
+  <p class="lead">You found the <a href="" class="tiny button">Options</a> button. Now, be a sweetie and and close me.</p>
+  <p></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

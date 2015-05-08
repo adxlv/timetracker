@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="small-12 columns box-drop-shadow page-estimate-info">
+
+	<div class="row">
+	  <div class="small-12 columns align-center">
+	  	<br>
+		<h4>{{estimate.title}}</h4>
+		<h4><small>ESTIMATE SUMMARY</small></h4>
+		<hr>
+	  </div>
+	</div>
+	
+	<div class="row ">
+	  <div class="small-12 columns details estimate-details" >
+		<h6>Estimate Details 
+			<a ui-sref="project.estimates.edit({estimateId:estimate.id})">
+				<i ng-click="" class="fa fa-pencil"></i>
+			</a>
+		</h6>
+		<a href="/printestimate/{{estimate.id}}" target="_blank">
+			<i ng-click="" class="fa fa-file-pdf-o"></i>
+		</a>
+
+	  	<table cellspacing="0" width="100%">
+			<tbody>
+				<tr ng-repeat="entry in estimate.headers" class="">
+					<td class="title-col first-col ">{{entry.title}}</td>
+					<td class="title-col align-center" width="50">{{entry.totals.hours}} h</td>
+					<td class="title-col align-center" width="50">{{entry.totals.summ}} €</td>
+				</tr>
+				<tr class="totals">
+					<td class="title-col first-col ">Totals</td>
+					<td class="title-col align-center">{{estimate.totals.hours}} h</td>
+					<td class="title-col align-center">{{estimate.totals.summ}} €</th>
+				</tr>
+			</tbody>
+	  	</table>
+	  </div>
+	</div>
+
+	<div class="row ">
+	  <div class="small-12 columns details invoice-details" >
+	  	<h6>Invoice Details 
+	  		<a href="">
+				<i ng-click="" class="fa fa-pencil"></i>
+			</a>
+		</h6>
+		<a href="/printinvoice/{{estimate.id}}" target="_blank">
+			<i ng-click="" class="fa fa-file-pdf-o"></i>
+		</a>
+
+	  	<table cellspacing="0" width="100%">
+			<tbody>
+				<tr ng-repeat="entry in estimate.bill_entries" class="">
+					<td class="title-col first-col ">{{entry.title}}</td>
+					<td class="title-col align-center" width="50">{{estimate.totals.summ}} €</td>
+				</tr>
+				<tr class="">
+					<td class="title-col first-col ">Tax ({{estimate.totals.tax_percent*100}}%)</td>
+					<td class="title-col align-center" >{{estimate.totals.tax}} €</td>
+				</tr>
+				<tr class="totals">
+					<td class="title-col first-col ">Totals</td>
+					<td class="title-col align-center" width="50">{{estimate.totals.summ+estimate.totals.tax}} €</th>
+				</tr>
+			</tbody>
+	  	</table>
+	  </div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="row hide">
+	  <div class="small-12 columns">
+		<img ng-src="{{estimate.branch.image_url}}" alt="">
+	  </div>
+	</div>
+
+
+  </div>
+</div>

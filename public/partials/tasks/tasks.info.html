@@ -1,0 +1,90 @@
+<div class="row ">
+    <div class="small-12 columns box-drop-shadow page-task-info ">
+
+        <div class="row title-row">
+            <div class="small-10 small-offset-1 columns align-center end ">
+                <h5>
+                    <small>Task Info</small>
+                    {{task.title}}
+                    <a class="edit-page-task-info"> <i class="fa fa-pencil"></i> </a> 
+                </h5>
+            </div>
+            <a class="close-page-task-info" ui-sref="project.tasks">&#215;</a> 
+        </div>
+
+        <div class="row info-edit-row">
+            <div class="small-12 columns">
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="task-name-input" class="right inline">Title:</label>
+                    </div>
+                    <div class="small-9 columns end">
+                        <input id="task-name-input" type="text" ng-model='task.title' placeholder="Dizaina izveide" autocomplete="off"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="task-select" class="right inline">Estimate: </label>
+                    </div>
+                    <div class="small-9 columns end" >
+                        <select id="task-select" required ng-options="estimate.id as estimate.title for estimate in estimates" ng-model="task.estimate_id" ></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-6 columns ">
+                        <ul class="button-group">
+                            <li><a class="button tiny secondary" ng-click="">&nbsp;<i class="fa fa-trash fa-lg">&nbsp;</i></a></li>
+                            <li><a class="button tiny secondary" ng-click="cancel_edit()">&nbsp;<i class="fa fa-undo fa-lg">&nbsp;</i></a></li>
+                        </ul>
+                    </div>
+                    <div class="small-6 columns ">
+                        <ul class="button-group right">
+                            <li><a class="button tiny success" ng-click="save_task_info()">&nbsp;<i class="fa fa-floppy-o fa-lg">&nbsp;</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row info-row">
+            <div class="small-12 columns">
+                <div class="hr"></div>
+                
+                <table class="main-table jobrole-{{rolebind.jobrole.id}}" width="100%" ng-repeat="rolebind in task.taskrolebinds" ng-hide="{{rolebind.users_empty}}">
+                    <thead>
+                        <tr>
+                            <th class="first-col center jobrole-border" width="250"> <small>role: </small>{{rolebind.jobrole.title}}</th>
+                            <th class="first-col center jobrole-border" width=""> <small>Total:</small> {{rolebind.total_m|parseTimeMins}}</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr class="no-bg"><td class="no-bg" colspan="2">
+                        <table class="inner-table" width="100%" ng-repeat="user in rolebind.users">
+                            <thead>
+                                <tr>
+                                    <th class="user-name" width="250">
+                                        <img class="inner th user-picture" ng-src="{{user.pict}}">
+                                        <span class="">{{user.name}} {{user.surname}}</span>
+                                    </th>
+                                    <th class="center" width=""><small>Total:</small> <span>{{user.total_m|parseTimeMins}}</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr class="highlith-full-row" ng-repeat="log in user.timelogs">
+                                    <td class="first-col" >{{log.time|parseTimeLog}}</td>
+                                    <td class="center">{{log.minutes|parseTimeMins}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td></tr></tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>

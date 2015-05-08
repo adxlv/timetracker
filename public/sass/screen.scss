@@ -1,0 +1,154 @@
+/* FONTS */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+/* http://www.google.com/fonts/#QuickUsePlace:quickUse/Family:Open+Sans:400,300,600 */
+
+// @import url(../fonts/foundation-icons/foundation-icons.css);
+// @import url(../fonts/fontawesome/font-awesome.css);
+/* icon fonts */
+
+
+@import "mixins";
+
+@import "settings";
+
+@import "includes/modals";
+
+
+// h6 { font-size: 0.9rem; }
+.fa {display: inline;}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  // font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+svg {overflow: initial;}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////// 
+html {
+	font-size: 90%;
+	@include transition(none);
+}
+
+* {
+	@include transition(all $app-transition-time);
+	opacity: 1;
+	// font-family: 'Roboto', 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+.preload-animations-disabled * {
+	//Remove transitions on load by default
+	@include transition(none !important);
+}
+
+body {
+	font-family: 'Roboto', 'Open Sans', sans-serif;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	// background: #888;
+}
+
+.app-container {
+	width: 100%;
+	height: 100%;
+	
+	overflow-x: hidden;
+	// -webkit-perspective: 1000px;
+	// 		perspective: 1000px;
+			
+	&:after {
+		@include transition(all $app-transition-time*2);
+
+		position: fixed;
+		display: none;
+		content: "";
+
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.2);
+		opacity: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+
+
+.app-pusher {
+	// transform-style: preserve-3d;
+	// position: absolute;
+
+	background: #F3EFE0;
+	background: #FFF;
+
+	width: 100%;
+	min-height: 100%;
+
+	margin-left: 50px;
+	padding-right: 50px;
+	
+	& > .container {
+		left: 0px;
+		position: relative;
+	}
+}
+
+
+.app-top {
+	background: $topbar-bg-color;
+
+	& > .container {
+		position: relative;
+	}
+}
+
+@import "includes/appcontents";
+@import "includes/apptop";
+@import "includes/desktopapp";
+
+// NG ANIMATIONS
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+@import "includes/nganimations";
+
+// SHOWING THE MENU
+//////////////////////////////////////////////////////////////////////////////////////////////////////// 
+@import "includes/sidemenu";
+
+
+
+// FOUNDATION FIXES
+//////////////////////////////////////////////////////////////////////////////////////////////////////// 
+.row-full-width {
+	.row {max-width: 100%}
+}
+
+table {
+	li:before, li:after,
+	li > *:before, li > *:after,
+	ul:before, ul:after,
+	
+	tr:before, tr:after,
+	th:before, th:after,
+	td:before, td:after {
+		position: absolute !important;
+		// margin-top: -3px
+	}
+}
+.reveal-modal-bg {
+	position: fixed;
+}

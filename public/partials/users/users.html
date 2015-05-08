@@ -1,0 +1,42 @@
+<div class="container row">
+	<div class="small-6 medium-6 large-6 columns page" ng-class="{'full-width q': (weareinview) ,'full-widt': ('users'|isState) }">
+		<div class="page-users row">
+			<div class="top">
+				<h1 ng-hide="weareinview">Users</h1>
+			</div>		
+			
+			<table width="100%">
+			  <thead>
+			    <tr>
+			      <th class="title-col"width=""></th>
+			      <th class="title-col"width="">Name</th>
+			      <th class="last-col button-col" width="46">
+					<a ui-sref="settings.users.profile({userId:'new'})" class="tiny button secondary">+</a>
+			      </th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr ng-repeat="user in users | orderByPriority | filter:filter " ui-sref-active="active" >
+			    	<td class="first-col" ng-click="" width="60">
+                        <img class="user-picture" ng-src="{{user.pict}}"></td>
+			    	<td class="title-col" colspan="2"> 
+			    		<a ui-sref="settings.users.profile({userId:user.id})">
+			    			<h6>{{ user.name }} {{ user.surname }}</h6>
+			    		</a> 
+			    	</td>			    	
+			    </tr>
+			   
+			  </tbody>
+			</table>
+		</div>
+		<div class="divider"></div>
+	</div>
+
+
+	<div class="small-6 medium-6 large-6 columns page" ui-view>
+	</div>
+
+	
+
+	
+</div>

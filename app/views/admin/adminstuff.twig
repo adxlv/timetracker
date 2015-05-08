@@ -1,0 +1,186 @@
+{% set people = [
+    {i:1,  name:'ROBERTS STAFECKIS',title:'Latvijas pilnvarotais<br>pārstāvis EXPO 2015,<br>LR Ekonomikas ministrija'},
+    {i:2,  name:'ĢIRTS MAJORS',title:'producents'},
+    {i:3,  name:'MĀRTIŅŠ PĪLĒNS',title:'arhitekts'},
+    {i:4,  name:'MIĶELIS PUTRĀMS',title:'arhitekts'},
+    {i:0,  name:'',title:''},
+    {i:6,  name:'JĀNIS ZOLDBERGS',title:'projektēšanas vaditājs<br> būvuzraugs'},
+    {i:7,  name:'Voldemārs Johansons',title:'jauno mediju mākslinieks'},
+    {i:8,  name:'ANDIS ZUSTS',title:'producents'},
+    {i:9,  name:'ELĪNA VIKMANE',title:'biroja "EXPO 2015" vadītāja'},
+    {i:10, name:'LINDA KRŪMIŅA',title:'arhitekte'},
+    {i:11, name:'ANETE KAUCE',title:'asistente'},
+    {i:12, name:'LĪGA ANDŽĀNE',title:'komunikācijas vadītāja'},
+    {i:13, name:'ROLANDS PĒTERKOPS',title:'mākslinieks'},
+    {i:14, name:'Roberts Rubīns',title:'video mākslinieks'},
+    {i:15, name:'LINDA ANDERSONE',title:'producente'},
+    {i:0,  name:'',title:''},
+    {i:17, name:'SIGVARDS KĻAVA',title:'mākslinieciskais vadītājs'},
+    {i:18, name:'Anda Poikāne',title:'tēlniece'},
+    {i:19, name:'BAIBA ERDMANE',title:'juriste'},
+    {i:0,  name:'',title:''},
+
+    {i:1,  name:'ROBERTS STAFECKIS',title:'Latvijas pilnvarotais<br>pārstāvis EXPO 2015,<br>LR Ekonomikas ministrija'},
+    {i:6,  name:'JĀNIS ZOLDBERGS',title:'projektēšanas vaditājs<br> būvuzraugs'},
+    {i:11, name:'ANETE KAUCE',title:'asistente'},
+    {i:7,  name:'Voldemārs Johansons',title:'jauno mediju mākslinieks'},
+    {i:9,  name:'ELĪNA VIKMANE',title:'biroja "EXPO 2015" vadītāja'},
+    
+    {i:0, name:'BAIBA ERDMANE',title:'juriste'},
+    {i:6,  name:'JĀNIS ZOLDBERGS',title:'projektēšanas vaditājs<br> būvuzraugs'},
+    {i:11, name:'ANETE KAUCE',title:'asistente'},
+    {i:7,  name:'Voldemārs Johansons',title:'jauno mediju mākslinieks'},
+    {i:0,  name:'MIĶELIS PUTRĀMS',title:'arhitekts'},
+  ] %}
+
+
+ <div class="admin-bar">
+  <div class="page_container">
+    {% include 'navigation' with {'extraClasses':' '} %}
+    <h3>Admin Mode</h3>
+    <div class="right-buttons">
+      <a class="modal-button help">?</a>
+      <a href="/logout" class="modal-button close">&#215;</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="admin">
+  <div class="disabler"></div>
+  
+  <div class="help">
+    <div class="page_container">
+      <div class="contain">
+        {% include 'admin/help' with {'extraClasses':'no-languages'} %}
+      <a class="close-reveal-modal">&#215;</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="place">
+    <textarea id='text-insert'></textarea>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+  <div class="image-crop">
+    <div class="v-center">
+
+      <div class="row">
+        <hr>
+        <div class="small-7 column">
+
+          <div class="row">
+            <div class="small-12 small-centered column">
+              <div class="row">
+                  <div class="img-mask-contain left active">
+                    <img src="/img/admin/sel-news-mask1.png" data- alt="">
+                    <img class="hidden-masks" src="/img/admin/mask-news-mask1.png" alt="">
+                  </div>
+                  <div class="img-mask-contain left">
+                    <img src="/img/admin/news-mask2.png" alt="">
+                    <img class="hidden-masks" src="/img/admin/mask-news-mask2.png" alt="">
+                  </div>
+                  <div class="img-mask-contain left">
+                    <img src="/img/admin/news-mask3.png" alt="">
+                    <img class="hidden-masks" src="/img/admin/mask-news-mask3.png" alt="">
+                  </div>
+                  <div class="img-mask-contain left">
+                    <img src="/img/admin/news-mask4.png" alt="">
+                    <img class="hidden-masks" src="/img/admin/mask-news-mask4.png" alt="">
+                  </div>
+                  <div class="img-mask-contain left">
+                    <img src="/img/admin/news-mask5.png" alt="">
+                    <img class="hidden-masks" src="/img/admin/mask-news-mask5.png" alt="">
+                  </div>
+                  <div class="img-mask-contain left">
+                    <img src="/img/admin/news-mask6.png" alt="">
+                    <img class="hidden-masks" src="/img/admin/mask-news-mask6.png" alt="">
+                  </div>
+              </div>
+
+            </div>
+          </div>
+                <input id="news-image-input" type="file">
+          
+          <div class="row">
+            <div class="small-12 small-centered column">
+              <div class="crop-container">
+                <a class="secondary button">add Image</a>
+                <img class="cropper" src="">
+              </div>
+            </div>
+          </div> 
+
+
+        </div>
+        <div class="small-5 last column">
+          {# <div class="img-mask img-preview"></div> #}
+          <div class="img-mask img-preview-canvas"> <canvas id='img-preview-canvas'></canvas> </div>
+          <div class="placeholder">
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, suscipit distinctio a minima </h4>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <hr>
+        <div class="small-12 column">
+            <a id="img-done-button" class="small button ">Done</a>
+            <a id="cancel-button" class="small alert button ">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="date-picker">
+    <input type="text" id="datepicker">
+    <div class="datepicker-container"></div>
+  </div>
+  
+  <div class="team-edit clearthis">
+    <div class="contain clearthis">
+        {% for p in people %}
+          
+            <div class="images image{{p.i}}">
+              {# <img src="img/team/team1-BW.jpg" class="bw" alt=""> #}
+              {# <img src="img/team/team1.jpg" class="color" alt=""> #}
+              <img src="/img/team/team{{p.i}}-BW.jpg" class="bw" alt="">
+              <img src="/img/team/team{{p.i}}.jpg" class="color" alt="">
+              <div class="edit-container">
+                <div class="row">
+                  <div class="small-4 column">
+                    <a class="button tiny">BW</a>
+                  </div>
+                  <div class="small-4 column">
+                    <a class="button tiny">COLOR</a>
+                  </div>
+                  <div class="small-4 column">
+                    <a class="button tiny">BLOB</a>
+                  </div>
+                </div>
+              </div>
+              <div class="info">
+                <img src="/img/popup/popup{{p.i}}.png" alt="">
+                <div class="center">
+                  <h4>{{p.name}}</h4>
+                  <p>{{p.title|raw}}</p>
+                </div>
+              </div>
+            </div>
+          
+        {% endfor %}
+      
+    </div>
+  </div>
+
+</div>
+  
+  <div data-alert class="admin-alerts alert-box warning">
+      <p></p>
+      <a class="close">&times;</a>
+  </div>  
+
+

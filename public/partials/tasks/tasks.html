@@ -1,0 +1,188 @@
+<div class="row">
+    <div class="small-8 columns" ng-class="{'full-width q': $state.is('project.tasks.new') ,'full-width a': $state.is('project.tasks') }">
+        <h4>Tasks</h4>
+        <table width="100%" class="menu-table" ng-show="">
+            <tbody>
+                <tr>
+                    <td class="menu-col">
+                        <ul class="button-group clearfix">
+                            <li class="left">
+                                <div class="row collapse">
+                                    <div class="small-3 columns">
+                                        <span class="prefix has-tip tip-top" title="To search, start typing!" data-tooltip>Search</span>
+                                    </div>
+                                    <div class="small-9 columns">
+                                        <input type="search" ng-model="task_filter.title" placeholder="" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+        <table width="100%" class="estimate-table done-task-filter-off">
+            <thead>
+                <tr>
+                    <th class="last-col button-col" width="46">
+                        <ul class="button-group">
+                            <li><a ui-sref="project.tasks.new" class="tiny button secondary">
+                                &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                            </a></li>   
+                        </ul>
+                    </th>
+                    <th class="first-col" width="">Task name
+                    </th>
+                    <th class="last-col button-col" width="46">
+                        <a class="with-fa tiny button secondary done-task-filter filter-off">
+                            <i class="fa fa-eye"></i>
+                            <i class="fa fa-eye-slash"></i>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="task in tasks | orderByPriority | filter:task_filter " ng-class="{'is-done': (task.done==1)}" ui-sref-active="active">
+                    <td class="">
+                        <a  href="" class="tiny button secondary done-button" ng-class="{'success': (task.done==1)}" style='width:100%' data-taskid="{{task.id}}">
+                            <i class="fa fa-check"></i>
+                            <i class="fa fa-circle-o-notch"></i>
+                        </a>
+                    </td>
+                    <td class="first-col title-col" colspan="2">
+                        <a ui-sref="project.tasks.info({taskId:task.id})">
+                        <h6>{{ task.title }}</h6>
+                        </a>
+                        <div class="picture-container">
+                            <img class="inner th user-picture first" src="/store/img/users/add-user.png" ng-click="open_task(task,$index)">
+                            <img class="inner th user-picture" ng-repeat="user in task.users" ng-src="{{user.pict}}" ng-click="open_task(task,$index)">
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="small-4 columns" ui-view="tasksinfo"></div>
+</div>
+
+<div id="new-task-modal" class="reveal-modal app-new-task-content" data-reveal >
+    <div class="row" ui-view="tasksnew"></div>
+    <a  class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<div id="bind-user-new-modal" class="reveal-modal app-bind-user-content" data-reveal>
+    <div class="row-full-width">
+        <h2> <small>Assign users.</small> {{task.title}} </h2>
+        <div class="rolebind-container">
+            <div class="rolebind jobrole-{{rolebind.jobrole.id}}" ng-repeat="rolebind in task.taskrolebinds">
+                <table width="100%">
+                  <thead>
+                    <tr class="search-row filter-row ">
+                      <th class="color-col jobrole-border"width="5"></th>
+                      <th class="last-col search-col" width="110">
+                        <input class="{{(local_user_filter.search)?'active':'empty'}}" type="search" ng-model="local_user_filter.search" 
+                            placeholder="&#xf234; Add user" autocomplete="off"
+                            ng-focus="filter_focus($event)"
+                            ng-change="filter_change($event,local_user_filter)"/>
+                      </th>
+                      <th class="title-col"width="">{{rolebind.jobrole.title}}</th>
+                    </tr>
+                    <tr class="search-row filter-row ">
+                        <th colspan="3" class="search-col">
+                            
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="user in rolebind.users ">
+                        <th colspan="3" class="search-col">
+                            <div class="user">
+                                <div class="img"><img ng-src="{{user.pict}}" alt=""></div>
+                                <div class="name"><h6>{{user.name}} {{user.surname}}</h6></div>
+                                <div class="rem"><a class="edit-button" ng-click="unbind_role_user(rolebind,user)"> <i class="fa fa-times"></i> </a></div>
+                            </div>
+                        </th>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+        
+
+        <div id="users-popup" class="users-list" ng-style="{'height': users_filtered.length*46 + 4}">
+            <div class="user" ng-repeat="user in users | filter:user_filter as users_filtered" ng-mousedown="bind_role_user(user)">
+                <div class="img"><img ng-src="{{user.pict}}" alt=""></div>
+                <div class="name">{{user.search}}</div>
+            </div>
+        </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<div id="bind-user-modal" class="reveal-modal app-bind-user-content" data-reveal ng-if="false">
+    <div class="row-full-width">
+        <h2>Assign users <small>| {{task.title}} |</small></h2>
+        <table width="100%" class="menu-table">
+            <tbody>
+                <tr>
+                    <td class="menu-col">
+                        <ul class="button-group clearfix">
+                            <li class="left" > 
+                                <div class="row collapse" >
+                                    <div class="small-3 columns">
+                                        <span class="prefix has-tip tip-top"  title="To search, start typing!" data-tooltip >Search</span>
+                                    </div>
+                                    <div class="small-9 columns">
+                                        <input type="search" ng-model="user_filter.name" placeholder=""  autocomplete="off"/>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <table width="100%" class="estimate-table">
+            <thead>
+                <tr>
+                    <th class="first-col" width="36"></th>
+                    <th class="second-col" width=""></th>
+                    <!-- <th class="first-col" width="125"></th> -->
+                    <th class="last-col" ng-repeat="taskrolebind in task.taskrolebinds" width="1"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr width="1000" ng-repeat="user in users | orderByPriority | filter:user_filter  ">
+                    <td class="first-col" ng-click="" width="36">
+                        <img class="user-picture" ng-src="{{user.pict}}"></td>
+                    <td class="second-col" ng-click="" width="">
+                        <h6>{{ user.name }} {{ user.surname }}</h6>
+                    </td>
+                    <td class="last-col" ng-repeat="taskrolebind in task.taskrolebinds" width="1">
+                        <ul class="button-group">
+                            <li><a class="tiny button no-wrap bind-role {{ (taskrolebind.users|compareArrayToObject:user:'id')?'':'secondary' }}" data-userid="{{user.id}}" data-taskroleid="{{taskrolebind.id}}" 
+                            ng-click="try_binding($event,taskrolebind.id,user.id)">{{taskrolebind.jobrole.title}}</a></li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+           
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+

@@ -1,0 +1,54 @@
+<div class="container row">
+	<div class="small-6 medium-6 large-6 columns" ng-class="{}">
+		<div class="page page-apps row">
+			<div class="top">
+				<h1 ng-hide="weareinview">Apps</h1>
+			</div>		
+			
+			<table width="100%">
+			  <thead>
+			    <tr>
+			      <th class="color-col"width="5"></th>
+			      <th class="title-col"width=""></th>
+			      <th class="last-col button-col" width="46">
+					<a class="tiny button secondary">+</a>
+			      </th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr ng-repeat="app in apps | orderByPriority | filter:filter | orderBy:'title' " >
+			    	<td class="color-col" style="background: {{cli.color}}; box-shadow: 0 0 3px {{cli.color}};" ></th>
+			    	<td class="title-col" colspan="2"> 
+			    		<ul class="button-group edit-button-group">
+			    			<a ui-sref="clients" class="tiny button edit-button">Edit</a>
+			    			<a class="tiny button alert edit-button" ng-click="destroy(cli.id,$index)">x</a>
+			    		</ul>
+			    		<a ng-href="#/apps/{{app.app_name|lowercase}}">
+			    			<h6>
+			    				{{ app.app_name }}
+			    			</h6>
+			    		</a> 
+			    	</td>			    	
+			    </tr>
+			   
+			  </tbody>
+			</table>
+		</div>
+		<div class="divider"></div>
+	</div>
+
+
+	<div class="small-6 medium-6 large-6 columns" ui-view>
+	</div>
+
+	
+
+	
+</div>
+
+<div id="myModal" class="reveal-modal app-help-content" data-reveal>
+  <h2>Congratulations!!</h2>
+  <p class="lead">You found the <a href="" class="tiny button">Options</a> button. Now, be a sweetie and and close me.</p>
+  <p></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

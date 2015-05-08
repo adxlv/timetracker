@@ -1,0 +1,238 @@
+@import "../settings";
+
+$font-size : 11px;
+
+$cmyk-black		: cmyk(0,0,0,1);
+$cmyk-grey		: cmyk(0,0,0,0.75);
+$cmyk-lgrey		: cmyk(0,0,0,0.1);
+$cmyk-pink		: cmyk(0,1,0,0);
+
+// $faded-color 	: #707070;
+$faded-color 	: $cmyk-grey;
+
+
+$normal-border 	: 1px solid $cmyk-black;
+$faded-border 	: 1px solid $faded-color;
+$faded-border2 	: 1px dotted $faded-color;
+$pink-border 	: 2px solid $pink-color;
+
+html.estimate {
+	// margin: 0.2in 0.5in 0.2in 0.5in;
+	margin: 0.5in 0.1in;
+
+}
+
+body {
+	font-family: "helvetica neue";
+	font-size: $font-size;
+	line-height: $font-size;
+	color: $cmyk-black;
+	// text-align: center;
+}
+
+
+table {
+	width: 90%;
+	margin: 0;
+	padding: 0;
+	margin: auto;
+	tr {
+		margin: 0;
+		padding: 0;
+		td {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+table.header {
+	margin-top: $font-size*2;
+	img {
+		width: 200px;
+	}
+
+	&.estimate {
+		.textn {
+			padding-right: 10px;
+		}
+		td.text {
+			padding-bottom: 1px;
+		}
+		img {
+			position: relative;
+			// margin-top: -30px;
+			width: 180px;
+		}
+	}
+}
+table.main-body {
+	// border-top: 2px solid #F60680;
+	// border-bottom: 2px solid #F60680;
+}
+table.darbi {
+	margin-top: $font-size*4;
+	// border: $normal-border;
+
+	thead.head, tbody.darbi {
+		border: $normal-border;
+	}
+	
+	th {
+		font-size: $font-size - 1;
+		color: $faded-color;
+		padding: 2px;
+		border-bottom: $normal-border;
+	}
+	td {
+		padding: 2px;
+	}
+	.darbi {
+		text-align: left;
+		padding-left: 10px;
+	}
+	.summa {
+		text-align: center;
+		border-left: $faded-border;
+	}
+
+
+	.jobroles {
+		text-align: center;
+		border-bottom: $faded-border2;
+		border-left: $faded-border;
+		font-size: 8px;
+		padding: 0 5px;
+	}
+	.workhour {
+		text-align: center;
+		border-bottom: $normal-border;
+		border-left: $faded-border;
+		font-size: 8px;
+	}
+	
+
+	tr.split-row {
+		font-size: $font-size - 5;
+		line-height: $font-size - 5;
+	}
+
+	tr.darba-row {
+		.darbi {
+			border-top: $faded-border2;
+			border-bottom: $faded-border2;
+			font-weight: bold;
+		}
+		.hours {
+			border-top: $faded-border2;
+			border-bottom: $faded-border2;
+			border-left: $faded-border;
+			border-right: $faded-border;
+			text-align: center;
+			font-weight: normal;
+			font-size: 10px;
+		}
+		.summa {
+			border-top: $faded-border2;
+			border-bottom: $faded-border2;
+
+		}
+
+	}
+	tr.total-row {
+		.darbi {
+			text-align: right;
+			border: none;	
+			padding-right: 10px;		
+		}
+		.summa {
+			text-align: center;
+			// font-weight: bold;
+
+			border-left: $normal-border;
+			border-right: $normal-border;
+			border-bottom: $normal-border;
+		}
+		&.final {
+			.summa {
+				font-weight: bold;
+			}
+		}
+	}
+	.spacer {
+		td.summa {
+			border: none;
+			border-bottom: $pink-border;
+		}
+	}
+
+	&.estimate {
+		margin-top: $font-size*1;
+		
+		td.summa {
+			padding-right: 8px;
+			text-align: right;
+		}
+		.darbi {
+			tr.darba-row {
+				td.darbi {
+					font-weight: normal;
+					padding-left: 15px;
+				}
+				&.group-header{
+					td {
+						background: $cmyk-lgrey;
+						&.darbi {
+							font-weight: bold;
+							padding-left: 10px;
+						}
+					}
+				}
+			}
+		}
+		.total {
+			.annotation {
+				color: $pink-color;
+				font-weight: bold;
+				
+			}
+			td.darbi {
+				font-weight: bold;
+			}
+			td.summa {
+				padding-right: 8px;
+				text-align: right;
+			}
+		}
+	}
+}
+table.summa-vardiem {
+	margin-top: $font-size*2;
+	text-align: right;
+}
+table.paraksts {
+	margin-top: $font-size*5;
+}
+
+
+.textb {
+	font-weight: bold;
+	// font-style: italic;
+}
+.split-col {
+	border-left: $normal-border;
+}
+
+.split-row {
+	&.line.black {
+		td {
+			border-bottom: $normal-border;
+		}
+	}
+	&.line.pink {
+		td {
+			border-bottom: $pink-border;
+		}
+	}
+}
+

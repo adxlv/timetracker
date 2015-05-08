@@ -1,0 +1,185 @@
+<div class="page-settings row">
+<div class="medium-12 columns box-drop-shadow">
+    <h1><small>{{link}} name</small>&nbsp;{{branch.title}}</h1>
+    <form autocomplete="off">
+        <fieldset>
+            <legend>Basic Info</legend>
+            <div class="row" data-equalizer>
+                <div class="small-6 columns" data-equalizer-watch>
+                    <div class="the-image">
+                        <img ng-src="{{branch.image_url}}" alt="">
+                    </div>
+                </div>
+                <div class="small-6 columns" data-equalizer-watch>
+                    <div class="add-image">
+                        <a href="" class="button tiny secondary disabled">Add Image</a>
+                    </div>
+                </div>
+                <div class="medium-8 columns">
+                    <label>Title
+                        <input autocomplete="off" type="text" placeholder="Title" ng-model="branch.title" />
+                    </label>
+                </div>
+                <div class="medium-4 columns">
+                    <label>Busines Type
+                        <select ng-model="branch.type">
+                            <option value="standart">Standart</option>
+                            <option value="micro">Micro</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="small-12 columns">
+                    <label>Description
+                        <textarea rows="3" placeholder="Description" ng-model="branch.description"></textarea>
+                    </label>
+                </div>
+
+
+                <div class="small-6 columns end">
+                    <label>Chairman
+                        <input autocomplete="off" type="text" placeholder="John Doe" ng-model="branch.chairman" />
+                    </label>
+                </div>
+                
+            </div>
+
+        	
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Advanced Info</legend>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>Legal Title
+                        <input autocomplete="off" type="text" placeholder='SIA "Brandbox"' ng-model="branch.name" />
+                    </label>
+                </div>
+                <div class="medium-6 columns">
+                    <label>Reg Nr
+                        <input autocomplete="off" type="text" placeholder="LV40103804277" ng-model="branch.reg_nr" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="medium-12 columns">
+                    <label>Address
+                        <input autocomplete="off" type="text" placeholder="Tērbatas iela 30" ng-model="branch.legal_street" />
+                    </label>
+                </div>
+                <div class="medium-4 columns">
+                    <label>Postal code
+                        <input autocomplete="off" type="text" placeholder="LV-1034" ng-model="branch.legal_postal" />
+                    </label>
+                </div>
+                <div class="medium-4 columns">
+                    <label>City
+                        <input autocomplete="off" type="text" placeholder="Rīga" ng-model="branch.legal_city" />
+                    </label>
+                </div>
+                <div class="medium-4 columns">
+                    <label>Country
+                        <input autocomplete="off" type="text" placeholder="Latvija" ng-model="branch.legal_country" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="medium-9 columns">
+                    <label>Bank Account Nr
+                        <input autocomplete="off" type="text" placeholder="LV99HABA0440044004400" ng-model="branch.bank_nr" />
+                    </label>
+                </div>
+
+                <div class="medium-3 columns">
+                    <label>Bank Code
+                        <input autocomplete="off" type="text" placeholder="HABALV22" ng-model="branch.bank_code" />
+                    </label>
+                </div>
+
+                <div class="medium-4 columns end">
+                    <label>Bank
+                        <input autocomplete="off" type="text" placeholder="AS Swedbank" ng-model="branch.bank" />
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="medium-8 columns">
+                    <label>Contact Name
+                        <input autocomplete="off" type="text" placeholder="John Doe" ng-model="branch.contact_name" />
+                    </label>
+                </div>
+
+                <div class="medium-4 columns end">
+                    <label>Phone number
+                        <input autocomplete="off" type="text" placeholder="22002200" ng-model="branch.contact_details" />
+                    </label>
+                </div>
+
+            </div>
+        </fieldset>
+
+
+
+        <div class="row hide">
+            <div class="small-6 columns">
+                <label>Mark with Color
+                    <input autocomplete="off" id="color-input" type="text" placeholder="#78AA00" ng-model="branch.color" />
+                    <div class="square" style="background-color: {{branch.color}}" > </div>
+                </label>
+            </div>
+            <div class="small-1 columns">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-12 columns">
+            	<a href="" class="button tiny success" ng-click="save()">Save</a>
+            	<a href="" class="button tiny alert  " ui-sref="settings.businessinfo">Back</a>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="row hide">
+            <div class="medium-12 columns">
+                <label>Select Box
+                    <select>
+                        <option value="husker">Husker</option>
+                        <option value="starbuck">Starbuck</option>
+                        <option value="hotdog">Hot Dog</option>
+                        <option value="apollo">Apollo</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="row hide">
+            <div class="medium-6 columns">
+                <label>Choose Your Favorite</label>
+                <input autocomplete="off" type="radio" name="pokemon" value="Red" id="pokemonRed">
+                <label for="pokemonRed">Red</label>
+                <input autocomplete="off" type="radio" name="pokemon" value="Blue" id="pokemonBlue">
+                <label for="pokemonBlue">Blue</label>
+            </div>
+            <div class="medium-6 columns hide">
+                <label>Check these out</label>
+                <input autocomplete="off" id="checkbox1" type="checkbox">
+                <label for="checkbox1">Checkbox 1</label>
+                <input autocomplete="off" id="checkbox2" type="checkbox">
+                <label for="checkbox2">Checkbox 2</label>
+            </div>
+        </div>
+        
+    </form>
+
+</div>
+</div>

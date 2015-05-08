@@ -1,0 +1,2 @@
+var app=angular.module("Timetracker.apps.FluidAlerts",["ngResource","ui.router","ui.sortable","Timetracker.apps.FluidAlerts.services","Timetracker.apps.FluidAlerts.controllers"]).config(function(e,r){e.state("fa_home",{url:"/apps/fluidalerts",templateUrl:"/coustom-ng-apps/fluid_alerts/partials/index.html",controller:"FA_IndexController"})});
+//# sourceMappingURL=./app-min.js.map

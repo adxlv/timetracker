@@ -1,0 +1,132 @@
+html.estimate {
+  margin: 0.5in 0.1in; }
+
+body {
+  font-family: "helvetica neue";
+  font-size: 11px;
+  line-height: 11px;
+  color: cmyk(0, 0, 0, 1); }
+
+table {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  margin: auto; }
+  table tr {
+    margin: 0;
+    padding: 0; }
+    table tr td {
+      margin: 0;
+      padding: 0; }
+
+table.header {
+  margin-top: 22px; }
+  table.header img {
+    width: 200px; }
+  table.header.estimate .textn {
+    padding-right: 10px; }
+  table.header.estimate td.text {
+    padding-bottom: 1px; }
+  table.header.estimate img {
+    position: relative;
+    width: 180px; }
+
+table.darbi {
+  margin-top: 44px; }
+  table.darbi thead.head, table.darbi tbody.darbi {
+    border: 1px solid cmyk(0, 0, 0, 1); }
+  table.darbi th {
+    font-size: 10px;
+    color: cmyk(0, 0, 0, 0.75);
+    padding: 2px;
+    border-bottom: 1px solid cmyk(0, 0, 0, 1); }
+  table.darbi td {
+    padding: 2px; }
+  table.darbi .darbi {
+    text-align: left;
+    padding-left: 10px; }
+  table.darbi .summa {
+    text-align: center;
+    border-left: 1px solid cmyk(0, 0, 0, 0.75); }
+  table.darbi .jobroles {
+    text-align: center;
+    border-bottom: 1px dotted cmyk(0, 0, 0, 0.75);
+    border-left: 1px solid cmyk(0, 0, 0, 0.75);
+    font-size: 8px;
+    padding: 0 5px; }
+  table.darbi .workhour {
+    text-align: center;
+    border-bottom: 1px solid cmyk(0, 0, 0, 1);
+    border-left: 1px solid cmyk(0, 0, 0, 0.75);
+    font-size: 8px; }
+  table.darbi tr.split-row {
+    font-size: 6px;
+    line-height: 6px; }
+  table.darbi tr.darba-row .darbi {
+    border-top: 1px dotted cmyk(0, 0, 0, 0.75);
+    border-bottom: 1px dotted cmyk(0, 0, 0, 0.75);
+    font-weight: bold; }
+  table.darbi tr.darba-row .hours {
+    border-top: 1px dotted cmyk(0, 0, 0, 0.75);
+    border-bottom: 1px dotted cmyk(0, 0, 0, 0.75);
+    border-left: 1px solid cmyk(0, 0, 0, 0.75);
+    border-right: 1px solid cmyk(0, 0, 0, 0.75);
+    text-align: center;
+    font-weight: normal;
+    font-size: 10px; }
+  table.darbi tr.darba-row .summa {
+    border-top: 1px dotted cmyk(0, 0, 0, 0.75);
+    border-bottom: 1px dotted cmyk(0, 0, 0, 0.75); }
+  table.darbi tr.total-row .darbi {
+    text-align: right;
+    border: none;
+    padding-right: 10px; }
+  table.darbi tr.total-row .summa {
+    text-align: center;
+    border-left: 1px solid cmyk(0, 0, 0, 1);
+    border-right: 1px solid cmyk(0, 0, 0, 1);
+    border-bottom: 1px solid cmyk(0, 0, 0, 1); }
+  table.darbi tr.total-row.final .summa {
+    font-weight: bold; }
+  table.darbi .spacer td.summa {
+    border: none;
+    border-bottom: 2px solid #F60680; }
+  table.darbi.estimate {
+    margin-top: 11px; }
+    table.darbi.estimate td.summa {
+      padding-right: 8px;
+      text-align: right; }
+    table.darbi.estimate .darbi tr.darba-row td.darbi {
+      font-weight: normal;
+      padding-left: 15px; }
+    table.darbi.estimate .darbi tr.darba-row.group-header td {
+      background: cmyk(0, 0, 0, 0.1); }
+      table.darbi.estimate .darbi tr.darba-row.group-header td.darbi {
+        font-weight: bold;
+        padding-left: 10px; }
+    table.darbi.estimate .total .annotation {
+      color: #F60680;
+      font-weight: bold; }
+    table.darbi.estimate .total td.darbi {
+      font-weight: bold; }
+    table.darbi.estimate .total td.summa {
+      padding-right: 8px;
+      text-align: right; }
+
+table.summa-vardiem {
+  margin-top: 22px;
+  text-align: right; }
+
+table.paraksts {
+  margin-top: 55px; }
+
+.textb {
+  font-weight: bold; }
+
+.split-col {
+  border-left: 1px solid cmyk(0, 0, 0, 1); }
+
+.split-row.line.black td {
+  border-bottom: 1px solid cmyk(0, 0, 0, 1); }
+.split-row.line.pink td {
+  border-bottom: 2px solid #F60680; }

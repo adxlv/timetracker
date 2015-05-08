@@ -1,0 +1,30 @@
+<div class="container row">
+    <div class="page">
+        <div class="page-reports">
+            <div class="row tabs-row">
+                <div class="small-12 columns">
+                    <dl class="tabs">
+                        <dd ui-sref-active="active" ng-class="{'active': ('reports.dashboard'|isState)}">
+                            <a ui-sref="reports.dashboard">Dashboard</a>
+                        </dd>
+                        <dd ui-sref-active="active" ng-class="{'active': ('reports.clients'|isState)}">
+                            <a ui-sref="reports.clients">Clients</a>
+                        </dd>
+                        <dd ui-sref-active="active"><a ui-sref="reports.users">All users <small>this week</small></a>
+                        </dd>
+                        <dd ui-sref-active="active"><a ui-sref="reports.bonus">Bonus System</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="row content-row">
+                <div class="small-12 columns page-my-tasks">
+                    <div class="tabs-content horizontal-move">
+                        <div class="content active" ui-view> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

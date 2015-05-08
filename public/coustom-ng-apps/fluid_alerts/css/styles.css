@@ -1,0 +1,37 @@
+.lt-index .seperate-row th {
+  padding: 10px; }
+.lt-index input {
+  margin: 0;
+  padding: 0 5px;
+  font-size: 0.8rem; }
+  .lt-index input[type="text"] {
+    border: 1px solid #f0f0f0;
+    box-shadow: none; }
+    .lt-index input[type="text"]:focus {
+      box-shadow: 0 0 5px #999999;
+      border: none;
+      background: #F0F0F0; }
+.lt-index .input-table tr th {
+  padding: 0; }
+  .lt-index .input-table tr th input[type="text"] {
+    background: #F5F5F5; }
+    .lt-index .input-table tr th input[type="text"]:focus {
+      background: #E0E0E0; }
+.lt-index .input-table tr td:hover {
+  background: initial; }
+.lt-index .result-table tr td {
+  padding: 5px 10px; }
+.lt-index .drag-col {
+  text-align: center; }
+.lt-index .check-col {
+  text-align: center; }
+.lt-index .lang-col input {
+  text-align: center; }
+.lt-index .value-col {
+  text-align: center; }
+.lt-index .button.secondary {
+  background: #FFF; }
+  .lt-index .button.secondary:hover {
+    background: #F5F5F5; }
+.lt-index .end {
+  padding: 80px; }

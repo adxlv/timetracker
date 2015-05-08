@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "public"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "app"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "public/js"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "public/sass"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "public/partials"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "public/coustom-ng-apps"
+		}
+	]
+}

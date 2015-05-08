@@ -1,0 +1,2740 @@
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+/* http://www.google.com/fonts/#QuickUsePlace:quickUse/Family:Open+Sans:400,300,600 */
+/* icon fonts */
+/* line 3, ../sass/includes/_modals.scss */
+#estimate-modal .jobs-table input {
+  margin: 0 0 1px 0;
+}
+
+/* line 21, ../sass/screen.scss */
+.fa {
+  display: inline;
+}
+
+/* line 23, ../sass/screen.scss */
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+/* line 33, ../sass/screen.scss */
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+/* line 38, ../sass/screen.scss */
+svg {
+  overflow: initial;
+}
+
+/* line 42, ../sass/screen.scss */
+html {
+  font-size: 90%;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 47, ../sass/screen.scss */
+* {
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+  opacity: 1;
+  font-weight: 300;
+}
+
+/* line 53, ../sass/screen.scss */
+.preload-animations-disabled * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* line 58, ../sass/screen.scss */
+body {
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* line 66, ../sass/screen.scss */
+.app-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* line 74, ../sass/screen.scss */
+.app-container:after {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  position: fixed;
+  display: none;
+  content: "";
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 92, ../sass/screen.scss */
+.app-pusher {
+  background: #F3EFE0;
+  background: #FFF;
+  width: 100%;
+  min-height: 100%;
+  margin-left: 50px;
+  padding-right: 50px;
+}
+/* line 105, ../sass/screen.scss */
+.app-pusher > .container {
+  left: 0px;
+  position: relative;
+}
+
+/* line 112, ../sass/screen.scss */
+.app-top {
+  background: #fff;
+}
+/* line 115, ../sass/screen.scss */
+.app-top > .container {
+  position: relative;
+}
+
+/* line 2, ../sass/includes/_appcontents.scss */
+.app-content {
+  position: relative;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 9, ../sass/includes/_appcontents.scss */
+.app-content > .row {
+  max-width: 75rem;
+  max-width: 85rem;
+  padding-left: 2.8125rem;
+  padding-right: 2.8125rem;
+}
+
+/* line 20, ../sass/includes/_appcontents.scss */
+.page-login {
+  width: 100%;
+}
+/* line 22, ../sass/includes/_appcontents.scss */
+.page-login .row.login {
+  height: 250px;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  position: absolute;
+}
+/* line 32, ../sass/includes/_appcontents.scss */
+.page-login .row.login .alert-box p {
+  font-size: 0.8125rem;
+}
+
+/* line 40, ../sass/includes/_appcontents.scss */
+.page .row:not(.collapse) > .columns {
+  margin-bottom: 10px;
+}
+/* line 45, ../sass/includes/_appcontents.scss */
+.page .page-index .top {
+  position: relative;
+  top: 200px;
+  left: 0%;
+}
+/* line 49, ../sass/includes/_appcontents.scss */
+.page .page-index .top h1 {
+  font-family: 'Bangers', sans-serif;
+  font-size: 6em;
+  line-height: 0.7em;
+}
+/* line 53, ../sass/includes/_appcontents.scss */
+.page .page-index .top h1 small {
+  line-height: 0.7em;
+}
+/* line 57, ../sass/includes/_appcontents.scss */
+.page .page-index .top h1:nth-child(2) {
+  color: #fbd25c;
+}
+/* line 63, ../sass/includes/_appcontents.scss */
+.page .page-404 .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50%;
+  width: 50%;
+}
+/* line 72, ../sass/includes/_appcontents.scss */
+.page .page-404 .top h1 {
+  font-family: 'Bangers', sans-serif;
+  font-size: 4em;
+  line-height: 0.7em;
+}
+/* line 76, ../sass/includes/_appcontents.scss */
+.page .page-404 .top h1 small {
+  line-height: 0.7em;
+}
+/* line 80, ../sass/includes/_appcontents.scss */
+.page .page-404 .top h1:nth-child(0) {
+  color: #fbd25c;
+  color: #FBD25C;
+}
+/* line 87, ../sass/includes/_appcontents.scss */
+.page.page-clients-edit #nr-input {
+  text-align: center;
+}
+/* line 90, ../sass/includes/_appcontents.scss */
+.page.page-clients-edit .row:not(.collapse) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 93, ../sass/includes/_appcontents.scss */
+.page.page-clients-edit .row:not(.collapse) > .columns {
+  margin-bottom: 0;
+}
+/* line 100, ../sass/includes/_appcontents.scss */
+.page.page-clients #color-input {
+  width: 75%;
+  float: left;
+}
+/* line 104, ../sass/includes/_appcontents.scss */
+.page.page-clients .square {
+  width: 2.3125rem;
+  height: 2.3125rem;
+  float: right;
+}
+/* line 116, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-table h6 {
+  white-space: normal;
+}
+/* line 121, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .ui-sortable-placeholder {
+  width: 60px !important;
+  height: 267.3px !important;
+  visibility: visible !important;
+  box-shadow: 0 0 10px #EEE;
+}
+/* line 132, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group {
+  position: relative;
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 50px;
+}
+/* line 140, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group.hover .main {
+  background: #EEE;
+  box-shadow: 0 0 10px #BBB;
+}
+/* line 149, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate {
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 189px;
+  height: 267.3px;
+  background: #fff;
+  box-shadow: 0 0 10px #CCC;
+  padding: 10px;
+  cursor: pointer;
+}
+/* line 164, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate .logo {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  right: 10px;
+}
+/* line 170, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate .title {
+  position: absolute;
+  top: 85px;
+  left: 10px;
+  right: 10px;
+  display: block;
+  text-align: center;
+}
+/* line 178, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate .total {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+/* line 183, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate .edit,
+.page .page-projects .estimate-list .estimate-page-group .estimate .expand {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  padding: 5px;
+  opacity: 0;
+}
+/* line 191, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate .edit .edit-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate .edit .expand-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate .expand .edit-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate .expand .expand-button {
+  display: none;
+  color: #CCC;
+}
+/* line 198, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate .edit:hover .edit-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate .expand:hover .edit-button {
+  color: #f04124;
+}
+/* line 201, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate .edit:hover .expand-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate .expand:hover .expand-button {
+  color: #FBD25C;
+}
+/* line 207, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate:hover, .page .page-projects .estimate-list .estimate-page-group .estimate.active {
+  top: -5px;
+  box-shadow: 0 5px 15px #CCC;
+}
+/* line 211, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate:hover .edit,
+.page .page-projects .estimate-list .estimate-page-group .estimate:hover .expand, .page .page-projects .estimate-list .estimate-page-group .estimate.active .edit,
+.page .page-projects .estimate-list .estimate-page-group .estimate.active .expand {
+  opacity: 1;
+}
+/* line 214, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .estimate:hover .edit .edit-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate:hover .edit .expand-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate:hover .expand .edit-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate:hover .expand .expand-button, .page .page-projects .estimate-list .estimate-page-group .estimate.active .edit .edit-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate.active .edit .expand-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate.active .expand .edit-button,
+.page .page-projects .estimate-list .estimate-page-group .estimate.active .expand .expand-button {
+  display: block;
+}
+/* line 220, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .subestimates {
+  display: inline-block;
+  position: relative;
+  height: 267.3px;
+  padding-top: 80.19px;
+}
+/* line 224, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .subestimates .ui-sortable-placeholder {
+  display: none !important;
+  width: 100px !important;
+}
+/* line 229, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .subestimates .space-fill {
+  position: relative;
+  width: 189px;
+  float: left;
+}
+/* line 245, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .subestimates .subestimate {
+  position: relative;
+  width: 132.3px;
+  height: 187.11px;
+  margin-left: 10px;
+  float: right;
+}
+/* line 252, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .subestimates .subestimate .title {
+  top: 60px;
+}
+/* line 254, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .estimate-page-group .subestimates .subestimate .title h6 {
+  font-size: 0.85rem;
+}
+/* line 262, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .empty-filler {
+  height: 180px;
+  overflow: hidden;
+}
+/* line 266, ../sass/includes/_appcontents.scss */
+.page .page-projects .estimate-list .empty-filler span {
+  font-size: 8rem;
+  overflow: hidden;
+  color: #F8F8F8;
+  margin-left: 5px;
+  margin-top: -10px;
+  display: block;
+  letter-spacing: -10px;
+}
+/* line 277, ../sass/includes/_appcontents.scss */
+.page .page-projects .top {
+  margin-top: 50px;
+}
+/* line 280, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row {
+  text-align: center;
+}
+/* line 283, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row .columns .chart {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 305, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row .columns #chart-project-overview-roles .c3-target-Done .c3-bar-0 {
+  fill: #C9674A !important;
+}
+/* line 306, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row .columns #chart-project-overview-roles .c3-target-Done .c3-bar-1 {
+  fill: #4AC9A5 !important;
+}
+/* line 307, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row .columns #chart-project-overview-roles .c3-target-Done .c3-bar-2 {
+  fill: #72A73D !important;
+}
+/* line 308, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row .columns #chart-project-overview-roles .c3-target-Done .c3-bar-3 {
+  fill: #C93B75 !important;
+}
+/* line 309, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row .columns #chart-project-overview-roles .c3-target-Done .c3-bar-4 {
+  fill: #4D4EC9 !important;
+}
+/* line 310, ../sass/includes/_appcontents.scss */
+.page .page-projects .chart-row .columns #chart-project-overview-roles .c3-target-Done .c3-bar-5 {
+  fill: #FBD25C !important;
+}
+/* line 315, ../sass/includes/_appcontents.scss */
+.page .page-projects table h6 {
+  white-space: nowrap;
+  padding: 0 10px;
+}
+/* line 320, ../sass/includes/_appcontents.scss */
+.page .page-projects table .estimate-filler-row td {
+  background: none;
+  padding: 10px 0;
+}
+/* line 329, ../sass/includes/_appcontents.scss */
+.page .page-projects table .estimate-title-row td {
+  padding-top: 10px;
+}
+/* line 331, ../sass/includes/_appcontents.scss */
+.page .page-projects table .estimate-title-row td h5 {
+  border-bottom: 1px solid #FBD25C;
+  padding-bottom: 2px;
+}
+/* line 337, ../sass/includes/_appcontents.scss */
+.page .page-projects table .user-picture {
+  width: 28px;
+  margin: 0;
+  margin-left: 2px;
+  float: left;
+  float: right;
+  border: none;
+  box-shadow: none;
+}
+/* line 348, ../sass/includes/_appcontents.scss */
+.page .page-projects table .user-picture.first {
+  cursor: pointer;
+  background: #CCC;
+}
+/* line 351, ../sass/includes/_appcontents.scss */
+.page .page-projects table .user-picture.first:hover {
+  background: #FBD25C;
+}
+/* line 358, ../sass/includes/_appcontents.scss */
+.page .page-projects table .picture-container {
+  margin-left: auto;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  right: 0px;
+}
+/* line 365, ../sass/includes/_appcontents.scss */
+.page .page-projects table .picture-container.single {
+  margin: auto;
+  text-align: center;
+}
+/* line 368, ../sass/includes/_appcontents.scss */
+.page .page-projects table .picture-container.single .user-picture {
+  float: none;
+}
+/* line 374, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-button {
+  padding: 0.76rem 0;
+  padding: 0.61rem 0 0.59rem;
+}
+/* line 378, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-button .fa-check {
+  display: none;
+}
+/* line 379, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-button .fa-circle-o-notch {
+  display: inline-block;
+}
+/* line 382, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-button.success .fa-check {
+  display: inline-block;
+}
+/* line 383, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-button.success .fa-circle-o-notch {
+  display: none;
+}
+/* line 387, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-task-filter .fa {
+  font-size: 0.9rem;
+}
+/* line 390, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-task-filter .fa-eye {
+  display: inline-block;
+  color: #43AC6A;
+}
+/* line 394, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-task-filter .fa-eye-slash {
+  display: none;
+  color: #f04124;
+}
+/* line 399, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-task-filter.filter-on .fa-eye {
+  display: none;
+}
+/* line 400, ../sass/includes/_appcontents.scss */
+.page .page-projects .done-task-filter.filter-on .fa-eye-slash {
+  display: inline-block;
+}
+/* line 404, ../sass/includes/_appcontents.scss */
+.page .page-projects table.done-task-filter-on tr.is-done {
+  display: none;
+}
+/* line 411, ../sass/includes/_appcontents.scss */
+.page .page-estimates .sortable.fix-display {
+  display: table-header-group;
+}
+/* line 414, ../sass/includes/_appcontents.scss */
+.page .page-estimates .full-row {
+  position: relative;
+}
+/* line 417, ../sass/includes/_appcontents.scss */
+.page .page-estimates .row.last-buttons-row {
+  margin-top: 30px;
+}
+/* line 420, ../sass/includes/_appcontents.scss */
+.page .page-estimates .row.tabs-row {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+/* line 424, ../sass/includes/_appcontents.scss */
+.page .page-estimates .total-row {
+  background: none;
+  margin-top: -50px;
+  text-align: right;
+  padding-right: 5px;
+}
+/* line 429, ../sass/includes/_appcontents.scss */
+.page .page-estimates .total-row div {
+  display: inline-block;
+}
+/* line 433, ../sass/includes/_appcontents.scss */
+.page .page-estimates .total-row .number {
+  width: 140px;
+}
+/* line 439, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .group-header-col input {
+  text-transform: uppercase;
+  box-shadow: none;
+  background: #AAA;
+  color: #EFEFEF;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-left: 8px;
+}
+/* line 448, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .group-header-col input:active, .page .page-estimates .jobs-table .group-header-col input:focus {
+  box-shadow: 0 0 5px #999999;
+}
+/* line 455, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col {
+  position: relative;
+  text-align: center;
+  background: #FFF;
+  color: #BBB;
+}
+/* line 462, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .context-menu {
+  padding: 10px 0;
+}
+/* line 465, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .context-menu .fa {
+  display: inline-block;
+}
+/* line 469, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col.group-header-col {
+  background: #AAA;
+}
+/* line 471, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col.group-header-col i {
+  color: #EFEFEF;
+}
+/* line 473, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col:hover {
+  background: #EFEFEF;
+  color: #333;
+}
+/* line 476, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col:hover i {
+  color: #333;
+}
+/* line 478, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .button-group {
+  margin: 0;
+  padding: 1px 0px;
+  position: absolute;
+  top: 0;
+  left: 33px;
+  width: 0;
+  background: #e7e7e7;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 0 5px #999999;
+}
+/* line 494, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .button-group .slider {
+  width: 121px;
+  height: 100%;
+}
+/* line 500, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .button-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 503, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .button-group.show, .page .page-estimates .jobs-table .drag-col .button-group.show-lock {
+  display: block;
+  margin-left: 0px;
+  width: 121px;
+  padding: 1px 1px;
+}
+/* line 509, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .button-group.show .button, .page .page-estimates .jobs-table .drag-col .button-group.show-lock .button {
+  left: 0;
+}
+/* line 511, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .button-group .button {
+  position: relative;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  left: -121px;
+  top: 0;
+  vertical-align: top;
+  margin-left: -4px;
+  margin-right: 0;
+  width: 60px;
+  display: inline-block;
+  height: 100%;
+  color: rgba(255, 255, 255, 0);
+}
+/* line 526, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .drag-col .button-group .button i {
+  color: #333;
+}
+/* line 530, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .ui-sortable-helper .button-group.show {
+  display: none;
+}
+/* line 533, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .ui-sortable-placeholder {
+  background: #EFEFEF;
+}
+/* line 537, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table th {
+  position: relative;
+  height: 75px;
+}
+/* line 540, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table th small {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  width: 100%;
+}
+/* line 549, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .jobs-roles-salary-edit-row.show th input {
+  margin-top: 0px;
+}
+/* line 552, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .jobs-roles-salary-edit-row.show th span {
+  margin-top: 0px;
+}
+/* line 556, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .jobs-roles-salary-edit-row th {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+/* line 557, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .jobs-roles-salary-edit-row th.input-col {
+  margin: 0;
+  padding: 0;
+}
+/* line 564, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .jobs-roles-salary-edit-row th input {
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 1px #ccc;
+}
+/* line 570, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .jobs-roles-salary-edit-row th span {
+  position: relative;
+  display: block;
+  margin-top: -50px;
+}
+/* line 577, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .gear-col {
+  text-align: center;
+  color: #BBB;
+}
+/* line 580, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .gear-col:hover {
+  background: #DDD;
+}
+/* line 582, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .gear-col:hover i {
+  color: #222;
+}
+/* line 584, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .gear-col.active {
+  background: #333;
+}
+/* line 586, ../sass/includes/_appcontents.scss */
+.page .page-estimates .jobs-table .gear-col.active i {
+  color: #FFF;
+}
+/* line 592, ../sass/includes/_appcontents.scss */
+.page .page-estimates table input {
+  margin: 0;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  border: 1px solid #EFEFEF;
+}
+/* line 598, ../sass/includes/_appcontents.scss */
+.page .page-estimates table input:focus {
+  border: none;
+  border: 1px solid #EFEFEF;
+  background-color: #EFEFEF;
+}
+/* line 604, ../sass/includes/_appcontents.scss */
+.page .page-estimates table input.title-input {
+  text-align: left;
+  padding-left: 20px;
+}
+/* line 608, ../sass/includes/_appcontents.scss */
+.page .page-estimates table .new-task-col,
+.page .page-estimates table .new-exp-col {
+  background: none;
+}
+/* line 611, ../sass/includes/_appcontents.scss */
+.page .page-estimates table .new-task-col > div,
+.page .page-estimates table .new-exp-col > div {
+  position: relative;
+  padding-right: 48px;
+}
+/* line 615, ../sass/includes/_appcontents.scss */
+.page .page-estimates table .new-task-col .button,
+.page .page-estimates table .new-exp-col .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+/* line 620, ../sass/includes/_appcontents.scss */
+.page .page-estimates table .new-task-col .button i,
+.page .page-estimates table .new-exp-col .button i {
+  top: 1px;
+}
+/* line 626, ../sass/includes/_appcontents.scss */
+.page .page-estimates table .bound-estimates-table:before {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 20px;
+}
+/* line 632, ../sass/includes/_appcontents.scss */
+.page .page-estimates table .bound-estimates-table .bound-estimates-title {
+  border-top: 1px solid #FBD25C;
+  padding-top: 5px;
+}
+/* line 639, ../sass/includes/_appcontents.scss */
+.page .page-estimates table.expenses-table .new-exp-col {
+  padding-top: 30px;
+}
+/* line 641, ../sass/includes/_appcontents.scss */
+.page .page-estimates table.expenses-table .new-exp-col input {
+  float: left;
+  width: 78%;
+}
+/* line 645, ../sass/includes/_appcontents.scss */
+.page .page-estimates table.expenses-table .new-exp-col .button {
+  float: right;
+  width: 20%;
+}
+/* line 658, ../sass/includes/_appcontents.scss */
+.page .page-estimate-info .details:hover i {
+  opacity: 1;
+}
+/* line 663, ../sass/includes/_appcontents.scss */
+.page .page-estimate-info table .totals td {
+  border-top: 1px solid #F60680;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+/* line 669, ../sass/includes/_appcontents.scss */
+.page .page-estimate-info table td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 674, ../sass/includes/_appcontents.scss */
+.page .page-estimate-info h6 {
+  display: inline-block;
+}
+/* line 677, ../sass/includes/_appcontents.scss */
+.page .page-estimate-info i {
+  margin-left: 15px;
+  opacity: 0;
+  color: #ccc;
+}
+/* line 691, ../sass/includes/_appcontents.scss */
+.page .page-new-task #task-select {
+  height: initial;
+  background: none;
+}
+/* line 697, ../sass/includes/_appcontents.scss */
+.page .page-task-info label.inline {
+  margin-bottom: 0;
+}
+/* line 698, ../sass/includes/_appcontents.scss */
+.page .page-task-info input {
+  margin-bottom: 0;
+}
+/* line 699, ../sass/includes/_appcontents.scss */
+.page .page-task-info .close-page-task-info {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #ccc;
+  font-size: 2em;
+  font-style: 300;
+}
+/* line 707, ../sass/includes/_appcontents.scss */
+.page .page-task-info .edit-page-task-info {
+  color: #ccc;
+  position: absolute;
+  font-size: 1rem;
+  margin-left: 15px;
+  margin-top: 5px;
+  display: none;
+}
+/* line 717, ../sass/includes/_appcontents.scss */
+.page .page-task-info .title-row:hover .edit-page-task-info {
+  display: inline;
+}
+/* line 722, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-edit-row {
+  height: 0px;
+  overflow: hidden;
+  margin-bottom: 45px;
+}
+/* line 727, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-edit-row.show {
+  height: 150px;
+}
+/* line 732, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row .hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: -35px;
+  margin-bottom: 10px;
+}
+/* line 738, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row .user-name span {
+  display: block;
+  margin-top: 2px;
+}
+/* line 743, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row .user-name .user-picture {
+  margin-top: -3px;
+  margin-bottom: -5px;
+}
+/* line 750, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row table .jobrole-border {
+  border-top: 1px solid;
+}
+/* line 753, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row table th.center,
+.page .page-task-info .info-row table td.center {
+  text-align: center;
+}
+/* line 760, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row table tr.highlith-full-row:hover > td:not(.no-bg), .page .page-task-info .info-row table tr.highlith-full-row.active > td:not(.no-bg) {
+  background: #E7E7E7;
+}
+/* line 763, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row table .first-col {
+  padding-left: 5px;
+}
+/* line 767, ../sass/includes/_appcontents.scss */
+.page .page-task-info .info-row .inner-table {
+  margin-bottom: 0px;
+  margin-left: -2px;
+  width: 101%;
+}
+/* line 776, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .main-table tr td,
+.page .page-my-tasks .main-table tr td {
+  box-shadow: inset 0 0 1px rgba(204, 204, 204, 0.5);
+}
+/* line 781, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .rouge-task .fa-square-o,
+.page .page-my-tasks .rouge-task .fa-square-o {
+  display: inline;
+}
+/* line 784, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .rouge-task .fa-square,
+.page .page-my-tasks .rouge-task .fa-square {
+  display: none;
+}
+/* line 788, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .user-picture,
+.page .page-my-tasks .user-picture {
+  width: 4rem;
+}
+/* line 791, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .day-col,
+.page .page-my-tasks .day-col {
+  text-align: center;
+}
+/* line 793, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .day-col.weekend,
+.page .page-my-tasks .day-col.weekend {
+  background: #ccc;
+}
+/* line 796, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .day-col.today,
+.page .page-my-tasks .day-col.today {
+  color: #FBD25C;
+}
+/* line 801, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .title-col small,
+.page .page-my-tasks .title-col small {
+  font-size: 0.85rem;
+}
+/* line 803, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .abbr-col,
+.page .page-my-tasks .abbr-col {
+  padding-left: 0;
+}
+/* line 806, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .abbr-col small,
+.page .page-my-tasks .abbr-col small {
+  font-size: 0.85rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* line 812, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .jobrole-border,
+.page .page-my-tasks .jobrole-border {
+  border-left: 2px solid #fff;
+}
+/* line 815, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .color-col,
+.page .page-my-tasks .color-col {
+  border-right: none;
+}
+/* line 818, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks td.day-col.today,
+.page .page-my-tasks td.day-col.today {
+  background-image: url(/img/line.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 826, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .first-col h6 small,
+.page .page-my-tasks .first-col h6 small {
+  white-space: nowrap;
+  line-height: 1.5;
+}
+/* line 830, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .task-home,
+.page .page-my-tasks .task-home {
+  width: 40px;
+  padding: 0.63rem 3px 0.75rem 8px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+/* line 835, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .task-home i,
+.page .page-my-tasks .task-home i {
+  font-size: 0.7rem;
+}
+/* line 839, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .task-arrow,
+.page .page-my-tasks .task-arrow {
+  width: 80px;
+  padding: 0.69rem 0;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+/* line 845, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .task-arrow i,
+.page .page-my-tasks .task-arrow i {
+  display: inline-block;
+  font-size: inherit;
+}
+/* line 849, ../sass/includes/_appcontents.scss */
+.page.page-my-tasks .task-arrow i:before,
+.page .page-my-tasks .task-arrow i:before {
+  position: static !important;
+}
+/* line 856, ../sass/includes/_appcontents.scss */
+.page .page-dashboard table h6 {
+  white-space: nowrap;
+}
+/* line 858, ../sass/includes/_appcontents.scss */
+.page .page-dashboard table h6 img {
+  width: 30px;
+  margin-top: -4px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+/* line 866, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .chart {
+  height: 300px;
+  margin-bottom: 50px;
+}
+/* line 870, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .project-open {
+  background: #FBD25C;
+}
+/* line 873, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .project-details {
+  height: 0px;
+}
+/* line 874, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .project-details > td {
+  border-bottom: 4px double #FBD25C;
+}
+/* line 879, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .project-details.closed {
+  display: none;
+}
+/* line 881, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .project-details.closed td {
+  height: 0;
+  display: block;
+  overflow: hidden;
+}
+/* line 892, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .estimate-details {
+  display: table-row;
+  height: 0px;
+}
+/* line 894, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .estimate-details > td {
+  border-bottom: 4px double #FBD25C;
+}
+/* line 899, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .estimate-details.closed {
+  display: none;
+}
+/* line 901, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .estimate-details.closed td {
+  height: 0;
+  display: block;
+  overflow: hidden;
+}
+/* line 910, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .row-title.open i {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 914, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .row-child {
+  display: none;
+}
+/* line 917, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .row-with-table,
+.page .page-dashboard .col-with-table {
+  background: none;
+  border-collapse: collapse;
+}
+/* line 922, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .inner-table {
+  margin-bottom: 0;
+  margin-left: 2px;
+}
+/* line 925, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .inner-table .first-col {
+  padding-left: 20px;
+}
+/* line 929, ../sass/includes/_appcontents.scss */
+.page .page-dashboard .bullet-col {
+  width: 33px;
+}
+/* line 932, ../sass/includes/_appcontents.scss */
+.page .page-dashboard i.fa:before {
+  margin: 0 10px;
+}
+/* line 938, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row {
+  display: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  height: 200px;
+  position: relative;
+  margin-top: 50px;
+}
+/* line 944, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .each-user {
+  position: relative;
+  margin-top: 0px;
+  float: left;
+  text-align: center;
+}
+/* line 949, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .each-user a {
+  box-shadow: none;
+}
+/* line 952, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .each-user img {
+  width: 70px;
+}
+/* line 956, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .each-user.active {
+  margin-top: 30px;
+  left: 0px;
+}
+/* line 961, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .user-id-5, .page .page-reports .user-picture-row .user-id-4 {
+  display: none;
+}
+/* line 966, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .user-pv .percent-contain {
+  bottom: initial;
+}
+/* line 968, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .user-pv .percent-contain .percent {
+  float: none;
+}
+/* line 970, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .user-pv .percent-contain .percent.jobrole-id-1 {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+}
+/* line 974, ../sass/includes/_appcontents.scss */
+.page .page-reports .user-picture-row .user-pv .percent-contain .percent.jobrole-id-1 .value {
+  font-size: 2.5rem;
+}
+/* line 983, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus #loading-slider {
+  overflow: hidden;
+  background: #fff;
+}
+/* line 986, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus #loading-slider .handle {
+  height: 100%;
+  border-right: 5px solid #FBD25C;
+  background: none;
+}
+/* line 992, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus #loading-slider .handle h6 {
+  margin-right: 10px;
+  line-height: 1.7;
+  position: relative;
+}
+/* line 1000, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .chart {
+  height: 190px;
+}
+/* line 1002, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .chart .c3-texts {
+  font-size: 20px;
+}
+/* line 1019, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .chart .c3-target-total_sold * {
+  stroke-width: 10px;
+}
+/* line 1022, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain {
+  position: absolute;
+  bottom: 40px;
+  bottom: 20px;
+  right: 0;
+  width: 90%;
+  height: 60px;
+}
+/* line 1023, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .sold-vs-done {
+  float: right;
+  padding: 0 20px;
+}
+/* line 1024, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .done-vs-total {
+  float: right;
+  padding: 0 20px;
+  border-right: dashed 1px #ccc;
+}
+/* line 1031, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain h6 {
+  width: 100%;
+  text-align: center;
+}
+/* line 1035, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent {
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* line 1043, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent .value {
+  font-size: 17px;
+}
+/* line 1048, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent.jobrole-id-1 .value {
+  color: #C9674A;
+}
+/* line 1049, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent.jobrole-id-2 .value {
+  color: #4AC9A5;
+}
+/* line 1050, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent.jobrole-id-3 .value {
+  color: #72A73D;
+}
+/* line 1051, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent.jobrole-id-4 .value {
+  color: #C93B75;
+}
+/* line 1052, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent.jobrole-id-5 .value {
+  color: #4D4EC9;
+}
+/* line 1053, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent.jobrole-id-6 .value {
+  color: #FBD25C;
+}
+/* line 1055, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .percent-contain .percent.jobrole-id-1 {
+  display: none;
+}
+/* line 1060, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .user-title {
+  padding-bottom: 20px;
+  position: relative;
+}
+/* line 1063, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .user-title h4 {
+  height: 80px;
+  line-height: 2.3;
+  float: left;
+}
+/* line 1068, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .user-title a {
+  float: left;
+  margin-right: 10px;
+}
+/* line 1075, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .user-row {
+  margin-bottom: 100px;
+}
+/* line 1078, ../sass/includes/_appcontents.scss */
+.page .page-reports .dashboard-bonus .filter-date-display {
+  text-align: right;
+  width: 125px;
+}
+/* line 1086, ../sass/includes/_appcontents.scss */
+.page .page-users td a h6 {
+  height: 100%;
+}
+/* line 1091, ../sass/includes/_appcontents.scss */
+.page .page-users-edit {
+  margin-top: 40px;
+  padding-left: 10px;
+}
+/* line 1096, ../sass/includes/_appcontents.scss */
+.page .page-users-edit .user-title h1 {
+  margin-top: 17px;
+}
+/* line 1098, ../sass/includes/_appcontents.scss */
+.page .page-users-edit label {
+  margin-bottom: 0;
+}
+/* line 1099, ../sass/includes/_appcontents.scss */
+.page .page-users-edit input {
+  margin-bottom: 0;
+}
+/* line 1103, ../sass/includes/_appcontents.scss */
+.page .page-planer .calendar {
+  width: 1100px;
+  display: inline-block;
+}
+/* line 1108, ../sass/includes/_appcontents.scss */
+.page .page-planer .calendar .calendar-day-contain .calendar-times {
+  width: 90px;
+  height: 400px;
+  float: left;
+}
+/* line 1113, ../sass/includes/_appcontents.scss */
+.page .page-planer .calendar .calendar-day-contain .calendar-day {
+  width: 200px;
+  height: 400px;
+  float: left;
+  border-left: none;
+  box-shadow: inset -1px 0 2px #ccc;
+}
+/* line 1125, ../sass/includes/_appcontents.scss */
+.page .page-planer .tasks {
+  display: inline-block;
+}
+/* line 1131, ../sass/includes/_appcontents.scss */
+.page .page-settings .list-contain {
+  margin-top: 30px;
+  text-align: center;
+}
+/* line 1134, ../sass/includes/_appcontents.scss */
+.page .page-settings .list-contain .item {
+  width: 150px;
+  height: 150px;
+  padding: 35px 10px;
+  margin-right: 20px;
+  float: left;
+  box-shadow: 0 0 10px #ccc;
+  color: #333;
+}
+/* line 1146, ../sass/includes/_appcontents.scss */
+.page .page-settings .list-contain .item:hover {
+  margin-top: -5px;
+  box-shadow: 0 5px 10px #ccc;
+}
+/* line 1151, ../sass/includes/_appcontents.scss */
+.page .page-settings .list-contain .icon {
+  font-size: 50px;
+}
+/* line 1153, ../sass/includes/_appcontents.scss */
+.page .page-settings .list-contain .icon i {
+  padding-left: 14px;
+}
+/* line 1157, ../sass/includes/_appcontents.scss */
+.page .page-settings .list-contain .text {
+  margin-top: 15px;
+}
+/* line 1161, ../sass/includes/_appcontents.scss */
+.page .page-settings table {
+  width: 100%;
+}
+/* line 1164, ../sass/includes/_appcontents.scss */
+.page .page-settings table td.active {
+  background: #E7E7E7;
+}
+/* line 1167, ../sass/includes/_appcontents.scss */
+.page .page-settings table td.first-col {
+  padding-left: 10px;
+}
+/* line 1171, ../sass/includes/_appcontents.scss */
+.page .page-settings .add-image {
+  margin: auto;
+  height: 29px;
+  top: 0;
+  bottom: 0;
+  right: 0.9375rem;
+  position: absolute;
+}
+
+/* line 1188, ../sass/includes/_appcontents.scss */
+.reveal-modal {
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 85rem;
+}
+
+/* line 1195, ../sass/includes/_appcontents.scss */
+.app-help-content {
+  padding-bottom: 50px;
+}
+/* line 1196, ../sass/includes/_appcontents.scss */
+.app-help-content p .button {
+  vertical-align: text-bottom;
+}
+
+/* line 1204, ../sass/includes/_appcontents.scss */
+.app-groups-content .grid .grid-item {
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: relative;
+  border: solid #ccc 1px;
+  margin: 0 3px;
+}
+/* line 1209, ../sass/includes/_appcontents.scss */
+.app-groups-content .grid .grid-item .image {
+  width: 100%;
+  height: 70%;
+  margin: 5px 0 0 0;
+  background: no-repeat center center;
+  background-size: contain;
+}
+/* line 1216, ../sass/includes/_appcontents.scss */
+.app-groups-content .grid .grid-item p {
+  width: 100%;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+/* line 1227, ../sass/includes/_appcontents.scss */
+.app-groups-content .grid .grid-item.selected {
+  background-color: #fbd25c;
+}
+
+/* line 1233, ../sass/includes/_appcontents.scss */
+.app-bind-user-content {
+  overflow: visible;
+}
+/* line 1236, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .second-col {
+  padding-left: 10px;
+}
+/* line 1239, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .jobrole-border {
+  border: 3px solid;
+}
+/* line 1242, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .title-col {
+  text-align: center;
+}
+/* line 1245, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .color-col {
+  opacity: 1;
+}
+/* line 1251, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .rolebind-container .rolebind {
+  width: 270px;
+  min-height: 100px;
+  margin-bottom: 50px;
+  margin-right: 19px;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 1261, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .rolebind-container .filter-row th {
+  padding: 0;
+}
+/* line 1263, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .rolebind-container .filter-row th input {
+  font-size: 12px;
+}
+/* line 1267, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .users-list {
+  position: absolute;
+  width: 285px;
+  min-height: 30px;
+  top: -1000;
+  display: none;
+  box-shadow: 0 0 10px #333;
+  background: #FFF;
+  z-index: 10;
+  overflow: hidden;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  -webkit-transition: height 250ms;
+  -moz-transition: height 250ms;
+  -o-transition: height 250ms;
+  transition: height 250ms;
+}
+/* line 1286, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user {
+  width: 100%;
+  margin: 0;
+  padding: 6px 10px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 1292, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user .img {
+  display: inline;
+}
+/* line 1295, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user .img img {
+  margin-top: -1px;
+  width: 35px;
+  border-radius: 100%;
+}
+/* line 1301, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user .name {
+  margin-left: 5px;
+  display: inline;
+}
+/* line 1304, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user .name h6 {
+  display: inline;
+}
+/* line 1306, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user .rem {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  display: none;
+}
+/* line 1313, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user .rem a {
+  padding: 5px 5px 0 0;
+  display: block;
+  height: 100%;
+  color: #f04124;
+}
+/* line 1320, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user:hover {
+  background: #CCC;
+}
+/* line 1323, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user:hover .rem {
+  opacity: 1;
+  display: block;
+}
+/* line 1328, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user:first-child {
+  padding-top: 8px;
+}
+/* line 1331, ../sass/includes/_appcontents.scss */
+.app-bind-user-content .user:last-child {
+  padding-bottom: 8px;
+}
+
+/* line 1338, ../sass/includes/_appcontents.scss */
+.app-time-select-modal #time-select-slider, .app-time-select-modal #time-select-slider * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+/* line 1341, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .contain {
+  width: 65%;
+  left: 10%;
+  height: 220px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+/* line 1350, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .dragdealer {
+  height: 50px;
+  border-radius: 50px;
+}
+/* line 1354, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .dragdealer .handle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-right: 50px;
+  background: #FBD25C;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+}
+/* line 1367, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .slider {
+  position: relative;
+  height: 100px;
+  top: 0px;
+}
+/* line 1372, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .slider a.override {
+  position: absolute;
+  right: 10px;
+  top: 120px;
+}
+/* line 1378, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .slider .digital-clock * {
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+/* line 1382, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .slider .digital-clock .display {
+  position: relative;
+  width: 130px;
+  margin: 0;
+}
+/* line 1386, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .slider .digital-clock .display .hours, .app-time-select-modal .slider .digital-clock .display .minutes, .app-time-select-modal .slider .digital-clock .display .divider {
+  display: inline-block;
+  color: #FBD25C;
+}
+/* line 1390, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .slider .digital-clock .display .hour, .app-time-select-modal .slider .digital-clock .display .minute {
+  font-size: 3rem;
+}
+/* line 1393, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .slider .digital-clock .display .divide {
+  font-size: 2rem;
+}
+/* line 1399, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .manual-override {
+  position: relative;
+  height: 1px;
+  top: 150px;
+}
+/* line 1404, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .manual-override .manual-input {
+  position: relative;
+  width: 216px;
+  margin: auto;
+}
+/* line 1410, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .manual-override .manual-input input {
+  display: inline;
+  width: 90px;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  font-size: 4rem;
+  height: 2.5em;
+}
+/* line 1419, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .manual-override .manual-input .input-seperator {
+  font-size: 2rem;
+  left: 90px;
+  color: #FBD25C;
+}
+/* line 1428, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .comments {
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+/* line 1433, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .comments .input-comment {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  border: none;
+  box-shadow: none;
+  font-size: 1rem;
+  resize: none;
+}
+/* line 1443, ../sass/includes/_appcontents.scss */
+.app-time-select-modal .buttons {
+  position: absolute;
+  bottom: 20px;
+  bottom: 0px;
+  width: 100%;
+}
+
+/* line 1455, ../sass/includes/_appcontents.scss */
+.app-user-add-new-task-modal .fuzzy-searchresults {
+  position: relative;
+}
+/* line 1457, ../sass/includes/_appcontents.scss */
+.app-user-add-new-task-modal .fuzzy-searchresults table {
+  display: none;
+  position: absolute;
+  top: 36px;
+  box-shadow: 0 0 5px #999999;
+  border: 1px solid #cccccc;
+  width: 100%;
+  background: #fff;
+}
+/* line 1466, ../sass/includes/_appcontents.scss */
+.app-user-add-new-task-modal .fuzzy-searchresults table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1;
+}
+/* line 1474, ../sass/includes/_appcontents.scss */
+.app-user-add-new-task-modal .postfix i {
+  display: none;
+  height: inherit;
+  line-height: 2.6;
+}
+
+/* line 1483, ../sass/includes/_appcontents.scss */
+.app-bound-other-estimates-content table h6 {
+  white-space: nowrap;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+/* line 1488, ../sass/includes/_appcontents.scss */
+.app-bound-other-estimates-content .bind-estimate {
+  padding-right: 1rem;
+  padding-left: 0.6rem;
+  text-align: right;
+}
+/* line 1492, ../sass/includes/_appcontents.scss */
+.app-bound-other-estimates-content .bind-estimate * {
+  font-size: 0.8rem;
+}
+/* line 1495, ../sass/includes/_appcontents.scss */
+.app-bound-other-estimates-content .bind-estimate i {
+  float: left;
+  margin-top: 3px;
+  vertical-align: middle;
+}
+/* line 1501, ../sass/includes/_appcontents.scss */
+.app-bound-other-estimates-content .button {
+  width: 100%;
+}
+/* line 1504, ../sass/includes/_appcontents.scss */
+.app-bound-other-estimates-content .button.binded {
+  background: #f04124;
+}
+/* line 1506, ../sass/includes/_appcontents.scss */
+.app-bound-other-estimates-content .button.binded i {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 1515, ../sass/includes/_appcontents.scss */
+.app-date-filter-modal .button-row {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+
+/* line 1524, ../sass/includes/_appcontents.scss */
+.tooltip table {
+  margin-bottom: 5px;
+  border: none;
+}
+/* line 1528, ../sass/includes/_appcontents.scss */
+.tooltip table tr td {
+  color: white;
+}
+/* line 1531, ../sass/includes/_appcontents.scss */
+.tooltip table tr td.col1 {
+  padding-right: 10px;
+  text-align: right;
+}
+
+/* line 1540, ../sass/includes/_appcontents.scss */
+.button.disabled * {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* line 1548, ../sass/includes/_appcontents.scss */
+a.button.table-fill {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+/* line 1552, ../sass/includes/_appcontents.scss */
+a.button.table-fill i {
+  top: 50%;
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+/* line 1561, ../sass/includes/_appcontents.scss */
+table tbody tr {
+  -webkit-transition: all 125ms;
+  -moz-transition: all 125ms;
+  -o-transition: all 125ms;
+  transition: all 125ms;
+}
+/* line 1565, ../sass/includes/_appcontents.scss */
+table .filter-row th {
+  padding: 0 2px 2px;
+  height: 3.5px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 1571, ../sass/includes/_appcontents.scss */
+table .filter-row .button-group {
+  margin-top: -100px;
+}
+/* line 1574, ../sass/includes/_appcontents.scss */
+table .filter-row .button, table .filter-row .button.tiny {
+  padding-top: 0.625rem;
+  padding-bottom: 0.6875rem;
+}
+/* line 1578, ../sass/includes/_appcontents.scss */
+table .filter-row .button .fa-stack, table .filter-row .button.tiny .fa-stack {
+  height: 10px;
+  top: -4px;
+  left: -5px;
+}
+/* line 1582, ../sass/includes/_appcontents.scss */
+table .filter-row .button .fa-stack .onactive, table .filter-row .button.tiny .fa-stack .onactive {
+  visibility: hidden;
+}
+/* line 1586, ../sass/includes/_appcontents.scss */
+table .filter-row .button.active, table .filter-row .button.tiny.active {
+  background: #333;
+  color: #fff;
+}
+/* line 1589, ../sass/includes/_appcontents.scss */
+table .filter-row .button.active .onactive, table .filter-row .button.tiny.active .onactive {
+  visibility: visible;
+}
+/* line 1595, ../sass/includes/_appcontents.scss */
+table .color-col {
+  opacity: 0;
+  padding: 0;
+}
+/* line 1599, ../sass/includes/_appcontents.scss */
+table .button-col {
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+/* line 1603, ../sass/includes/_appcontents.scss */
+table .button-col .button {
+  height: 36px;
+  width: 46px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* line 1611, ../sass/includes/_appcontents.scss */
+table .button-col .button i {
+  position: relative;
+  top: 3px;
+}
+/* line 1618, ../sass/includes/_appcontents.scss */
+table .title-col {
+  position: relative;
+  overflow: hidden;
+}
+/* line 1623, ../sass/includes/_appcontents.scss */
+table .search-col {
+  padding: 0px;
+}
+/* line 1625, ../sass/includes/_appcontents.scss */
+table .search-col input {
+  margin: 0;
+  border: none;
+  height: 36px;
+  width: 100%;
+  background: #f5f5f5;
+  box-shadow: none;
+  font: normal normal normal 14px/1 FontAwesome;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+}
+/* line 1636, ../sass/includes/_appcontents.scss */
+table .search-col input:focus, table .search-col input:active, table .search-col input:hover {
+  background: #CCC;
+}
+/* line 1643, ../sass/includes/_appcontents.scss */
+table .search-col input.active {
+  background: #333;
+  color: #fff;
+}
+/* line 1650, ../sass/includes/_appcontents.scss */
+table .first-col {
+  padding-left: 10px;
+  padding-left: 0.625rem;
+}
+/* line 1654, ../sass/includes/_appcontents.scss */
+table td.color-col {
+  background: #000;
+  box-shadow: 0 0 0px #000;
+}
+/* line 1660, ../sass/includes/_appcontents.scss */
+table td.menu-col input {
+  margin: 0;
+}
+/* line 1663, ../sass/includes/_appcontents.scss */
+table td.menu-col .row {
+  height: 36px;
+}
+/* line 1667, ../sass/includes/_appcontents.scss */
+table td:hover {
+  background: #E7E7E7;
+}
+/* line 1669, ../sass/includes/_appcontents.scss */
+table td:hover i.rotate.fa-minus,
+table td:hover i.rotate.fa-chevron-right,
+table td:hover i.rotate.fa-circle-o-notch {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 1675, ../sass/includes/_appcontents.scss */
+table .user-picture {
+  width: 95%;
+  border-radius: 100%;
+}
+/* line 1680, ../sass/includes/_appcontents.scss */
+table tr th.bt {
+  padding: 0;
+}
+/* line 1682, ../sass/includes/_appcontents.scss */
+table tr th.bt .button {
+  font-size: 15px;
+}
+/* line 1687, ../sass/includes/_appcontents.scss */
+table tr td .button, table tr th .button {
+  width: 100%;
+}
+/* line 1689, ../sass/includes/_appcontents.scss */
+table tr td .button.tiny, table tr th .button.tiny {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 1695, ../sass/includes/_appcontents.scss */
+table tr td i, table tr th i {
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+/* line 1701, ../sass/includes/_appcontents.scss */
+table tr td h6, table tr th h6 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+/* line 1708, ../sass/includes/_appcontents.scss */
+table tr:hover .color-col, table tr.active .color-col {
+  opacity: 1;
+}
+/* line 1716, ../sass/includes/_appcontents.scss */
+table tr:hover td.title-col, table tr.active td.title-col {
+  background: #E7E7E7;
+}
+/* line 1722, ../sass/includes/_appcontents.scss */
+table .archived h6 {
+  color: #ccc;
+}
+/* line 1723, ../sass/includes/_appcontents.scss */
+table .archived h6:before {
+  content: ' achived ';
+  font-size: 0.8rem;
+}
+
+/* line 1733, ../sass/includes/_appcontents.scss */
+table.menu-table {
+  margin-bottom: -2px;
+}
+
+/* line 1737, ../sass/includes/_appcontents.scss */
+table.total-table {
+  margin-top: -22px;
+}
+
+/* line 1741, ../sass/includes/_appcontents.scss */
+.tabs-row {
+  border-bottom: 1px solid #FBD25C;
+}
+/* line 1744, ../sass/includes/_appcontents.scss */
+.tabs-row .tabs dd a {
+  padding: 5px 2rem;
+}
+/* line 1747, ../sass/includes/_appcontents.scss */
+.tabs-row .tabs dd.active a {
+  background: #FBD25C;
+}
+
+/* line 1753, ../sass/includes/_appcontents.scss */
+.empty-col {
+  padding: 15px 0 5px 0;
+  text-align: center;
+}
+
+/* line 1758, ../sass/includes/_appcontents.scss */
+.user-picture {
+  border-radius: 100%;
+  max-width: 100px;
+}
+
+/* line 1763, ../sass/includes/_appcontents.scss */
+.filter-button.active {
+  background: #333;
+  color: #fff;
+}
+
+/* line 1769, ../sass/includes/_appcontents.scss */
+.edit-button-group {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -150px;
+  left: initial;
+  opacity: 1;
+  display: block;
+  text-align: center;
+}
+/* line 1780, ../sass/includes/_appcontents.scss */
+.edit-button-group .edit-button {
+  text-align: center;
+  height: 100%;
+  padding-top: 0.53rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  width: 45px;
+  display: inline-block;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+/* line 1793, ../sass/includes/_appcontents.scss */
+.edit-button-group.show {
+  -webkit-transition: all 125ms;
+  -moz-transition: all 125ms;
+  -o-transition: all 125ms;
+  transition: all 125ms;
+  opacity: 1;
+  right: 0px;
+}
+
+/* line 1801, ../sass/includes/_appcontents.scss */
+.get-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 83.33333ms;
+  -moz-transition: all 83.33333ms;
+  -o-transition: all 83.33333ms;
+  transition: all 83.33333ms;
+  cursor: context-menu;
+  background: #e7e7e7;
+  color: #333;
+}
+/* line 1817, ../sass/includes/_appcontents.scss */
+.get-menu i {
+  position: relative;
+  top: 4px;
+}
+
+/* line 1822, ../sass/includes/_appcontents.scss */
+table tr:hover .get-menu {
+  opacity: 1;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 1827, ../sass/includes/_appcontents.scss */
+.no-bg {
+  background: none;
+}
+/* line 1829, ../sass/includes/_appcontents.scss */
+.no-bg:hover {
+  background: none;
+}
+
+/* line 1834, ../sass/includes/_appcontents.scss */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* line 1838, ../sass/includes/_appcontents.scss */
+.align-left {
+  text-align: left;
+}
+
+/* line 1842, ../sass/includes/_appcontents.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 1846, ../sass/includes/_appcontents.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 1850, ../sass/includes/_appcontents.scss */
+.modal-error-area {
+  display: none;
+  position: relative;
+  background: #f04124;
+  margin: 30px -30px -30px -30px !important;
+  padding: 15px 30px 1px;
+}
+/* line 1856, ../sass/includes/_appcontents.scss */
+.modal-error-area, .modal-error-area * {
+  color: #fff;
+}
+
+/* line 1861, ../sass/includes/_appcontents.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 1866, ../sass/includes/_appcontents.scss */
+.view-palceholder .container {
+  box-shadow: 0 0 10px rgba(200, 200, 200, 0.2);
+  padding: 10px;
+  margin: 10px;
+}
+
+/* line 1873, ../sass/includes/_appcontents.scss */
+.box-drop-shadow {
+  position: relative;
+  box-shadow: 0 0 10px rgba(200, 200, 200, 0.2);
+  padding: 10px;
+  margin: 10px;
+}
+
+/* line 1879, ../sass/includes/_appcontents.scss */
+.button.with-fa:hover,
+.button.with-fa:active,
+.button.with-fa {
+  color: #fff;
+  color: transparent;
+}
+/* line 1884, ../sass/includes/_appcontents.scss */
+.button.with-fa:hover i.fa,
+.button.with-fa:active i.fa,
+.button.with-fa i.fa {
+  color: initial;
+}
+
+/* line 1886, ../sass/includes/_appcontents.scss */
+small.new {
+  color: #FBD25C;
+}
+
+/* line 1889, ../sass/includes/_appcontents.scss */
+h6 small {
+  line-height: inherit;
+}
+
+/* line 1892, ../sass/includes/_appcontents.scss */
+.loading-row {
+  height: 70px;
+  width: 100% !important;
+  position: absolute;
+}
+/* line 1896, ../sass/includes/_appcontents.scss */
+.loading-row .loading-gif {
+  z-index: 1000;
+  width: 90px;
+  height: 24px;
+  margin: auto;
+}
+/* line 1905, ../sass/includes/_appcontents.scss */
+.loading-row .loading-gif img {
+  max-width: 100%;
+}
+
+/* line 1908, ../sass/includes/_appcontents.scss */
+.hide {
+  display: none;
+}
+
+/* line 1911, ../sass/includes/_appcontents.scss */
+.prefix, .postfix {
+  position: initial;
+}
+
+/* line 1914, ../sass/includes/_appcontents.scss */
+.full-row {
+  max-width: none;
+}
+
+/* line 1917, ../sass/includes/_appcontents.scss */
+h1.teaser {
+  overflow: hidden;
+  font-size: 8rem;
+  overflow: hidden;
+  color: #F8F8F8;
+  margin-left: 5px;
+  margin-top: -10px;
+  display: block;
+  letter-spacing: -10px;
+}
+
+/* line 1930, ../sass/includes/_appcontents.scss */
+.jobrole-1,
+.jobrole-1 .jobrole-border {
+  border-color: #c9674a !important;
+}
+
+/* line 1934, ../sass/includes/_appcontents.scss */
+.jobrole-2,
+.jobrole-2 .jobrole-border {
+  border-color: #4ac9a5 !important;
+}
+
+/* line 1938, ../sass/includes/_appcontents.scss */
+.jobrole-3,
+.jobrole-3 .jobrole-border {
+  border-color: #72a73d !important;
+}
+
+/* line 1942, ../sass/includes/_appcontents.scss */
+.jobrole-4,
+.jobrole-4 .jobrole-border {
+  border-color: #c93b75 !important;
+}
+
+/* line 1946, ../sass/includes/_appcontents.scss */
+.jobrole-5,
+.jobrole-5 .jobrole-border {
+  border-color: #4d4ec9 !important;
+}
+
+/* line 1950, ../sass/includes/_appcontents.scss */
+.jobrole-6,
+.jobrole-6 .jobrole-border {
+  border-color: #fbd25c !important;
+}
+
+/* line 1956, ../sass/includes/_appcontents.scss */
+.testing-frames {
+  border: 1px solid black;
+}
+/* line 1958, ../sass/includes/_appcontents.scss */
+.testing-frames * {
+  border: 1px solid black;
+}
+/* line 1959, ../sass/includes/_appcontents.scss */
+.testing-frames > * {
+  border-color: red;
+}
+/* line 1961, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * {
+  border-color: blue;
+}
+/* line 1963, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * > * {
+  border-color: green;
+}
+/* line 1965, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * > * > * {
+  border-color: yellow;
+}
+/* line 1967, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * > * > * > * {
+  border-color: purple;
+}
+/* line 1969, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * > * > * > * > * {
+  border-color: brown;
+}
+/* line 1971, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * > * > * > * > * > * {
+  border-color: orange;
+}
+/* line 1973, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * > * > * > * > * > * > * {
+  border-color: pink;
+}
+/* line 1975, ../sass/includes/_appcontents.scss */
+.testing-frames > * > * > * > * > * > * > * > * > * {
+  border-color: darkblue;
+}
+
+/* line 3, ../sass/includes/_apptop.scss */
+.app-top .title-area .name a {
+  color: #FBD25C;
+}
+/* line 8, ../sass/includes/_apptop.scss */
+.app-top .top-bar-section ul li {
+  background: #fff;
+}
+
+/* line 3, ../sass/includes/_desktopapp.scss */
+.app-container.desktopapp .app-pusher > .container {
+  margin: 0px 10px;
+}
+/* line 4, ../sass/includes/_desktopapp.scss */
+.app-container.desktopapp .app-top > .container {
+  margin: 0px 10px;
+}
+/* line 6, ../sass/includes/_desktopapp.scss */
+.app-container.desktopapp .logout {
+  text-align: right;
+}
+/* line 8, ../sass/includes/_desktopapp.scss */
+.app-container.desktopapp .logout a {
+  margin-right: 30px;
+}
+/* line 11, ../sass/includes/_desktopapp.scss */
+.app-container.desktopapp .app-content > .row {
+  max-width: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+/* NG ANIMATIONS
+   ========================================================================== */
+/* line 3, ../sass/includes/_nganimations.scss */
+.ng-animate {
+  position: relative;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+}
+
+/* line 8, ../sass/includes/_nganimations.scss */
+.ng-enter {
+  opacity: 0;
+  margin-left: -10px;
+}
+
+/* line 9, ../sass/includes/_nganimations.scss */
+.ng-enter-active {
+  opacity: 0;
+  margin-left: -10px;
+}
+
+/* line 11, ../sass/includes/_nganimations.scss */
+.ng-leave {
+  opacity: 0;
+  margin-left: 10px;
+}
+
+/* line 12, ../sass/includes/_nganimations.scss */
+.ng-leave-active {
+  opacity: 0;
+  margin-left: 10px;
+}
+
+/* NG ANIMATIONS - OVERRIDES (speed; on/off for specific clases; other)
+   ========================================================================== */
+/* line 18, ../sass/includes/_nganimations.scss */
+.breadcrumbs * {
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+}
+/* line 21, ../sass/includes/_nganimations.scss */
+.breadcrumbs .ng-enter {
+  opacity: 0;
+  margin-left: 0;
+}
+/* line 22, ../sass/includes/_nganimations.scss */
+.breadcrumbs .ng-enter-active {
+  opacity: 0;
+  margin-left: 0;
+}
+/* line 23, ../sass/includes/_nganimations.scss */
+.breadcrumbs .ng-leave {
+  opacity: 0;
+  margin-left: 0;
+}
+/* line 24, ../sass/includes/_nganimations.scss */
+.breadcrumbs .ng-leave-active {
+  opacity: 0;
+  margin-left: 0;
+}
+
+/* line 27, ../sass/includes/_nganimations.scss */
+table .ng-enter, table .ng-leave {
+  -webkit-transition: all 0;
+  -moz-transition: all 0;
+  -o-transition: all 0;
+  transition: all 0;
+  opacity: 0;
+}
+
+/* line 36, ../sass/includes/_nganimations.scss */
+.jobs-roles-salary-edit-row {
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+}
+
+/* line 40, ../sass/includes/_nganimations.scss */
+.nvtooltip-pending-removal,
+.nvtooltip {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 45, ../sass/includes/_nganimations.scss */
+#loading-slider,
+#loading-slider * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 50, ../sass/includes/_nganimations.scss */
+.c3,
+.c3 * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 55, ../sass/includes/_nganimations.scss */
+*.ng-hide {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 62, ../sass/includes/_nganimations.scss */
+.app-content .page-estimates table.jobs-table .ng-leave {
+  display: none;
+}
+/* line 69, ../sass/includes/_nganimations.scss */
+.app-content .page-dashboard .project-details .ng-leave {
+  display: none;
+}
+
+/* line 76, ../sass/includes/_nganimations.scss */
+.ng-leave-fast {
+  -webkit-transition: all 83.33333ms;
+  -moz-transition: all 83.33333ms;
+  -o-transition: all 83.33333ms;
+  transition: all 83.33333ms;
+  opacity: 0;
+}
+
+/* line 81, ../sass/includes/_nganimations.scss */
+.no-anim {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 84, ../sass/includes/_nganimations.scss */
+.no-anim-all {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+/* line 86, ../sass/includes/_nganimations.scss */
+.no-anim-all * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 89, ../sass/includes/_nganimations.scss */
+.app-time-select-modal .slider .digital-clock .display {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 93, ../sass/includes/_nganimations.scss */
+.ui-sortable,
+.ui-sortable * {
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  -webkit-transition: 0;
+  -moz-transition: 0;
+  -o-transition: 0;
+  transition: 0;
+}
+/* line 98, ../sass/includes/_nganimations.scss */
+.ui-sortable .handle,
+.ui-sortable .handle *,
+.ui-sortable * .handle,
+.ui-sortable * .handle * {
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+}
+
+/* line 103, ../sass/includes/_nganimations.scss */
+.gear-col,
+.gear-col * {
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+}
+
+/* line 109, ../sass/includes/_nganimations.scss */
+.button,
+.edit-button {
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  -webkit-transition: all 125ms;
+  -moz-transition: all 125ms;
+  -o-transition: all 125ms;
+  transition: all 125ms;
+}
+
+/* Foundation tabs animation override
+   ========================================================================== */
+/* line 117, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move {
+  position: relative;
+}
+/* line 120, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move > .content {
+  position: absolute;
+  left: 0%;
+  opacity: 1;
+  display: block;
+}
+/* line 128, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-left > .ng-enter {
+  left: 100%;
+  opacity: 0;
+}
+/* line 129, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-left > .ng-enter-active {
+  left: 0%;
+  opacity: 1;
+}
+/* line 131, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-left > .ng-leave {
+  left: 0%;
+  opacity: 1;
+}
+/* line 132, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-left > .ng-leave-active {
+  left: -100%;
+  opacity: 0;
+}
+/* line 136, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-right > .ng-enter {
+  left: -100%;
+  opacity: 0;
+}
+/* line 137, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-right > .ng-enter-active {
+  left: 0%;
+  opacity: 1;
+}
+/* line 139, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-right > .ng-leave {
+  left: 0%;
+  opacity: 1;
+}
+/* line 140, ../sass/includes/_nganimations.scss */
+.tabs-content.horizontal-move.leave-right > .ng-leave-active {
+  left: 100%;
+  opacity: 0;
+}
+
+/* line 144, ../sass/includes/_nganimations.scss */
+.tabs-content > .content.foundation {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  float: none;
+  opacity: 0;
+}
+/* line 151, ../sass/includes/_nganimations.scss */
+.tabs-content > .content.foundation.to-left {
+  left: -100%;
+  opacity: 0;
+  display: block;
+}
+/* line 156, ../sass/includes/_nganimations.scss */
+.tabs-content > .content.foundation.to-right {
+  left: 100%;
+  opacity: 0;
+  display: block;
+}
+/* line 161, ../sass/includes/_nganimations.scss */
+.tabs-content > .content.foundation.active {
+  left: 0%;
+  opacity: 1;
+  display: block;
+  position: relative;
+}
+/* line 167, ../sass/includes/_nganimations.scss */
+.tabs-content > .content.foundation.no-anim {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 2, ../sass/includes/_sidemenu.scss */
+body.enviroment-local .app-menu a, body.enviroment-local .app-menu i, body.enviroment-local .app-menu h2 {
+  color: #24E3EB !important;
+}
+
+/* line 7, ../sass/includes/_sidemenu.scss */
+.app-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 220px;
+  height: 100%;
+  background: #333;
+  opacity: 1;
+  -webkit-transform: translate3d(-170px, 0, 0);
+  transform: translate3d(-170px, 0, 0);
+  text-align: right;
+}
+/* line 23, ../sass/includes/_sidemenu.scss */
+.app-menu .container {
+  position: relative;
+  margin-top: 1.5rem;
+}
+/* line 27, ../sass/includes/_sidemenu.scss */
+.app-menu .container .side-nav {
+  font-family: inherit;
+}
+/* line 32, ../sass/includes/_sidemenu.scss */
+.app-menu .container h2 {
+  color: #FBD25C;
+  font-weight: inherit;
+  margin-right: 60px;
+}
+/* line 38, ../sass/includes/_sidemenu.scss */
+.app-menu .container .fa {
+  position: absolute;
+  right: 0px;
+  width: 50px;
+  text-align: center;
+}
+/* line 45, ../sass/includes/_sidemenu.scss */
+.app-menu .container .menu-icon {
+  top: 4.2rem;
+  margin: 0.5rem 0 0 0;
+  margin: 0;
+  font-size: 1.8rem;
+}
+/* line 54, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul {
+  margin-top: 30px;
+}
+/* line 58, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li.empty {
+  border: none;
+}
+/* line 60, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li.empty a {
+  font-size: 0.2rem;
+}
+/* line 62, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li.empty:hover, .app-menu .container ul li.empty.active {
+  background: none;
+}
+/* line 68, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li.disabled a {
+  color: #555;
+}
+/* line 69, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li.disabled i {
+  color: #555;
+}
+/* line 72, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li {
+  line-height: 3.5;
+  margin: 0;
+  position: relative;
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
+  margin-top: -1px;
+}
+/* line 82, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li:hover, .app-menu .container ul li.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 87, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li a {
+  padding: 0 60px 0 0;
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 100%;
+}
+/* line 93, ../sass/includes/_sidemenu.scss */
+.app-menu .container ul li i {
+  font-size: 1.8rem;
+  top: 1.1rem;
+  color: #FBD25C;
+}
+
+/* line 108, ../sass/includes/_sidemenu.scss */
+.show-menu .app-pusher {
+  -webkit-transition-delay: 100;
+  transition-delay: 100;
+  -webkit-transform: translate3d(70px, 0, 0);
+  transform: translate3d(70px, 0, 0);
+}
+/* line 125, ../sass/includes/_sidemenu.scss */
+.show-menu:after {
+  -webkit-transition: display 0;
+  -moz-transition: display 0;
+  -o-transition: display 0;
+  transition: display 0;
+  display: block;
+  opacity: 1;
+  z-index: 2;
+}
+/* line 132, ../sass/includes/_sidemenu.scss */
+.show-menu .app-menu {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 137, ../sass/includes/_sidemenu.scss */
+.show-menu .app-menu ul {
+  -webkit-transition-delay: 250ms;
+  transition-delay: 250ms;
+  opacity: 1;
+}
+
+/* line 144, ../sass/includes/_sidemenu.scss */
+.anim-hide {
+  opacity: 0;
+}
+
+/* line 137, ../sass/screen.scss */
+.row-full-width .row {
+  max-width: 100%;
+}
+
+/* line 141, ../sass/screen.scss */
+table li:before, table li:after,
+table li > *:before, table li > *:after,
+table ul:before, table ul:after,
+table tr:before, table tr:after,
+table th:before, table th:after,
+table td:before, table td:after {
+  position: absolute !important;
+}
+
+/* line 152, ../sass/screen.scss */
+.reveal-modal-bg {
+  position: fixed;
+}

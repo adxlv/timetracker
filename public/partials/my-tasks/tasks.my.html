@@ -1,0 +1,177 @@
+<div class="container row page" ng-class="{'page-planer-test': ('tasks.list_test' | isState )}">
+    <div class="page-my-tasks">
+        <div class="top">
+            <h2>
+                <img class="th user-picture" src="/store/img/users/default.jpg" ng-src="{{user.pict}}"> {{user.name}}
+            </h2>
+        </div>
+
+        <table width="100%" class="menu-table">
+            <tbody>
+                <tr>
+                    <td class="menu-col">
+                        <ul class="button-group clearfix">
+                            <li ng-show="false" class="right"><a class="tiny button  " ng-click="">Options</a>
+                            </li>
+                            <li class="right" ng-show=""><a href="" class="tiny button success " ng-click="open_task_add()">Add One Extra Task</a>
+                            </li>
+                            <li class="right"><a class="tiny button secondary task-arrow" ng-click="resolve_task_offset(1)">Next<i class="fa fa-chevron-right"></i></a>
+                            </li>
+                            <li class="right"><a class="tiny button secondary task-home with-fa" ng-click="resolve_task_offset(0)"><i class="fa fa-chevron-down"></i>&#770;</a>
+                            </li>
+                            <li class="right"><a class="tiny button secondary task-arrow" ng-click="resolve_task_offset(-1)"><i class="fa fa-chevron-left"></i>Prev</a>
+                            </li>
+                            <li class="left hide">
+                                <div class="row collapse">
+                                    <div class="small-3 columns">
+                                        <span class="prefix">Search</span>
+                                    </div>
+                                    <div class="small-9 columns">
+                                        <input type="search" ng-model="filter.search" placeholder="" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table width="100%" ui-view class="main-table">
+            <thead>
+                <tr>
+                    <th class="color-col" width="5" ></th>
+                    <th class="search-col" width="" colspan="2">
+                        <input class="{{(filter.search)?'active':'empty'}}" type="search"  ng-model="filter.search" placeholder="&#61442 Search task" autocomplete="off" />
+                    </th>
+                    <th ng-repeat="day in week" class="day-col {{ (day.weekend)?'weekend':'' }} {{ (day.today)?'today':'' }}" width="50">
+                        {{ day.date() }}
+                    </th>
+
+                </tr>
+            </thead> 
+            <tbody>
+                <tr ng-repeat="taskrole in user.taskroles | orderByPriority | filter:filter | orderBy:'task.project.client.title' " class="{{ (taskrole.task.estimate_id==null)?'rouge-task':'' }} jobrole-{{taskrole.jobrole.id}}">
+                    <td class="color-col" width="5" style="background: {{taskrole.task.project.client.color}}; box-shadow: 0 0 3px {{taskrole.task.project.client.color}};" ></th>
+                    <td class="align-center abbr-col jobrole-border" width="40"> <h6><small>{{ taskrole.jobrole.abbreviation }}</small></h6> </th>
+                    <td class="title-col">  
+                        <a ui-sref="project.tasks({projectId:taskrole.task.project.id})" ng-if="user.group==1">
+                            <h6>{{ taskrole.task.project.client.title }} - {{taskrole.task.project.title}} <small>{{ taskrole.task.title }}</span> </h6>
+                        </a>
+                        <h6 ng-if="user.group!=1">{{ taskrole.task.project.client.title }} - {{taskrole.task.project.title}} <small>{{ taskrole.task.title }}</span> </h6>
+                    </td>
+
+                    <td ng-repeat="day in week" class="day-col {{ (day.weekend)?'weekend':'' }} {{ (day.today)?'today':'' }}" 
+                        ng-click="open_log_select({
+                                            taskrole:taskrole,
+                                            day:day,
+                                            timelog:timelog, 
+                                            comment:timelog.comment
+                                    })">
+                        <h6 ng-show="timelog.exist">{{timelog = (taskrole.usertimelogs | compareTimesGetObject:day); timelog.minutes|parseTimeMins}}</h6>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+<div id="time-select-modal" class="reveal-modal app-time-select-modal" data-reveal>
+    <div class="contain">
+        <div class="row">
+
+            <div class="small-8 columns">
+                <div class="slider">
+                    <div class="digital-clock">
+                        <div class="display">
+                            <div class="hours">
+                                <span class="hour">1</span>h</div>
+                            <div class="divider">
+                                <span class="divide">:</span>
+                            </div>
+                            <div class="minutes">
+                                <span class="minute">20</span>m</div>
+                        </div>
+                    </div>
+                    <div id="time-select-slider" class="dragdealer">
+                        <div class="handle value">drag</div>
+                    </div>
+                    <a class="override">Manually</a>
+
+                </div>
+                <div class="manual-override">
+                    <div class="space"></div>
+                    <div class="manual-input">
+                        <input class="input-hours" type="text" maxlength="2" ng-model="hours">
+                        <span class="input-seperator">:</span>
+                        <input class="input-minutes" type="text" maxlength="2" ng-model="minutes">
+                    </div>
+                </div>
+            </div>
+
+            <div class="small-4 columns">
+                <div class="comments">
+                    <textarea rows="10" class="input-comment" name="comment" ng-model="passobject.comment" placeholder="Your Comment"></textarea>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="buttons">
+            <ul class="button-group">
+                <li><a ng-click="add_log()" class="button success tiny">Save</a>
+                </li>
+                <li><a ng-click="close_log_select()" class="button alert tiny">Cancel</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="user-add-new-task-modal" class="reveal-modal app-user-add-new-task-modal" data-reveal>
+    <div class="row">
+        <div class="small-12 large-6 columns">
+            <label>task Title
+                <input type="text" placeholder="Title" ng-model="newTask.title" />
+            </label>
+            <label>your Role
+                <select ng-model="newTask.jobroles_o" ng-options="jobrole.title for jobrole in jobroles">
+            </label>
+
+            <input type="hidden" ng-model="newTask.done" ng-init="newTask.done=false" />
+        </div>
+
+        <div class="small-12 large-6 columns">
+            <div class="row collapse">
+                <label>Project</label>
+                <div class="small-10 columns fuzzy-searchresults">
+                    <input type="text" placeholder="start typing to find project" ng-model="fuzzy.searchstring" ng-change="refresh_fuzzysearch()" />
+                    <table class="fuzzy-searchresults">
+                        <tr ng-repeat="project in fuzzy.result">
+                            <td ng-click="set_fuzzysearch(project)">{{project.client.title}} {{project.title}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="small-2  columns">
+                    <span class="postfix button secondary">
+                        <i class="fa fa-check fa-fw"></i>
+                    </span>
+                </div>
+                <input type="hidden" ng-model="newTask.project_id" ng-init="newTask.done=0" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+            <a href="" class="button tiny success" ng-click="add_rouge_task()">Save</a>
+        </div>
+    </div>
+
+    <div class="modal-error-area"></div>
+</div>

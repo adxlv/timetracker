@@ -1,0 +1,88 @@
+<div class="container row">
+        <div class="page-users-edit box-drop-shadow small-11 small-offset-1 columns">
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <img class="user-picture" ng-src="{{user.pict}}"></td>
+                        </div>
+                        <div class="small-9 columns user-title">
+                            <h1>{{user.name}} {{user.surname}}</h1>
+                        </div>
+                    </div>
+                    <div class="row"><div class="medium-12 columns">
+                        <form autocomplete="off">
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="name-input" class="right inline">Name:</label>
+                                </div>
+                                <div class="small-9 columns end">
+                                    <input id="name-input" type="text" ng-model='user.name' placeholder="John" />
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="surname-input" class="right inline">Surname:</label>
+                                </div>
+                                <div class="small-9 columns end">
+                                    <input id="surname-input" type="text" ng-model='user.surname' placeholder="John" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="email-input" class="right inline">e-mail:</label>
+                                </div>
+                                <div class="small-9 columns end">
+                                    <input id="email-input" type="text" ng-model='user.email' placeholder="John" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="login-input" class="right inline">Login:</label>
+                                </div>
+                                <div class="small-9 columns end">
+                                    <input id="login-input" type="text" ng-model='user.login' placeholder="John" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="group-select" class="right inline">Group:</label>
+                                </div>
+                                <div class="small-9 columns end">
+                                    <select id="group-select" required ng-options="usergroup.id as usergroup.title for usergroup in groups" ng-model="user.group" ></select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="small-2 columns">
+                                    <label for="password-input" class="right inline">Password:</label>
+                                </div>
+                                <div class="small-9 columns end">
+                                    <input id="password-input" type="password" ng-model='password.one' placeholder="Your password" />
+                                    <input id="password2-input" type="password" ng-model='password.two' placeholder="Please repeat pasword" />
+                                    <small class="error" ng-show="password.error_nomatch">Passwords don't match</small>
+                                    <small class="error" ng-show="password.error_noentered">Please input password</small>
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="small-11 columns end">
+                                    <ul class="button-group right">
+                                        <li><a class="button tiny success" ng-click="save()">Save</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div></div>
+        </div>
+</div>
+
+<div id="myModal" class="reveal-modal app-help-content" data-reveal>
+    <h2>Congratulations!!</h2>
+    <p class="lead">You found the <a href="" class="tiny button">Options</a> button. Now, be a sweetie and and close me.</p>
+    <p></p>
+    <a class="close-reveal-modal">&#215;</a>
+</div>

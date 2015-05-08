@@ -1,0 +1,149 @@
+<div class="row dashboard-bonus">
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+		<table width="100%" class="menu-table">
+            <tbody>
+                <tr>
+                    <td class="menu-col">
+                        <ul class="button-group clearfix">
+                            <li class=""><a href="" class="tiny button secondary" ng-click="openModal()">Filter by Date</a>
+                            </li>
+                            <li class="hide"><a href="" class="tiny button secondary hide" ng-click="">Filter by Bussines</a>
+                            </li>
+                            <!-- <li class="right"><a href="#/client/new" class="tiny button success" ng-click="" >Add New</a></li> -->
+                            
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="align-center">Bonus Report</h2>
+        <h3 class="align-center"><small class="filter-date-display"></small></h3>
+      </div>
+    </div>
+    <div class="small-12 medium-12 large-12 columns">
+		<div class="row loading-row">
+		  <div class="small-12 medium-12 large-12 columns">
+		  	<div class="loading-gif"><img src="/img/loading.gif" alt=""></div>
+			<div id="loading-slider" class="dragdealer">
+                <div class="handle value"><h6>0%</h6></div>
+            </div>
+		  </div>
+		</div>
+
+		<div class="row user-picture-row" data-period="{{date_period}}">
+		  <div class="small-12 medium-12 large-12 columns">
+		  	<div ng-repeat="user in users | orderByPriority | orderBy:'surname'" class="row user-row user-id-{{user.id}}" ng-if="user.id!=12 && user.id!=16 && user.id!=15 && user.id!=10">
+		  		<div class="user-title clearfix">
+					<a class=""  data-userid="{{user.id}}"> <img class="th user-picture" src="/store/img/users/default.jpg" ng-src="{{user.pict}}"> </a>
+					<h4>{{user.name}} {{user.surname}}</h4>
+					<div class="percent-contain clearfix">
+						<div class="sold-vs-done clearfix">
+							<h6>Pārdotās pret Padarītajām</h6>
+							<div ng-repeat="(jobrole_id,percent) in user.percent" class="percent jobrole-id-{{jobrole_id}}">
+								<span class="title jobrole-id-{{jobrole_id}}">{{ jobroles[jobrole_id].title||'Kopā' }}:</span>	
+								<span class="value jobrole-id-{{jobrole_id}}">{{ percent|number:1}}%</span>	
+							</div>
+						</div>
+						<div class="done-vs-total clearfix">
+							<h6>Pārdotās pret Visām</h6>
+							<div ng-repeat="(jobrole_id,sold_m) in user.sold_m" class="percent jobrole-id-{{jobrole_id}}">
+								<span class="title jobrole-id-{{jobrole_id}}">{{ jobroles[jobrole_id].title||'Kopā' }}:</span>	
+								<span ng-if="!(user.id==2 && date_period>=115200) && !(user.id==8 && date_period>=115200)" class="value jobrole-id-{{jobrole_id}}">{{ sold_m/(1600*60)*100|number:1}}%</span>	
+
+								<!-- Uldis -->
+								<span ng-if="user.id==2 && date_period>=115200" class="value jobrole-id-{{jobrole_id}}">{{ sold_m/(87*6.5*60)*100|number:1}}% <small>(no: {{88*6.5}})</small></span>	
+
+								<!-- Ginta -->
+								<span ng-if="user.id==8 && date_period>=115200" class="value jobrole-id-{{jobrole_id}}">{{ sold_m/(127*6.5*60)*100|number:1}}% <small>(no: {{128*6.5}})</small></span>	
+
+							</div>
+						</div>
+					</div>
+		  		</div>
+				<h6 class="hide align-center">Sold Hours</h6>
+				<!-- {{user.done_m}} | {{user.sold_m}} -->
+				<div class="chart" style="height:{{(user.jobrolecount>1)?300:170}}px;" id="user-{{user.id}}-jorole-{{id}}-chart" data-title="{{ jobroles[id].title }}" data-mins="{{sold_m}}" data-sold-json="{{user.sold_m}}" data-done-json="{{user.done_m}}" data-json="{{user.json}}">
+					<svg></svg>
+				</div>
+		  	</div>
+
+		  	<div class="row user-row user-pv hide">
+				<div class="user-title clearfix">
+					<h4>Projektu Vadītaji <small>pārdotās stundas kopā:</small></h4>
+					<div class="percent-contain clearfix">
+						
+						<div class="asold-vs-done clearfix">
+							<div class="percent jobrole-id-1">
+								<span class="title jobrole-id-{{jobrole_id}}">{{ jobroles[jobrole_id].title||'Kopā' }}:</span>	
+								<span class="value jobrole-id-{{jobrole_id}}">{{ pm_sold_hours }}h</span>	
+							</div>
+						</div>
+						
+					</div>
+		  		</div>
+		  	</div>
+		  </div>
+		</div>		
+
+
+    </div>
+</div>
+
+<div id="date-filter-modal" class="reveal-modal app-date-filter-modal" data-reveal style="height:500px">
+    <div class="contain">
+    	<div class="row">
+    	  <div class="small-12 medium-12 large-12 columns">
+    	  	<h3>Select Filter dates</h3> <br>
+    	  </div>
+    	</div>
+
+    	<div class="row">
+    	  <div class="small-12 medium-12 large-12 columns">
+			<!-- Button Group Optional Classes: [radius round] -->
+			<ul class="button-group">
+			  <!-- Button Color Classes: [secondary alert success] -->
+			  <!-- Button Size Classes: [tiny small large] -->
+			  <li><a ng-click="lastYear()"   class="tiny secondary button">Last Year</a></li>
+			  <li><a ng-click="thisYear()"   class="tiny secondary button">This Year</a></li>
+			  <li><a ng-click="customDate()" class="tiny secondary button">Coustom</a></li>
+			</ul>
+			<br>
+    	  </div>
+    	</div>
+    	
+        <div class="row custom-date-row">
+          <div class="small-6 medium-6 large-6 columns">
+          	<div class="row collapse">
+          	  <div class="small-4 medium-4 large-4 columns">
+				<span class="prefix">Select Start Date</span>
+          	  </div>
+          	  <div class="small-8 medium-8 large-8 columns">
+				<input class="" type="text" pick-a-date="date" placeholder="Start Date" pick-a-date-options="date_options" ng-model="s_date"/>
+          	  </div>
+          	</div>
+          </div>
+          <div class="small-6 medium-6 large-6 columns">
+			<div class="row collapse">
+          	  <div class="small-4 medium-4 large-4 columns">
+				<span class="prefix">Select End Date</span>
+          	  </div>
+          	  <div class="small-8 medium-8 large-8 columns">
+				<input class="" type="text" pick-a-date="date" placeholder="End Date" pick-a-date-options="date_options" ng-model="e_date"/>
+          	  </div>
+          	</div>
+          </div>
+        </div>
+
+        <div class="row button-row">
+    	  <div class="small-12 medium-12 large-12 columns">
+			<!-- Button Group Optional Classes: [radius round] -->
+			<ul class="button-group right">
+			  <!-- Button Color Classes: [secondary alert success] -->
+			  <!-- Button Size Classes: [tiny small large] -->
+			  <li><a href="" class="success tiny button" ng-click="startQuery()">Generate Report</a></li>
+			</ul>
+    	  </div>
+    	</div>
+    </div>
+</div>

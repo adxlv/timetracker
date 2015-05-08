@@ -1,0 +1,219 @@
+<div class="row" ng-if="false">
+    <h4>Estimates</h4>
+    <div class="small-12">
+        <table width="100%" class="menu-table" ng-show="">
+            <tbody>
+                <tr>
+                    <td class="menu-col">
+                        <ul class="button-group clearfix">
+                            <li class="right"><a href="" class="tiny button success" ui-sref="project.estimates.new">
+                                &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                            </a>
+                            </li>
+                            <li class="left" ng-show="">
+                                <div class="row collapse">
+                                    <div class="small-3 columns">
+                                        <span class="prefix">Search</span>
+                                    </div>
+                                    <div class="small-9 columns">
+                                        <input type="search" ng-model="estimate_filter.title" placeholder="" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <table width="100%" class="estimate-table">
+            <thead>
+                <tr>
+                    <th class="button-col" width="46">
+                        <a href="" class="tiny button secondary" ui-sref="project.estimates.new">
+                            &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                        </a>
+                        </th>
+                    <th class="title-col" width="">Estimate Name</th>
+                    <th class="title-col" width="">Estimate Description</th>
+                    <th class="first-col" width="96"></th>
+
+                </tr>
+            </thead>
+            <tbody ng-repeat="estimates in estimates_grouped" ng-init="groupIndex = $index">
+                <tr ng-hide="{{$index==0}}" class="estimate-filler-row" >
+                    <td colspan="30"></td>
+                </tr>
+                <tr class="estimate-title-row">
+                    <td colspan="4">
+                        <h5>
+                            <small>group:</small>{{estimates.options.name}}</h5>
+                    </td>
+                </tr>
+                <tr ng-repeat="estimate in estimates | orderByPriority | filter:estimate_filter ">
+                    <td class="title-col" colspan="2">
+                        <a ui-sref="project.estimates.edit({estimateId:estimate.id})"><h6>{{ estimate.title }}</h6></a>
+                    </td>
+                    <td class="title-col" colspan="1">
+                        <a ui-sref="project.estimates.edit({estimateId:estimate.id})"><h6>{{ estimate.description }}</h6></a>
+                    </td>
+                    <td class="last-col" width="96">
+                        <ul class="button-group">
+                            <li><a href="" class="tiny button" ng-click="print_estimate(estimate.id)">Print</a>
+                            </li>
+                            <li><a href="" class="tiny button alert" ng-click="delete_estimate(estimate.id,groupIndex,$index)">x</a>
+                            </li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-8 columns" ng-class="{'full-width q': $state.is('project.estimates.new') ,'full-width a': $state.is('project.estimates') ,'full-width b': $state.is('project.estimates.edit') }">
+        <table width="100%" class="estimate-table">
+            <tbody>
+                <tr>
+                    <th class="title-col" width="">
+                        <h4>Estimates & Invoices</h4>
+                    </th>
+                    <th class="button-col" width="46">
+                        <a href="" class="tiny button secondary" ui-sref="project.estimates.new">
+                            &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                        </a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row estimate-list">
+          <div class="small-12 medium-12 large-12 columns no-anim" ui-sortable="fullListOptions" ng-model="estimates">
+            <div class="empty-filler" ng-show="estimates.length == 0"><span>No Estimates</span></div>
+            <div class="estimate-page-group no-anim" ng-repeat="estimate in estimates | orderByPriority | filter:estimate_filter ">
+               
+                <div class="subestimates clearfix" ui-sortable="shortListOptions" ng-model="estimate.bound">
+                    <div class="space-fill"></div>
+
+                    <div class="estimate subestimate handle" ng-repeat="subestimate in estimate.bound" ng-click="open_estimate(subestimate,$event)" data-estimate-id="{{subestimate.id}}">
+                        <div class="logo"><img ng-src="/img/{{subestimate.group.img}}" alt=""></div>
+                        <div class="title">
+                            <h6>{{subestimate.title}}</h6>
+                        </div>
+                        <div class="total">
+                            <h5>
+                                <small>Total:</small>
+                                {{subestimate.total_summ|number}} €
+                            </h5>
+                        </div>
+                        <div class="expand" ng-click="expand_estimate(subestimate,estimate,$event)">
+                            <a class="expand-button" > <i class="fa fa-expand"></i> </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="estimate main handle" 
+                        ng-click="open_estimate(estimate,$event)" 
+                        data-estimate-id="{{estimate.id}}">
+                    <div class="logo"><img ng-src="/img/{{estimate.group.img}}" alt=""></div>
+                    <div class="title">
+                        <h5>{{estimate.title}}</h5>
+                    </div>
+                    <div class="total">
+                        <h4>
+                            <small>Total:</small>
+                            {{estimate.total_summ|number}} €
+                        </h4>
+                    </div>
+                    <div class="edit" ng-click="delete_estimate(estimate,$event)">
+                        <a class="edit-button" > <i class="fa fa-trash"></i> </a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="small-4 columns" ui-view="info"></div>
+
+    <div class="small-12" ng-if="false">
+
+        <table width="100%" class="invoice-table">
+            <tbody>
+                <tr>
+                    <th class="title-col" width="">
+                        <h4>Invoices <small>based on estimates</small></h4>
+                    </th>
+                    <th class="button-col" width="46">
+                        <a ng-show="false" href="" class="tiny button secondary" ui-sref="project.estimates.new">
+                            &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                        </a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <table width="100%" class="invoice-table">
+            <thead>
+                <tr>
+                    
+
+                    <th class="title-col" width="" colspan="2"></th>
+                    <th class="title-col" width="" colspan="">Name</th>
+                    <th class="title-col align-center" width="80">Cost <br><small>NET</small></th>
+                    <th class="title-col align-center" width="80">Cost <br><small>3. party</small></th>
+                    <th class="title-col align-center" width="80">Total</th>
+                    <th class="title-col" width="" colspan="1"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="estimate in estimates ">
+                    <td class="button-col" width="46">
+                        <a href="" class="tiny button secondary">
+                            &nbsp;<i class="fa fa-circle-o-notch "></i>&nbsp;
+                        </a>
+                    </td>
+                    <td class="button-col" width="46">
+                        <a href="" class="tiny button success">
+                            &nbsp;<i class="fa fa-star "></i>&nbsp;
+                        </a>
+                    </td>
+
+                    <td class="title-col" colspan="1">
+                        <h6><small>G120-10-03</small> {{ estimate.title }}</h6>
+                    </td>
+
+                    <td class="title-col align-center" width="80">
+                        <h6>{{estimate.total_summ|number}} €</h6>
+                    </td>
+                    <td class="title-col align-center" width="80">
+                        <h6>0 €</h6>
+                    </td>
+                    <td class="title-col align-center" width="80">
+                        <h6>{{estimate.total_summ|number}} €</h6>
+                    </td>
+
+                    <td class="button-col" width="46">
+                        <a ng-href="/printinvoice/{{estimate.id}}" target="_blank" class="tiny button secondary">
+                            &nbsp;<i class="fa fa-file-pdf-o "></i>&nbsp;
+                        </a>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>
+
+
+<div id="new-estimate-modal" class="reveal-modal app-help-content" data-reveal >
+    <div class="row" ng-class="{'full-row':('project.estimates.edit' | isState )}" ui-view="edit"></div>
+    <a  class="close-reveal-modal">&#215;</a>
+</div>

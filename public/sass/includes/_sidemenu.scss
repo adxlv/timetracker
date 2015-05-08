@@ -1,0 +1,146 @@
+body.enviroment-local .app-menu {
+	a,i,h2 {
+		color: #24E3EB !important;
+	}
+}
+
+.app-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	width: $app-menu-width;
+	height: 100%;
+
+	background: #333;
+	opacity: 1;
+	
+	@include translate3d(-$app-menu-width + 50px,0,0);
+
+	text-align: right;
+
+	.container {
+		position: relative;
+		margin-top: 1.5rem;		
+		
+		.side-nav {
+			font-family: inherit;
+		}
+
+		
+		h2 { 
+			color: $primary-color; 
+			font-weight: inherit; 
+			margin-right: 60px;
+		} 
+
+		.fa {
+			position: absolute;
+			right: 0px;
+			width: 50px;
+			text-align: center;
+		}
+		
+		.menu-icon  { 
+			// position: absolute;
+			// right: 0px;
+			top:4.2rem;
+			margin: 0.5rem 0 0 0;
+			margin: 0;
+			font-size: 1.8rem;
+		}		
+
+		ul {
+			margin-top: 30px;
+			// opacity: 0;
+			
+			li.empty {
+				border:none;
+				a { font-size: 0.2rem; }
+
+				&:hover,
+				&.active {
+					background: none;
+				}
+			}
+			li.disabled {
+				a { color: #555; }
+				i { color: #555; }
+			}
+
+			li {
+				line-height: 3.5;
+				margin: 0;
+				position: relative;
+
+				border-bottom: solid 1px black;
+				border-top: solid 1px black;
+
+				margin-top:-1px;
+
+				&:hover,
+				&.active {
+					background: rgba(255, 255, 255, 0.1);
+				}
+
+				a {
+					padding: 0 60px 0 0;
+					font-size: 1.2rem;
+					display: inline-block;
+					width: 100%;
+				}
+				i { 
+					font-size: 1.8rem;
+					top: (1.2rem * 3.5) / 2 - 1rem;
+					color: $primary-color;
+				}
+			}
+		}
+
+	}
+}
+
+
+// SHOWING THE MENU
+//////////////////////////////////////////////////////////////////////////////////////////////////////// 
+.show-menu {
+	.app-pusher {
+		@include transition-delay(100);
+		// @include transition-delay($app-transition-time*5+100);
+		// Push back style
+		// @include translate3d(100px, 0, -200px);
+		@include translate3d($app-menu-width - 150px, 0, 0);
+
+		// Push rotate out style
+		// @include translate3d(100px, 0, -400px);
+		// @include rotateY(-10deg);
+		
+		// Dor open style
+		// @include rotateY(-5deg);
+		// -webkit-transform-origin: 100% 50%;
+		// 		transform-origin: 100% 50%;
+
+	}
+	&:after {
+		@include transition(display 0);
+		display: block;
+		opacity: 1;
+		z-index:2;
+	}
+	
+	.app-menu {
+		// @include transition-delay($app-transition-time*1);
+		// @include transition-delay($app-transition-time*5);
+		@include translate3d(0,0,0);
+
+		ul {
+			@include transition-delay($app-transition-time);
+			opacity: 1;
+		}
+	}
+}
+
+.anim-hide {
+	opacity: 0;
+}

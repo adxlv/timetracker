@@ -1,0 +1,17 @@
+{"clients": {"brandbox": 
+{
+  "description" : "Doe",
+  "title" : "Brandbox",
+  "id" : "brandbox"
+}, 
+"rietumubanka":
+{
+  "description" : "Smith",
+  "title" : "Rietumu Banka",
+  "id" : "rietumubanka"
+},
+"mccann": {
+  "description" : "Jones",
+  "title" : "McCann",
+  "id" : "mccann"
+} }}

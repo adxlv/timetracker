@@ -1,0 +1,1 @@
+{"version":3,"file":"app-min.js","sources":["../app.js"],"names":["app","angular","module","config","$stateProvider","$urlRouterProvider","state","url","templateUrl","controller"],"mappings":"AAEA,GAAIA,KAAMC,QAAQC,OAAO,gCACxB,aAEA,YACA,cAEA,wCACA,6CAIAC,OAAO,SAASC,EAAgBC,GAShCD,EACEE,MAAM,WACNC,IAAK,oBACLC,YAAa,oDACbC,WAAY"}

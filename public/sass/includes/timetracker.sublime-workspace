@@ -1,0 +1,1084 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"adx-s",
+				"adx-bower-script"
+			],
+			[
+				"adx",
+				"adx-bower-style"
+			],
+			[
+				"$in",
+				"$interval	AngularJS"
+			],
+			[
+				"ng",
+				"ng-click	AngularJS"
+			],
+			[
+				"b",
+				"bxsh	box-shadow: ${1:inset }${2:hoff} ${3:voff} ${4:blur} ${5:color};"
+			],
+			[
+				"zf-bu",
+				"zf-button-group	ZURB Foundation 5 Button Groups"
+			],
+			[
+				"ng-in",
+				"ng-init	AngularJS"
+			],
+			[
+				"$s",
+				"$scope	AngularJS"
+			],
+			[
+				"bx",
+				"bxsh	box-shadow: ${1:inset }${2:hoff} ${3:voff} ${4:blur} ${5:color};"
+			],
+			[
+				"ng-",
+				"ng-bind	AngularJS"
+			],
+			[
+				"layo",
+				"LayouterGrid"
+			],
+			[
+				"ng-re",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"bsh",
+				"bxsh	box-shadow: ${1:inset }${2:hoff} ${3:voff} ${4:blur} ${5:color};"
+			],
+			[
+				"estima",
+				"estimate"
+			],
+			[
+				"wa",
+				"WATCHES"
+			],
+			[
+				"p",
+				"p	padding"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"tas",
+				"taskrole_id"
+			],
+			[
+				"f",
+				"fz	font-size"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"pro",
+				"project"
+			],
+			[
+				"pr",
+				"pos-r	position: relative;"
+			],
+			[
+				"week",
+				"weekOffset"
+			],
+			[
+				"the_",
+				"the_url"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"background",
+				"background-image:   (property)"
+			],
+			[
+				"lo",
+				"loaderTime"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"_",
+				"_counter"
+			],
+			[
+				"console",
+				"console.	console.error()"
+			],
+			[
+				"ite",
+				"items"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"mag",
+				"margin"
+			],
+			[
+				"re",
+				"ready"
+			],
+			[
+				"time",
+				"timeout	setTimeout function"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"data-",
+				"data-width"
+			],
+			[
+				"con",
+				"console.	console.log()"
+			],
+			[
+				"arr",
+				"array	$… = array (…)"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"consol",
+				"console.	console.log()"
+			],
+			[
+				"All",
+				"allow"
+			],
+			[
+				"cons",
+				"console.	console.groupCollapsed(name)"
+			],
+			[
+				"ima",
+				"image"
+			],
+			[
+				"frontI",
+				"frontImageInd"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"to",
+				"to_h"
+			],
+			[
+				"img",
+				"img_r"
+			],
+			[
+				"par",
+				"par_w"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"bor",
+				"border-color"
+			],
+			[
+				"gr",
+				"groupCollapsed"
+			],
+			[
+				"la",
+				"lastClicked"
+			],
+			[
+				"imag",
+				"imageAction"
+			],
+			[
+				"array",
+				"array_from_form"
+			],
+			[
+				"_o",
+				"__constructor"
+			],
+			[
+				"M",
+				"myModal"
+			],
+			[
+				"image",
+				"image_object"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"Uplo",
+				"UploadHandler"
+			],
+			[
+				"RE",
+				"REQUEST_METHOD"
+			],
+			[
+				"up",
+				"uploaded_file"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"ta",
+				"text-align"
+			],
+			[
+				"c",
+				"cols	Attr"
+			],
+			[
+				"pritn",
+				"print_r"
+			],
+			[
+				"text",
+				"textarea	Tag"
+			],
+			[
+				"tx",
+				"text-decoration"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"t",
+				"table"
+			],
+			[
+				"tabe",
+				"table-cell"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"al",
+				"vertical-align"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"bar",
+				"background"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"get",
+				"getPosition"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_sidemenu.scss",
+			"settings":
+			{
+				"buffer_size": 2252,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set",
+				"Set Syntax: HTML"
+			],
+			[
+				"comm",
+				"Toggle Block Comment"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"live",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"tit",
+				"Convert Case: Title Case"
+			],
+			[
+				"Titt",
+				"Convert Case: Title Case"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"titl",
+				"Convert Case: Title Case"
+			],
+			[
+				"mini",
+				"Minify::Minify File"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"medi",
+				"Snippet: CSS - @media {}"
+			],
+			[
+				"for",
+				"Format Code"
+			],
+			[
+				"form",
+				"Format Code"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"media	",
+				"Snippet: CSS - @media {}"
+			],
+			[
+				"min",
+				"Minify Javascript"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"m",
+				"Minify Javascript"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"jso",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"json",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"js",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"fold",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"jsin",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"proje",
+				"Project: Save As"
+			],
+			[
+				"prtt",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"prree",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"set htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"tab",
+				"View: Toggle Tabs"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/controllers/AdminController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/HomeController.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/public/scss/styles.scss",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/views/layouts/master.blade.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/controllers/HomeController.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/routes.php",
+		"/private/etc/apache2/extra/httpd-vhosts.conf",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/bootstrap/start.php",
+		"/Users/Guntis/Library/Application Support/Sublime Text 3/Packages/User/adx-snippets.sublime-snippet",
+		"/Users/Guntis/Library/Application Support/Sublime Text 3/Packages/User/adx-snippets.sublime-completions",
+		"/Users/Guntis/Library/Application Support/Sublime Text 3/Packages/User/adx-snippets",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/public/bower_components/moment/min/moment-with-locales.min.js",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/public/scss/app.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/views/layouts/master.blade.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/views/admin/login.blade.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/views/index.blade.php",
+		"/Users/Guntis/Library/Application Support/Sublime Text 3/Packages/BufferScroll/BufferScroll.sublime-settings",
+		"/Users/Guntis/Library/Application Support/Sublime Text 3/Packages/User/BufferScroll.sublime-settings",
+		"/Users/Guntis/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/routes.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/bower_components/foundation/scss/foundation/components/_global.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/screen.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/app.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/_mixins.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/_settings.scss",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/public/bower_components/foundation/scss/foundation/_functions.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/bower_components/foundation/scss/foundation/_functions.scss",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/config/app.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/start/global.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/start/global.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/config/app.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/config/local/app.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/app/config/local/database.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/public/index.php",
+		"/Users/Guntis/Documents/Work/Inspirendo/_web/_wwwroot/composer.json",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/composer.json",
+		"/Users/Guntis/Documents/Work/FazerDruva/_web/_wwwroot/wp-config.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/layouter_grid/partials/index.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/clients/clients.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/js/controllers.js",
+		"/Users/Guntis/Downloads/timetracker (4).sql",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/BaseController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/layouter_grid/js/controllers.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/js/app.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/projects/projects.open.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/tasks/tasks.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/estimates/estimates.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/views/partials/menu.blade.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/ProjectsController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/reports/reports.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/reports/reports.dashboard.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/my-tasks/tasks.list.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/reports/reports.users.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/reports/reports.clients.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/js/services.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/reports/reports.clients.open.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/my-tasks/tasks.my.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/fluid_alerts/js/controllers.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/fluid_alerts/partials/index.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/reports/reports.full.html",
+		"/Users/Guntis/Library/Caches/Cleanup At Startup/Transmit/DF2089B0-7CCC-4D60-AA59-8C7D444D1669/app.php",
+		"/Users/Guntis/Library/Caches/Cleanup At Startup/Transmit/CE7C8094-A986-43BE-A833-17E89121CF59/AjaxController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/apps/apps.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/NgAppsTableController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/fluid_alerts/js/services.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/fluid_alerts/js/app.js",
+		"/Users/Guntis/Library/Caches/Cleanup At Startup/Transmit/1F8DB24C-AE23-4461-88D9-65507ECDA93F/app.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/layouter_grid/js/services.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/layouter_grid/scss/styles.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/coustom-ng-apps/layouter_grid/js/app.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/seeds/ngAppTableSeeder.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/seeds/DatabaseSeeder.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/seeds/UserTableSeeder.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/migrations/2014_10_17_142805_install_ngAppsTable.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/models/NgAppTable",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/js/interaction.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/includes/_appcontents.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/UsersController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/js/coustom-ng-apps/layouter_grid/app.js",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/EstimatesController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/tasks/tasks.info.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/estimates/estimates.edit.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/reports/reports.project.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/estimates/estimates.new.html",
+		"/Users/Guntis/Downloads/users.sql",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/seeds/ClientsTableSeeder.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/projects/projects.edit.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/ClientsController.php",
+		"/Users/Guntis/Documents/Work/RietumuBanka/Kreditēšanas banners/_httpd/index.html",
+		"/Users/Guntis/Documents/Work/RietumuBanka/Kreditēšanas banners/_httpd/scss/styles.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/seeds/ProjectsTableSeeder.php",
+		"/Users/Guntis/Documents/Work/RietumuBanka/Flash Banneri - eCOM14/_httpd/index.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/migrations/2014_06_13_071557_create_Users_table.php",
+		"/Users/Guntis/Downloads/job_roles.sql",
+		"/Users/Guntis/Desktop/lv.adx.time/app/config/database.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/config/database.php",
+		"/Users/Guntis/Desktop/lv.adx.time/app/config/app.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/users/users.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/users/users.profile.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/TasksController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/includes/_sidemenu.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/fonts/fontawesome/font-awesome.css",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/fonts/fontawesome/font-awesome.min.css",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/dashboard/dashboard.full.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/models/User.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/views/index.blade.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/includes/_nganimations.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/projects/projects.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/bower_components/c3/htdocs/samples/point_r.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/fonts/foundation-icons/preview.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/fonts/foundation-icons/svgs/fi-rewind-ten.svg",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/bower_components/c3/htdocs/samples/data_region_timeseries.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/sass/print.scss",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/tasks/tasks.new.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/seeds/EstimatesTableSeeder.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/clients/clients.edit.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/migrations/2014_10_01_185940_create_EstimateEntries_table.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/DashboardController.php",
+		"/Users/Guntis/Library/Caches/Cleanup At Startup/Transmit/A585F58E-3A9F-40E1-A530-9363CF07C96F/talents",
+		"/Users/Guntis/Library/Caches/Cleanup At Startup/Transmit/68D70257-D452-48DD-9D6D-8370E73FE0E5/items.json",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/home/home.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/views/my-tasks/index.blade.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/public/partials/dashboard/dashboard.project.html",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/migrations/2014_05_13_121148_create_Clients_table.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/migrations/2014_06_13_071557_create_Projects_table.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/controllers/EstimateEntriesController.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/database/seeds/EstimateEntriesTableSeeder.php",
+		"/Users/Guntis/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/app/models/EstimateEntry.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"",
+			"/",
+			"foundation",
+			"Variable",
+			"make",
+			"HomeController",
+			"Home",
+			"homestead",
+			" q",
+			"ng",
+			"includedByState",
+			"DROP",
+			"6",
+			"h1",
+			"h2",
+			"h1",
+			"h2",
+			"project",
+			"clients",
+			"project",
+			"button",
+			"beep",
+			"FluidAlerts",
+			"Timetracker.apps.LayouterGrid",
+			"tbody",
+			"td",
+			"	",
+			" ",
+			"	",
+			"$id",
+			"apps",
+			"update",
+			"watch",
+			"new",
+			"secondary",
+			"th",
+			"0",
+			"5",
+			"F",
+			"8",
+			"5",
+			"<th",
+			"<td",
+			"td",
+			"th",
+			"valaue",
+			"vlaue",
+			"header",
+			"'0'",
+			"0",
+			"',",
+			"0",
+			"text",
+			"	",
+			"Input",
+			"	",
+			"User",
+			"'",
+			"app_name",
+			"taskuserbinds",
+			"');\n",
+			"	",
+			"E  |  ",
+			" ",
+			"Table",
+			"width",
+			"Content Goes Here",
+			"6",
+			"users",
+			"foundation",
+			"h4",
+			"involved_roles",
+			"project_id",
+			"collapse",
+			"inline",
+			"columns",
+			"prefix",
+			"h1",
+			"1004x90",
+			"13",
+			"Restart",
+			"20px",
+			"600x90",
+			"240x400",
+			"10px",
+			"600x90",
+			"10",
+			";Project",
+			"Project",
+			"Zaļā",
+			"eCom",
+			"Buklets",
+			"i_",
+			"Buklets",
+			"i_",
+			"Buklets",
+			"disabled",
+			"email",
+			"'/store/",
+			"'/store",
+			"task.done",
+			"ProjectsOpen_Click_Setup",
+			"RIB",
+			"Lindenholma",
+			"Gutta",
+			"Selga",
+			"Livna",
+			"Premia",
+			"Runway",
+			"estimate",
+			"name",
+			"text",
+			"pass",
+			"password",
+			"name",
+			"surname",
+			"login",
+			"surname",
+			"Surname",
+			"surname",
+			"small-3",
+			"name",
+			"reports",
+			"dashboard",
+			"../fonts/",
+			"11px",
+			"13px",
+			"1px"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_sidemenu.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bs_sintax": "scss",
+							"buffer_scroll_name": "6009d745",
+							"color_scheme": "Packages/User/Color Highlighter/themes/base16-eighties.dark.tmTheme",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 299.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "timetracker.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"por",
+				"~/Library/Caches/Cleanup At Startup/Transmit/7ABB28B7-5F8F-4B9A-945E-7F238A589854/portfolio.php"
+			],
+			[
+				"st",
+				"~/Library/Caches/Cleanup At Startup/Transmit/B754B339-39AB-4E75-A492-3AE254B6E4BF/styles.css"
+			],
+			[
+				"s",
+				"~/Library/Caches/Cleanup At Startup/Transmit/B754B339-39AB-4E75-A492-3AE254B6E4BF/styles.css"
+			],
+			[
+				"ma",
+				"~/Library/Caches/Cleanup At Startup/Transmit/49C9B87C-7354-45D2-B6FB-F9512CE5C40B/main.php"
+			],
+			[
+				"",
+				"~/Library/Caches/Cleanup At Startup/Transmit/B754B339-39AB-4E75-A492-3AE254B6E4BF/styles.css"
+			],
+			[
+				"man",
+				"~/Library/Caches/Cleanup At Startup/Transmit/49C9B87C-7354-45D2-B6FB-F9512CE5C40B/main.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/Work/Brandbox/brandbox.timetracker/web/timetracker/timetracker.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

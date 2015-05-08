@@ -1,0 +1,61 @@
+<div class="small-12 columns">
+
+    <div class="row"></div>
+
+    <div class="row">
+        <div class="small-12 columns ">
+            <div class="row">
+                <div class="small-3 columns">
+                    <h2>
+                        <small>New Estimate:</small>&nbsp;</h2>
+                </div>
+                <div class="small-6 columns align-center end">
+                    <h2>{{estimate.title}}</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="small-3 columns">
+            <label for="estimate-name-input" class="">Name:
+                <input id="estimate-name-input" type="text" ng-model='estimate.title' placeholder="Dizaina izveide" />
+            </label>
+        </div>
+
+        <div class="small-7 columns">
+            <label for="estimate-desc-input" class="">Description:
+                <input id="estimate-desc-input" type="text" ng-model='estimate.description' placeholder="Tāme par logotipa, vizītkartes un web kataloga dizaina izstrādi" />
+            </label>
+        </div>
+
+        <div class="small-2 columns">
+            <label for="estimate-select" class="">Type:
+                <select id="estimate-select" ng-options="type.name for type in selecttypes.list" ng-model="selecttypes.selected"></select>
+            </label>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="small-3 columns end">
+            <ul class="button-group">
+                <li><a class="button tiny success" ng-click="save_open_estimate()">Save</a>
+                </li>
+                <li><a class="button tiny alert" onclick="$('a.close-reveal-modal').trigger('click');">Back</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="groups-modal" class="reveal-modal app-groups-content" data-reveal>
+    <div class="grid">
+        <div class="grid-item jobrole-item" ng-repeat="jobrole in jobroles " data-id='{{jobrole.id}}'>
+            <div class="image" style="background-image: url({{jobrole.img_url}});"></div>
+            <p>{{jobrole.title}}</p>
+        </div>
+    </div>
+
+    <a class="close-reveal-modal">&#215;</a>
+</div>

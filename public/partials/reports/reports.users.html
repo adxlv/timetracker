@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+		
+		<div class="row user-picture-row">
+		  <div class="small-12 medium-12 large-12 columns">
+		  	<div ng-repeat="user in users" class="each-user">
+				<a class="th click-bind"  data-userid="{{user.id}}"> <img class="th user-picture" src="/store/img/users/default.jpg" ng-src="{{user.pict}}"> </a>
+				<p>{{user.name}}</p>
+		  	</div>
+		  </div>
+		</div>
+
+		<div class="row">
+		  <div class="small-12 medium-12 large-12 columns">
+			   <table width="100%" ui-view="tasks" autoscroll='true' class="main-table"> </table>
+		  </div>
+		</div>
+
+    </div>
+</div>

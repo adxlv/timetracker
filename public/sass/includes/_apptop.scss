@@ -1,0 +1,11 @@
+.app-top {
+	.title-area {
+		.name a {
+			color: $primary-color;
+		}
+	}
+
+	.top-bar-section ul li {
+		background: $topbar-bg-color;
+	}
+}

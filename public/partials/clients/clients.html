@@ -1,0 +1,93 @@
+<div class="container row">
+	<div class="small-6 medium-6 large-6 columns" ng-class="{'full-width q': (weareinview) ,'full-width a': $state.is('clients')}" ui-sref-active="active" >
+		<div class="page page-clients row">
+			<div class="top">
+				<h3 ng-hide="weareinview">Clients</h3>
+				<h3 ng-show="weareinview">My Clients</h3>
+			</div>		
+			
+			<table width="100%">
+			  <thead>
+			    <tr>
+			      <th class="color-col"width="5"></th>
+			      <th class="search-col"width="">
+			      	<input class="{{(filter_client.title)?'active':'empty'}}" type="search" ng-model="filter_client.title" placeholder="&#61442 Search client" autocomplete="off" />
+			      </th>
+			      <th class="last-col button-col" width="{{(weareinview)?46:92}}">
+			      	<ul class="button-group">
+						<li ng-if="!weareinview"><a class="tiny button secondary filter-button">
+							&nbsp;<i class="fa fa-filter "></i>&nbsp;
+						</a></li>
+						<li><a ui-sref="clients.edit({clientId:'new'})" class="tiny button secondary">
+							&nbsp;<i class="fa fa-plus "></i>&nbsp;
+						</a></li>	
+			      	</ul>
+					
+			      </th>
+			    </tr>
+			    <tr class="filter-row">
+					<th colspan="3">
+						<ul class="button-group">
+							<li>
+								<a ng-click="filterArchived(filters.archived)" ng-class="{'active':filters.archived}" class="tiny button secondary">
+									Achived
+								</a>
+							</li>
+				      	</ul>
+					</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr ng-repeat="cli in clients | orderByPriority | filter:filter_client | orderBy:'title' " ui-sref-active="active" ng-class="{'archived':cli.archived_by}" class="client-{{cli.id}}">
+			    	<td class="color-col" style="background: {{cli.color}}; box-shadow: 0 0 3px {{cli.color}};" ></th>
+			    	<td class="title-col" colspan="2"> 
+			    		<div class="get-menu">
+							&nbsp;<i class="fa fa-ellipsis-v"></i>&nbsp;
+			    		</div>
+			    		
+			    		<ul class="button-group edit-button-group">
+			    			<li><a ui-sref="clients.edit({clientId:cli.id})" class="tiny secondary button edit-button">
+									&nbsp;<i class="fa fa-pencil fa-lg"></i>&nbsp;
+					    	</a></li>
+					    	<li><a class="tiny secondary button edit-button" ng-click="archiveClient(cli.id)">
+									&nbsp;<i class="fa fa-file-archive-o fa-lg"></i>&nbsp;
+					    	</a></li>
+			    			<li><a class="tiny button alert edit-button" ng-click="destroy(cli.id,$index)">
+									&nbsp;<i class="fa fa-trash-o fa-lg"></i>&nbsp;
+					    	</a></li>
+				    	</ul>
+			    		<a ui-sref="clients.projects({clientId:cli.id})">
+			    			<h6>
+								<small class='new' ng-show="cli.new">new</small>
+			    				{{ cli.title }}
+			    			</h6>
+			    			
+			    		</a> 
+			    	</td>
+			    	<td>
+						
+			    	</td>
+			    	
+			    </tr>
+			   
+			  </tbody>
+			</table>
+		</div>
+		<div class="divider"></div>
+	</div>
+
+
+	<div class="small-6 medium-6 large-6 columns" ui-view>
+	</div>
+
+	
+
+	
+</div>
+
+<div id="myModal" class="reveal-modal app-help-content" data-reveal>
+  <h2>Congratulations!!</h2>
+  <p class="lead">You found the <a href="" class="tiny button">Options</a> button. Now, be a sweetie and and close me.</p>
+  <p></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

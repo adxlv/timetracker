@@ -1,0 +1,78 @@
+<div class="container row">
+	<div class="page">
+		<div class="page-projects">
+			<div class="">
+				<h3><small>Projects for </small>{{client.title}} &nbsp;</h3>
+			</div>
+					
+			<table width="100%">
+			  <thead>
+			    <tr>
+			      <th class="search-col"width="">
+					<input class="{{(filter_project.title)?'active':'empty'}}" type="search" ng-model="filter_project.title" placeholder="&#61442 Search project" autocomplete="off" />
+			      </th>
+			      <th class="last-col button-col" width="92">
+			      	<ul class="button-group">
+						<li><a class="tiny button secondary filter-button">
+							&nbsp;<i class="fa fa-filter "></i>&nbsp;
+						</a></li>
+						<li><a ui-sref="clients.projects.new({projectId:'new'})" class="tiny button secondary">
+							&nbsp;<i class="fa fa-plus "></i>&nbsp;
+						</a></li>	
+			      	</ul>
+			      </th>
+			    </tr>
+			    <tr class="filter-row">
+					<th colspan="2">
+						<ul class="button-group">
+							<li>
+								<a ng-click="filterArchived(filters.archived)" ng-class="{'active':filters.archived}" class="tiny button secondary">
+									Achived
+								</a>
+							</li>
+				      	</ul>
+					</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr ng-repeat="project in projects | orderByPriority | filter:filter_project | orderBy:'title' " ng-class="{'archived':project.archived_by}" class="project-{{project.id}}">
+			    	<td class="color-col" ng-show=""></td>
+			    	<td class="title-col" colspan="2"> 
+			    		<div class="get-menu">
+							&nbsp;<i class="fa fa-ellipsis-v"></i>&nbsp;
+			    		</div>
+			    		
+			    		<ul class="button-group edit-button-group">
+			    			<li><a ui-sref="clients.projects.new({projectId:project.id})" class="tiny secondary button edit-button">
+									&nbsp;<i class="fa fa-pencil fa-lg"></i>&nbsp;
+					    	</a></li>
+					    	<li><a class="tiny secondary button edit-button" ng-click="archiveProject(project.id,$index)">
+									&nbsp;<i class="fa fa-file-archive-o fa-lg"></i>&nbsp;
+					    	</a></li>
+			    			<li><a class="tiny button alert edit-button" ng-click="destroy(project.id,$index)">
+									&nbsp;<i class="fa fa-trash-o fa-lg"></i>&nbsp;
+					    	</a></li>
+				    	</ul>
+				    	<a ui-sref="project.tasks({projectId:project.id})"><h6> {{ project.title }}</h6></a>
+			    	</td>
+			    	<td class="last-col" ></td>
+			    	
+			    </tr>
+			   
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div id="myModal" class="reveal-modal app-help-content" data-reveal>
+  <h2>Congratulations!!</h2>
+  <p class="lead">You found the <a href="" class="tiny button">Options</a> button. Now, be a sweetie and and close me.</p>
+  <p></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="project-edit-modal" class="reveal-modal app-help-content" data-reveal>
+	<div class="row" ui-view></div>
+    <a  class="close-reveal-modal">&#215;</a>
+</div>

@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+		
+			<table width="100%">
+			  <thead>
+			    <tr>
+			      <th class="title-col"width=""></th>
+			      <th class="last-col" width="106"></th>
+			      <th class="last-col button-col" width="46">
+					<a ui-sref="." class="tiny button secondary">+</a>
+			      </th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr ng-repeat="client in clients | orderByPriority | filter:filter | orderBy:'title' " >
+			    	<td class="color-col" ng-show=""></td>
+			    	<td class="title-col"> 
+			    		<a ui-sref="."><h6> {{ client.title }}</h6></a>
+			    		<ul class="button-group edit-button-group">
+				    		<a ui-sref="." class="tiny button edit-button">Edit</a>
+				    		<a class="tiny button alert edit-button" ng-click="destroy($index)">x</a>
+				    	</ul>
+			    	</td>
+			    	<td>
+			    		<h6>{{client.done_m|parseTimeMins}}</h6>
+			    	</td>
+			    	<td class="last-col" ></td>
+			    	
+			    </tr>
+			   
+			  </tbody>
+			</table>
+			
+    </div>
+</div>

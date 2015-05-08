@@ -1,0 +1,29 @@
+<thead>
+    <tr>
+        <th class="color-col" width="5" ></th>
+        <th class="first-col" width="" colspan="2"></th>
+        <th ng-repeat="day in week" class="day-col {{ (day.weekend)?'weekend':'' }} {{ (day.today)?'today':'' }}" width="50">
+            {{ day.date() }}
+        </th>
+
+    </tr>
+</thead> 
+<tbody>
+    <tr ng-if="user.hide == true"> Loading... </tr>
+    <tr ng-repeat="taskrole in user.taskroles | orderByPriority | filter:filter | orderBy:'task.project.client.title' " ng-show='taskrole.task' class="{{ (taskrole.task.estimate_id==null)?'rouge-task':'' }}">
+        <td class="color-col" width="5" style="background: {{taskrole.task.project.client.color}}; box-shadow: 0 0 3px {{taskrole.task.project.client.color}};" ></th>
+        <td class="title-col align-center abbr-col" width="40"> <h6><small>{{ taskrole.jobrole.abbreviation }}</small></h6> </th>
+        <td class="title-col">  
+            <a ui-sref="project({projectId:taskrole.task.project.id})" ng-if="user.group==1">
+                <h6>{{ taskrole.task.project.client.title }} - {{taskrole.task.project.title}} <small>{{ taskrole.task.title }}</span> </h6>
+            </a>
+            <h6 ng-if="user.group!=1">{{ taskrole.task.project.client.title }} - {{taskrole.task.project.title}} <small>{{ taskrole.task.title }}</span> </h6>
+        </td>
+
+        <td ng-repeat="day in week" class="day-col {{ (day.weekend)?'weekend':'' }} {{ (day.today)?'today':'' }}" ng-click="open_log_select({taskrole:taskrole,day:day,timelog:timelog, comment:timelog.comment})">
+            <h6 ng-show="timelog.exist">{{timelog = (taskrole.usertimelogs | compareTimesGetObject:day); timelog.minutes|parseTimeMins}}</h6>
+        </td>
+
+    </tr>
+
+</tbody>

@@ -1,0 +1,2 @@
+var app=angular.module("Timetracker.apps.LayouterGrid",["ngResource","ui.router","ui.sortable","Timetracker.apps.LayouterGrid.services","Timetracker.apps.LayouterGrid.controllers"]).config(function(r,e){r.state("lg_home",{url:"/apps/layoutergrid",templateUrl:"/coustom-ng-apps/layouter_grid/partials/index.html",controller:"LG_IndexController"})});
+//# sourceMappingURL=./app-min.js.map

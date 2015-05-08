@@ -1,0 +1,53 @@
+<div class="container row">
+    <div class="page page-projects">
+        <div class="row " >
+            
+            <div class="small-12 medium-8 medium-offset-2 columns " >
+                <div class="row">
+                        <div class="small-2 columns">
+                            <h3 class="right"> &nbsp;  <small>{{link}} project</small></h3>
+                        </div><div class="small-10 columns">
+                            <h3>{{project.title}}</h3>
+                        </div>
+                    </div>
+                <form autocomplete="off">
+                    <div class="row">
+                        <div class="small-2 columns">
+                            <label for="title" class="inline right">Title</label>
+                        </div><div class="small-10 columns">
+                            <input id="title" type="text" placeholder="Title" ng-model="project.title" autocomplete="off"/>
+                        </div>
+                    </div>
+                    
+
+                	<div class="row">
+                        <div class="small-2 columns">
+                            <label for="description" class="inline right">Description</label>
+                        </div><div class="small-10 columns">
+                            <textarea rows="2" placeholder="Description" id="description" ng-model="project.description"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                        	<a href="" class="button tiny success" ng-click="save()">Save</a>
+                        	<a href="" class="button tiny alert  " ng-click="back()">Back</a>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>            
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+<div id="myModal" class="reveal-modal app-help-content" data-reveal>
+    <h2>Congratulations!!</h2>
+    <p class="lead">You found the <a href="" class="tiny button">Options</a> button. Now, be a sweetie and and close me.</p>
+    <p></p>
+    <a class="close-reveal-modal">&#215;</a>
+</div>

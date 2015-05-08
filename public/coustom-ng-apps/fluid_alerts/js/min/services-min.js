@@ -1,0 +1,2 @@
+var app=angular.module("Timetracker.apps.FluidAlerts.services",[]).factory("FluidAlerts",function(r,e){return r("/api/v1/apps/fluidalerts",{id:"@id",projects:"@projects",csrf_token:e},{})});
+//# sourceMappingURL=./services-min.js.map

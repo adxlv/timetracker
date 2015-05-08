@@ -1,0 +1,50 @@
+<div class="small-12 columns page-new-task">
+
+    <div class="row"></div>
+
+    <div class="row">
+        <div class="small-12 columns ">
+            <div class="row">
+                <div class="small-3 columns">
+                    <h2>
+                        <small>New Task:</small>&nbsp;</h2>
+                </div>
+                <div class="small-6 columns align-center end">
+                    <h2>{{new_task.title}}</h2>
+                </div>
+            </div>
+
+        </div>
+    <div>
+    <div class="row">
+        <div class="small-1 columns">
+            <label for="task-name-input" class="right inline">Title:</label>
+        </div>
+        <div class="small-6 columns end">
+            <input id="task-name-input" type="text" ng-model='new_task.title' placeholder="Dizaina izveide" autocomplete="off"/>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="small-1 columns">
+            <label for="task-select" class="right inline">Estimate: </label>
+        </div>
+        <div class="small-6 columns end" >
+            <select id="task-select" required ng-options="estimate.id as estimate.title for estimate in estimates" ng-model="new_task.estimate_id" ></select>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="small-3 columns end">
+            <ul class="button-group">
+                <li><a class="button tiny success" ng-click="save_task()">Save</a>
+                </li>
+                <li><a class="button tiny alert" onclick="$('a.close-reveal-modal').trigger('click');">Back</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>

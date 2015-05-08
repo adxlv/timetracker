@@ -1,0 +1,172 @@
+/* NG ANIMATIONS
+   ========================================================================== */
+.ng-animate {
+	position: relative;
+	@include transition(all $app-transition-time);
+}
+
+.ng-enter 			{  	opacity: 0; margin-left: -10px;}
+.ng-enter-active 	{ 	opacity: 0; margin-left: -10px;}
+
+.ng-leave 			{ 	opacity: 0; margin-left: 10px;}
+.ng-leave-active 	{  	opacity: 0; margin-left: 10px;}
+
+
+/* NG ANIMATIONS - OVERRIDES (speed; on/off for specific clases; other)
+   ========================================================================== */
+.breadcrumbs {
+	& * {
+		@include transition(all $app-transition-time)
+	}
+	.ng-enter 			{  	opacity: 0; margin-left:0}
+	.ng-enter-active 	{ 	opacity: 0; margin-left:0}
+	.ng-leave 			{ 	opacity: 0; margin-left:0}
+	.ng-leave-active 	{  	opacity: 0; margin-left:0}
+}
+table {
+	.ng-enter, .ng-leave {
+		@include transition(all 0);
+		opacity: 0;
+	}
+	.ng-enter {
+		// @include transition(all $app-transition-time);
+	}
+}
+
+.jobs-roles-salary-edit-row {
+	@include transition(all $app-transition-time)
+}
+
+.nvtooltip-pending-removal,
+.nvtooltip {
+	@include transition(none);
+}
+
+#loading-slider,
+#loading-slider * {
+	@include transition(none);
+}
+
+.c3,
+.c3 * {
+	@include transition(none);
+}
+
+*.ng-hide {
+	@include transition(none);
+}
+
+.app-content {
+	.page-estimates {
+		table.jobs-table{
+			.ng-leave {
+				display: none;
+			}
+		}
+	}
+	.page-dashboard {
+		.project-details {
+			.ng-leave {
+				display: none;
+			}
+		}
+	}
+}
+
+.ng-leave-fast {
+	@include transition(all $app-transition-time/3);
+	opacity: 0;
+}
+
+.no-anim {
+	@include transition(none);
+}
+.no-anim-all {
+	@include transition(none);
+	* { @include transition(none); }
+}
+
+.app-time-select-modal .slider .digital-clock .display {
+	@include transition(none);
+}
+
+.ui-sortable, 
+.ui-sortable * {
+	@include transition-delay(0);
+	@include transition(0);
+
+	.handle,
+	.handle * {
+		@include transition(all $app-transition-time)
+	}
+}
+.gear-col,
+.gear-col * {
+	@include transition-delay(0);
+	@include transition(all $app-transition-time)
+}
+
+.button,
+.edit-button {
+	@include transition-delay(0);
+	@include transition(all $app-transition-time/2);
+}
+
+/* Foundation tabs animation override
+   ========================================================================== */
+.tabs-content.horizontal-move{
+	position: relative;
+	
+	& > .content {
+		position: absolute;
+		left: 0%;
+		opacity: 1;
+		display: block;
+	}
+	
+	&.leave-left {
+		& > .ng-enter 			{ left: 100%; 	opacity: 0; }
+		& > .ng-enter-active 	{ left: 0%; 	opacity: 1; }
+		
+		& > .ng-leave 			{ left: 0%;		opacity: 1; }
+		& > .ng-leave-active 	{ left: -100%; 	opacity: 0; }
+	}
+
+	&.leave-right {
+		& > .ng-enter 			{ left: -100%; 	opacity: 0; }
+		& > .ng-enter-active 	{ left: 0%; 	opacity: 1; }
+
+		& > .ng-leave 			{ left: 0%;		opacity: 1; }
+		& > .ng-leave-active 	{ left: 100%; 	opacity: 0; }
+	}
+}
+
+.tabs-content > .content.foundation {
+	position: absolute;
+	top: 0px;
+	left: 100%;
+	float: none;
+	opacity: 0;
+
+	&.to-left {
+		left: -100%;
+		opacity: 0;
+		display: block;
+	}
+	&.to-right {
+		left: 100%;
+		opacity: 0;
+		display: block;
+	}
+	&.active {
+		left: 0%;
+		opacity: 1;
+		display: block;
+		position: relative;
+	}
+	&.no-anim {
+		@include transition(none);
+	}
+}
+
+

@@ -1,0 +1,30 @@
+<div class="small-6 medium-6 large-6 columns page">
+	<div class="page-settings row">
+		<h1>Business Info</h1>
+		
+		<table>
+			<thead>
+				<tr>
+					<th class="title-col">Business Name</th>
+					<th class="button-col" width="46">
+						<a href="" class="tiny button secondary" ui-sref="settings.businessinfo.edit({id:'new'})">
+                            &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                        </a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="branch in branches | orderBy:'title'">
+					<td class="first-col" colspan="2" ui-sref-active="active">
+						<a href="" ui-sref="settings.businessinfo.edit({id:branch.id})">
+							<h6>{{branch.title}}</h6>
+						</a>	
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
+<div class="small-6 medium-6 large-6 columns page" ui-view></div>

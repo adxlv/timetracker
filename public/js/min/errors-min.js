@@ -1,0 +1,1 @@
+var app=angular.module("Timetracker.errors",["ngResource"]).factory("$exceptionHandler",function(){return function(r,e){throw console.error("HELLO THIS IS MINE ERROR::"),r.message+=' (caused by "'+e+'")',r}});

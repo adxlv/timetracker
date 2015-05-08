@@ -1,0 +1,71 @@
+.lt-index {
+	.seperate-row th{
+		padding: 10px;
+	}
+	input {
+		margin: 0;
+		padding: 0 5px;
+		font-size: 0.8rem;
+		
+		&[type="text"] {
+			border: 1px solid rgb(240, 240, 240);
+			box-shadow: none;
+
+			&:focus {
+				box-shadow: 0 0 5px #999999;
+				border: none;
+				background: #F0F0F0;
+			}
+		}
+	}
+	
+	.input-table tr {
+		th {
+			padding: 0;
+			input[type="text"] {
+				background: #F5F5F5;
+				&:focus { 
+					background: #E0E0E0;
+				}
+			}
+		}
+		td {
+			&:hover {
+				background: initial;
+			}
+		}
+	}
+
+	.result-table tr {
+		th {
+		}
+		td {
+			padding:  5px 10px;
+		}
+	}
+
+	.drag-col {
+		text-align: center;
+	}
+	.check-col {
+		text-align: center;		
+	}
+	.lang-col {
+		input { text-align: center;	}
+	}
+	.input-col {
+	}
+	.value-col {
+		text-align: center;
+	}
+
+	.button.secondary {
+		background: #FFF;
+		// margin-top: 10px;
+		&:hover { background: #F5F5F5; }
+	}
+
+	.end {
+		padding: 80px;
+	}
+}

@@ -1,0 +1,303 @@
+<div class="page">
+    <div class="small-12 columns page-estimates">
+        <div class="row">
+            <div class="small-12 columns ">
+                <div class="row">
+                    <div class="small-2 columns">
+                        <h2>
+                            <small>Estimate:</small>&nbsp;</h2>
+                    </div>
+                    <div class="small-8 columns align-center end">
+                        <h2>{{estimate.title}}</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="estimate-name-input" class="">Name:
+                            <input id="estimate-name-input" type="text" ng-model='estimate.title' placeholder="Dizaina izveide" />
+                        </label>
+                    </div>
+
+                    <div class="small-7 columns">
+                        <label for="estimate-desc-input" class="">Description:
+                            <input id="estimate-desc-input" type="text" ng-model='estimate.description' placeholder="Tāme par logotipa, vizītkartes un web kataloga dizaina izstrādi" />
+                        </label>
+                    </div>
+
+                    <div class="small-2 columns">
+                        <label for="estimate-select" class="">Type:
+                            <select id="estimate-select" ng-options="type.name for type in selecttypes.list" ng-model="estimate.group"></select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row tabs-row">
+            <div class="small-12 columns">
+                <dl class="tabs" data-tab>
+                    <dd data-tab-panel="panel-1" class="active"><a href="">Tasks</a>
+                    </dd>
+                    <dd data-tab-panel="panel-2"><a href="">Additional Expences</a>
+                    </dd>
+                    <dd data-tab-panel="panel-3"><a href="">Third Party</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+
+        <div class="row content-row">
+            <div class="small-12 columns">
+                <div class="tabs-content row">
+
+
+                    <div class="content active foundation" id="panel-1">
+                        <div class="small-12 columns">
+                            <!-- <h4>Tasks</h4> -->
+                            <table width="100%" class="jobs-table">
+                                <thead>
+                                    <tr>
+                                        <th class="gear-col jobroles-salary-button" width="32">
+                                            <i class="fa fa-cog"></i>
+                                        </th>
+                                        <th class="" width="">Tasks</th>
+                                        <th class=" align-center" width="90" ng-repeat="jobrole in jobroles | arrayfilter:estimate.involved_roles ">
+                                            {{jobrole.title}}
+                                            <small>{{estimate.involved_roles.salary[$index]}} €</small>
+                                        </th>
+                                        <th class="button-col bt" ng-show="" width="51">
+                                            <a id="estimate-groups-button" href="" class="button secondary tiny table-fill ">
+                                                <i class="fa">&#61450;</i>
+                                            </a>
+                                        </th>
+                                    </tr>
+                                    <tr class="jobs-roles-salary-edit-row">
+                                        <th class="color-col" width=""></th>
+                                        <th class="" width="">
+                                            <span>edit hour cost for each role:&nbsp;</span>
+                                        </th>
+                                        <th class="input-col" width="90" ng-repeat="jobrole in jobroles | arrayfilter:estimate.involved_roles ">
+                                            <span><input type="number" ng-model='estimate.involved_roles.salary[$index]' class=""/></span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="empty-col" ng-show="estimate.entries.show" colspan="8">
+                                            <h3>
+                                                <small>No entries</small>
+                                            </h3>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="sortable" ui-sortable="sortableOptions" ng-model="estimate.entries">
+                                    <tr class="full-row" ng-repeat="entry in estimate.entries ">
+                                        <td class="drag-col handle" width="32" ng-class="{'group-header-col':(entry.is_header==1)}"> 
+                                            <div class="context-menu">
+                                                <i class="fa fa-bars"></i>
+                                                <ul class="button-group edit-button-group">
+                                                    <div class="slider">
+                                                        <a class="tiny button secondary" ng-click="setHeader(entry,true)" ng-if="entry.is_header==0">
+                                                            &nbsp;<i class="fa fa-star fa-flip-horizontal fa-lg"></i>&nbsp;
+                                                        </a>
+                                                        <a class="tiny button secondary" ng-click="setHeader(entry,false)" ng-if="entry.is_header==1">
+                                                            &nbsp;<i class="fa fa-star-o fa-lg"></i>&nbsp;
+                                                        </a>
+                                                        <a class="tiny button secondary" ng-click="remove_task(entry,$index)">
+                                                            &nbsp;<i class="fa fa-trash fa-lg"></i>&nbsp;
+                                                        </a>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </td>
+
+                                        <td class="" ng-click="" colspan="{{(entry.is_header==1)?7:1}}" ng-class="{'group-header-col':(entry.is_header==1)}">
+                                            <input type="text" ng-model='entry.title' class="title-input change-taskname-callback" data-entryid="{{entry.id}}" />
+                                        </td>
+
+                                        <td class="" width="100" ng-repeat="hour in entry.hours track by $index" ng-if="entry.is_header==0">
+                                            <input type="text" ng-model='entry.hours[$index]' class="" ng-blur="changeHours(entry.hours[$index],$index,entry)" data-taskid="{{task.id}}"/>
+                                            <input type="hidden" ng-model='entry.summ' ng-init='jobrole.summ=hour*estimate.involved_roles.salary[$index]' />
+                                        </td>
+                                        <td class="last-col">
+                                            <a href="" class="tiny button alert" ng-show="" ng-click="remove_task(entry,$index)">x</a>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+
+                                <tbody ng-repeat="bound_e in estimate.bound_estimates " class="bound-estimates-table">
+                                    <tr>
+                                        <td class="bound-estimates-title" ng-show="true" colspan="10">
+                                            <h6><i class="fa fa-chevron-right"></i>
+                                                <small>estimate</small>{{bound_e.title}}</h6>
+                                        </td>
+                                    </tr>
+                                    <tr class="full-row" ng-repeat="task in bound_e.tasks ">
+                                        <td class="" ng-click="" colspan="2">
+                                            <input type="text" ng-model='task.title' class="title-input" disabled/>
+                                        </td>
+                                        <td class="" width="100" ng-repeat="jobrole in task.jobroles">
+                                            <input type="text" ng-model='jobrole.pivot.hours' disabled/>
+                                        </td>
+                                        <td class="last-col">
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <tbody>
+                                    <tr><td>&nbsp;</td></tr>
+                                    <tr class="input-row new-task-row ">
+                                        <td class="button-col">
+                                            
+                                        </td>
+                                        <td class=" new-task-col button-col" ng-click="">
+                                            <div>
+                                                <input id="estimate-new-name-input" type="text" placeholder="Jauns darbs..." ng-model='new_task.title' class="title-input" />
+                                                <a href="" class="tiny button success" ng-click="add_task(new_task)">
+                                                    &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                                                </a>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="total-row">
+                                <div class="total ">Total:</div>
+                                <div class="number">
+                                    <h3>{{tasks_total|number}} €</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="content foundation" id="panel-2">
+                        <div class="small-12 columns">
+                            <!-- <h4>Additional Expenses</h4> -->
+                            <table width="100%" class="expenses-table">
+                                <thead>
+                                    <tr>
+                                        <th class="" width="">Expences</th>
+                                        <th class=" align-center" width="100">Units</th>
+                                        <th class=" align-center" width="100">Quantity</th>
+                                        <th class=" align-center" width="100">Price</th>
+                                        <th class=" align-center" width="100">Total</th>
+                                        <th class=" bt" width="51"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="empty-col" ng-show="estimate.expences.show" colspan="6">
+                                            <h3>
+                                                <small>No expences</small>
+                                            </h3>
+                                        </td>
+                                    </tr>
+                                    <tr class="full-row" ng-repeat="exp in estimate.expences ">
+                                        <td class="" ng-click="">
+                                            <input type="text" ng-model='exp.title' class="title-input change-exp-callback" data-expid="{{exp.id}}" />
+                                        </td>
+                                        <td class="" width="100">
+                                            <input type="text" ng-model='exp.units' class="units-input change-exp-callback" data-expid="{{exp.id}}" />
+                                        </td>
+                                        <td class="" width="100">
+                                            <input type="text" ng-model='exp.qty' class="qty-input change-exp-callback" data-expid="{{exp.id}}" />
+                                        </td>
+                                        <td class="" width="100">
+                                            <input type="text" ng-model='exp.price' class="price-input change-exp-callback" data-expid="{{exp.id}}" />
+                                        </td>
+                                        <td class=" align-center" width="100">
+                                            <h6>{{exp.qty*exp.price|number}} €</h6>
+                                        </td>
+                                        <td class="last-col">
+                                            <a href="" class="tiny button alert" ng-click="remove_exp(exp,$index)">x</a>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+
+                                <tbody ng-repeat="bound_e in estimate.bound_estimates " class="bound-estimates-table">
+                                    <tr>
+                                        <td class="bound-estimates-title" ng-show="true" colspan="6">
+                                            <h6><i class="fa fa-chevron-right"></i>
+                                                <small>estimate</small>{{bound_e.title}}</h6>
+                                        </td>
+                                    </tr>
+                                    <tr class="full-row" ng-repeat="exp in bound_e.expences ">
+                                        <td class="" ng-click="">
+                                            <input type="text" ng-model='exp.title' class="title-input" disabled/>
+                                        </td>
+                                        <td class="" width="100">
+                                            <input type="text" ng-model='exp.units' class="units-input" disabled/>
+                                        </td>
+                                        <td class="" width="100">
+                                            <input type="text" ng-model='exp.qty' class="qty-input" disabled/>
+                                        </td>
+                                        <td class="" width="100">
+                                            <input type="text" ng-model='exp.price' class="price-input" disabled/>
+                                        </td>
+                                        <td class=" align-center" width="100">
+                                            <h6>{{exp.qty*exp.price|number}} €</h6>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <tbody>
+                                    <tr><td>&nbsp;</td></tr>
+                                    <tr class="input-row new-task-row">
+                                        <td class=" new-task-col button-col" ng-click="" width="300">
+                                            <div>
+                                            <input id="estimate-new-exp-name-input" type="text" placeholder="Jauna izmaksa..." ng-model='new_exp.title' class="title-input" />
+                                            <a href="" class="tiny button success" ng-click="add_exp(new_exp)">
+                                                &nbsp;<i class="fa fa-plus "></i>&nbsp;
+                                            </a>
+                                            </div> 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="total-row">
+                                <div class="total ">Total:</div>
+                                <div class="number">
+                                    <h3>{{exp_total|number}} €</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="content foundation" id="panel-3">
+                        <div class="small-12 columns">
+                            <h1 class="teaser">under construction...</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row last-buttons-row">
+                  <div class="small-12 medium-12 large-12 columns"> <a ng-click="save()" class="tiny success button right">Save</a> </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<div id="groups-modal" class="reveal-modal app-groups-content " data-reveal>
+    <div class="grid">
+        <div class="grid-item jobrole-item" ng-repeat="jobrole in jobroles " data-id='{{jobrole.id}}'>
+            <div class="image" style="background-image: url({{jobrole.img_url}});"></div>
+            <p>{{jobrole.title}}</p>
+        </div>
+    </div>
+
+    <a class="close-reveal-modal">&#215;</a>
+</div>
