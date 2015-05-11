@@ -140,7 +140,6 @@ function Estimate_SetActive(id){
 	console.log('Estimate_SetActive');
 	$('.estimate-list .estimate.active').removeClass('active')
 	if(typeof id !== 'undefined') $('.estimate-list .estimate[data-estimate-id='+id+']').addClass('active')
-
 }
 
 function EstimateEdit_JobRoles_Events_Setup($scope) {
