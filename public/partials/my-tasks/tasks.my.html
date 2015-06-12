@@ -3,6 +3,9 @@
         <div class="top">
             <h2>
                 <img class="th user-picture" src="/store/img/users/default.jpg" ng-src="{{user.pict}}"> {{user.name}}
+                <div class="right month" style="display:inline">
+                    {{ the_month }}
+                </div>
             </h2>
         </div>
 
@@ -11,7 +14,7 @@
                 <tr>
                     <td class="menu-col">
                         <ul class="button-group clearfix">
-                            <li ng-show="false" class="right"><a class="tiny button  " ng-click="">Options</a>
+                            <li ng-show="false" class="left"><a class="tiny button  " ng-click="">Options</a>
                             </li>
                             <li class="right" ng-show=""><a href="" class="tiny button success " ng-click="open_task_add()">Add One Extra Task</a>
                             </li>

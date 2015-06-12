@@ -1243,6 +1243,8 @@ var app = angular.module('Timetracker.controllers', [])
 	$scope.week = week
 	$scope.hours = 0;
 	//*/
+	//
+	$rootScope.the_month = week[0].format("MMMM");
 
 	// $rootScope.weekOffset = parseInt($stateParams.weekOffset);
 	console.log('Made Week',$stateParams.weekOffset);
@@ -1377,6 +1379,8 @@ var app = angular.module('Timetracker.controllers', [])
 	}
 	$scope.week = week
 	$scope.hours = 0;
+
+	$rootScope.the_month = week[0].format("MMMM");
 	
 
 	$scope.open_log_select = function (passobject) {
